@@ -1,0 +1,35 @@
+﻿@using Microsoft.AspNetCore.Components.Forms
+
+<EditForm Model="@branchesModel" OnValidSubmit="HandleValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    <div class="mb-3">
+        <label for="branchName" class="form-label">Nombre de la Sucursal</label>
+        <InputText id="branchName" class="form-control" @bind-Value="branchesModel.BranchName" />
+    </div>
+    <div class="mb-3">
+        <label for="branchAddress" class="form-label">Dirección de la Sucursal</label>
+        <InputText id="branchAddress" class="form-control" @bind-Value="branchesModel.BranchAddress" />
+    </div>
+    <div class="mb-3">
+        <label for="branchPhone" class="form-label">Teléfono de la Sucursal</label>
+        <InputText id="branchPhone" class="form-control" @bind-Value="branchesModel.BranchPhone" />
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar cambios</button>
+</EditForm>
+
+@code {
+    private BranchesModel branchesModel = new BranchesModel();
+
+    private void HandleValidSubmit()
+    {
+        // Lógica para manejar el envío del formulario válido
+    }
+
+    private class BranchesModel
+    {
+        public string? BranchName { get; set; }
+        public string? BranchAddress { get; set; }
+        public string? BranchPhone { get; set; }
+    }
+}

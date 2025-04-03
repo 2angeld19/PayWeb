@@ -1,0 +1,44 @@
+﻿@page
+@model WizardModel
+@{
+    ViewData["Title"] = "Wizard";
+}
+
+<h2>PayDayWeb</h2>
+
+<div>
+    <form method="post">
+        <input type="hidden" asp-for="CurrentStep" />
+        @if (Model.CurrentStep == 1)
+        {
+            <partial name="WizardSteps/_CreateCompany" />
+        }
+        else if (Model.CurrentStep == 2)
+        {
+            <partial name="WizardSteps/_GeneralData" />
+        }
+        else if (Model.CurrentStep == 3)
+        {
+            <partial name="WizardSteps/_Banks" />
+        }
+        else if (Model.CurrentStep == 4)
+        {
+            <partial name="WizardSteps/_Employees" />
+        }
+
+        <div class="d-flex justify-content-end mt-3">
+            @if (Model.CurrentStep > 1)
+            {
+                <button type="submit" name="direction" value="previous" class="btn btn-secondary">Previous</button>
+            }
+            @if (Model.CurrentStep < 4)
+            {
+                <button type="submit" name="direction" value="next" class="btn btn-primary">Next</button>
+            }
+            else
+            {
+                <button type="submit" name="direction" value="finish" class="btn btn-success">Finish</button>
+            }
+        </div>
+    </form>
+</div>

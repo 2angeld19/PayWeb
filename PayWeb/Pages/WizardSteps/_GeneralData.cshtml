@@ -1,0 +1,58 @@
+﻿@page
+@model WizardModel
+@using Microsoft.JSInterop
+@using PayWeb.Pages.Modals
+@inject IJSRuntime JSRuntime
+
+<h3>Datos Generales</h3>
+<!-- Campos para los datos generales -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 mb-3">
+            <div class="card" id="cardBranches">
+                <div class="card-body">
+                    <h5 class="card-title">Sucursales</h5>
+                    <p class="card-text">Información sobre las sucursales.</p>
+                    <button type="button" class="btn btn-primary" onclick ="() => ShowModal('Branches')">Ver más</button>
+                </div>
+            </div>
+        </div>
+        <!-- Repetir para otros cards -->
+    </div>
+    <div class="text-center mt-4">
+        <button type="button" class="btn btn-success" id="enableCardsButton">Habilitar Cards</button>
+    </div>
+</div>
+
+<DynamicModal Title="@modalTitle">
+    @if (currentForm == "Branches")
+    {
+        <BranchesForm />
+    }
+    <!-- Repetir para otros formularios -->
+</DynamicModal>
+
+@functions {
+    private string currentForm = string.Empty;
+    private string modalTitle = string.Empty;
+
+    private async Task ShowModal(string formName)
+    {
+        currentForm = formName;
+        modalTitle = formName switch
+        {
+            "Branches" => "Sucursales",
+            "Departments" => "Departamentos",
+            "Positions" => "Cargos",
+            "Schedules" => "Horarios",
+            "CostCenters" => "Centros de Costo",
+            "Projects" => "Proyectos",
+            "Phases" => "Fases",
+            "Division" => "División",
+            _ => "Formulario"
+        };
+
+        // Mostrar el modal
+        await JSRuntime.InvokeVoidAsync("modalHelper.showModal", "dynamicModal");
+    }
+}
