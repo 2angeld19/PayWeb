@@ -1,0 +1,130 @@
+﻿@model WizardModel
+
+<div class="container-fluid">
+    <div class="text-center mb-4">
+        <i class="fas fa-check-circle text-success fa-5x mb-3"></i>
+        <h4>Confirmación de Compañía</h4>
+        <p class="text-muted">Revise la información antes de finalizar</p>
+    </div>
+
+    <div class="card shadow-sm mb-4">
+        <div class="card-header bg-light">
+            <h5 class="mb-0">Información de Compañía</h5>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <p class="mb-1 fw-bold">Nombre de Patrono</p>
+                    <p id="confirmEmployerName" class="text-muted">-</p>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <p class="mb-1 fw-bold">Lugar de Trabajo</p>
+                    <p id="confirmWorkplaceName" class="text-muted">-</p>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <p class="mb-1 fw-bold">Tipo de Identificación</p>
+                    <p id="confirmIdType" class="text-muted">-</p>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <p class="mb-1 fw-bold">Valor de Identificación</p>
+                    <p id="confirmIdValue" class="text-muted">-</p>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <p class="mb-1 fw-bold">Dirección Fiscal</p>
+                    <p id="confirmFiscalAddress" class="text-muted">-</p>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <p class="mb-1 fw-bold">Teléfono</p>
+                    <p id="confirmPhone" class="text-muted">-</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card shadow-sm mb-4">
+        <div class="card-header bg-light">
+            <h5 class="mb-0">Configuración General</h5>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <p class="mb-1 fw-bold">Sucursales</p>
+                    <p id="confirmBranches" class="text-muted">2 Configuradas</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <p class="mb-1 fw-bold">Departamentos</p>
+                    <p id="confirmDepartments" class="text-muted">5 Configurados</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <p class="mb-1 fw-bold">Puestos</p>
+                    <p id="confirmPositions" class="text-muted">10 Configurados</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card shadow-sm mb-4">
+        <div class="card-header bg-light">
+            <h5 class="mb-0">Empleados y Nómina</h5>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <p class="mb-1 fw-bold">Tipos de Empleado</p>
+                    <p id="confirmEmployeeTypes" class="text-muted">3 Configurados</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <p class="mb-1 fw-bold">Tipos de Contrato</p>
+                    <p id="confirmContractTypes" class="text-muted">2 Configurados</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <p class="mb-1 fw-bold">Deducciones</p>
+                    <p id="confirmDeductions" class="text-muted">4 Configuradas</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card shadow-sm mb-4">
+        <div class="card-header bg-light">
+            <h5 class="mb-0">Configuración Bancaria</h5>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <p class="mb-1 fw-bold">Bancos</p>
+                    <p id="confirmBanksList" class="text-muted">3 Configurados</p>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <p class="mb-1 fw-bold">Métodos de Pago</p>
+                    <p id="confirmPaymentMethods" class="text-muted">2 Configurados</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-center mt-4">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="confirmTerms" required>
+            <label class="form-check-label" for="confirmTerms">
+                Confirmo que toda la información es correcta y deseo crear la compañía
+            </label>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Aquí podríamos agregar código para llenar los campos de confirmación
+        // con los datos recogidos en pasos anteriores
+
+        // Ya no deshabilitamos el botón, solo mostramos un mensaje cuando cambia el estado del checkbox
+        document.getElementById('confirmTerms').addEventListener('change', function() {
+            if (this.checked) {
+                console.log('Términos aceptados');
+            } else {
+                console.log('Términos no aceptados');
+            }
+        });
+    });
+</script>

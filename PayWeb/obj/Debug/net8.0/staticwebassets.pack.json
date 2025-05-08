@@ -5,8 +5,16 @@
       "PackagePath": "staticwebassets\\PayWeb.hfdpi38cix.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\css\\index.css",
+      "PackagePath": "staticwebassets\\css\\index.css"
+    },
+    {
       "Id": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\css\\wizard.css",
+      "PackagePath": "staticwebassets\\css\\wizard.css"
     },
     {
       "Id": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\favicon.ico",
@@ -19,6 +27,10 @@
     {
       "Id": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\js\\wizard.js",
+      "PackagePath": "staticwebassets\\js\\wizard.js"
     },
     {
       "Id": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\lib\\bootstrap\\LICENSE",

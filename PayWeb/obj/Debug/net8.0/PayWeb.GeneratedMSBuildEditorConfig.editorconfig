@@ -20,40 +20,40 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/angel/source/repos/PayWeb/PayWeb/Pages/Modals/BranchesForm.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTW9kYWxzXEJyYW5jaGVzRm9ybS5yYXpvcg==
+[C:/Users/angel/source/repos/PayWeb/PayWeb/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/angel/source/repos/PayWeb/PayWeb/Pages/Modals/CostCentersModal.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTW9kYWxzXENvc3RDZW50ZXJzTW9kYWwucmF6b3I=
+[C:/Users/angel/source/repos/PayWeb/PayWeb/Pages/Shared/_BranchesForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9CcmFuY2hlc0Zvcm0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/angel/source/repos/PayWeb/PayWeb/Pages/Modals/DepartmentsModal.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTW9kYWxzXERlcGFydG1lbnRzTW9kYWwucmF6b3I=
+[C:/Users/angel/source/repos/PayWeb/PayWeb/Pages/Shared/_CostCentersForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9Db3N0Q2VudGVyc0Zvcm0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/angel/source/repos/PayWeb/PayWeb/Pages/Modals/DivisionModal.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTW9kYWxzXERpdmlzaW9uTW9kYWwucmF6b3I=
+[C:/Users/angel/source/repos/PayWeb/PayWeb/Pages/Shared/_DepartmentsForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9EZXBhcnRtZW50c0Zvcm0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/angel/source/repos/PayWeb/PayWeb/Pages/Modals/DynamicModal.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTW9kYWxzXER5bmFtaWNNb2RhbC5yYXpvcg==
+[C:/Users/angel/source/repos/PayWeb/PayWeb/Pages/Shared/_DivisionForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9EaXZpc2lvbkZvcm0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/angel/source/repos/PayWeb/PayWeb/Pages/Modals/PhasesModal.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTW9kYWxzXFBoYXNlc01vZGFsLnJhem9y
+[C:/Users/angel/source/repos/PayWeb/PayWeb/Pages/Shared/_PhasesForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9QaGFzZXNGb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/angel/source/repos/PayWeb/PayWeb/Pages/Modals/PositionsModal.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTW9kYWxzXFBvc2l0aW9uc01vZGFsLnJhem9y
+[C:/Users/angel/source/repos/PayWeb/PayWeb/Pages/Shared/_PositionsForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9Qb3NpdGlvbnNGb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/angel/source/repos/PayWeb/PayWeb/Pages/Modals/ProjectsModal.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTW9kYWxzXFByb2plY3RzTW9kYWwucmF6b3I=
+[C:/Users/angel/source/repos/PayWeb/PayWeb/Pages/Shared/_ProjectsForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9Qcm9qZWN0c0Zvcm0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/angel/source/repos/PayWeb/PayWeb/Pages/Modals/SchedulesModal.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTW9kYWxzXFNjaGVkdWxlc01vZGFsLnJhem9y
+[C:/Users/angel/source/repos/PayWeb/PayWeb/Pages/Shared/_SchedulesForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9TY2hlZHVsZXNGb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/angel/source/repos/PayWeb/PayWeb/Pages/Shared/_ValidationScriptsPartial.cshtml]
@@ -70,6 +70,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/angel/source/repos/PayWeb/PayWeb/Pages/WizardSteps/_Banks.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV2l6YXJkU3RlcHNcX0JhbmtzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/angel/source/repos/PayWeb/PayWeb/Pages/WizardSteps/_Confirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV2l6YXJkU3RlcHNcX0NvbmZpcm1hdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/angel/source/repos/PayWeb/PayWeb/Pages/WizardSteps/_CreateCompany.cshtml]

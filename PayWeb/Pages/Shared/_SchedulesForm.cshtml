@@ -1,0 +1,21 @@
+﻿@model PayWeb.Controllers.FormController.BranchViewModel
+
+<form id="schedulesForm" method="post">
+    <div class="mb-3">
+        <label for="scheduleName" class="form-label">Nombre del Horario</label>
+        <input type="text" class="form-control" id="scheduleName" name="ScheduleName">
+    </div>
+    <div class="mb-3">
+        <label for="startTime" class="form-label">Hora de Inicio</label>
+        <input type="time" class="form-control" id="startTime" name="StartTime">
+    </div>
+    <div class="mb-3">
+        <label for="endTime" class="form-label">Hora de Fin</label>
+        <input type="time" class="form-control" id="endTime" name="EndTime">
+    </div>
+    <div class="mb-3">
+        <label for="lunchBreak" class="form-label">Tiempo de Almuerzo (minutos)</label>
+        <input type="number" class="form-control" id="lunchBreak" name="LunchBreak">
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+</form>

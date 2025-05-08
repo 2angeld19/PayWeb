@@ -1,21 +1,5 @@
 [
   {
-    "ContainingType": "PayWeb.Controllers.FormController",
-    "Method": "SetCurrentForm",
-    "RelativePath": "api/Form/setCurrentForm",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "formData",
-        "Type": "PayWeb.Controllers.FormData",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "PayWeb.Controllers.LogController",
     "Method": "Log",
     "RelativePath": "Log",

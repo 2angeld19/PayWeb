@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "yEi5dmPMcLkU61ZmjN+lfW/HoRIBLTHISf+x4lE+hR0=",
+  "Hash": "z4blK5LLi2YBpkQLdsEGpP1AxQBVBLd7VqAetdN05Lw=",
   "Source": "PayWeb",
   "BasePath": "_content/PayWeb",
   "Mode": "Default",
@@ -59,6 +59,27 @@
       "OriginalItemSpec": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\PayWeb.bundle.scp.css"
     },
     {
+      "Identity": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\css\\index.css",
+      "SourceId": "PayWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\",
+      "BasePath": "_content/PayWeb",
+      "RelativePath": "css/index#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ux7xxoycwa",
+      "Integrity": "cuenNUHbdmNN3qRj8JKzXw34vsqLrm5eKIIJHP57enk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\index.css"
+    },
+    {
       "Identity": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\css\\site.css",
       "SourceId": "PayWeb",
       "SourceType": "Discovered",
@@ -73,11 +94,32 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "spu70m1jcy",
-      "Integrity": "QH9hWNbtZH8nFbJDU9YKTUGQcAnkRBG+yw8AeiM4lNY=",
+      "Fingerprint": "sv8ghbnwgp",
+      "Integrity": "CEKVDQa6n+KZwUG9rB/mHl2Yo6mxt/DzXnYlq3GKebY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\css\\wizard.css",
+      "SourceId": "PayWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\",
+      "BasePath": "_content/PayWeb",
+      "RelativePath": "css/wizard#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "6b0ccia9xi",
+      "Integrity": "bn9EEMSGk/+vb1jwQULfk/AdpClJU/mJAe+H1u2/O4o=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\wizard.css"
     },
     {
       "Identity": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\favicon.ico",
@@ -115,8 +157,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "vgcnke8mp8",
-      "Integrity": "3yqRY/nnYWlqas1zEbhDmn7JAuAil/AkonvetdsjP7o=",
+      "Fingerprint": "rzjoxcq8kv",
+      "Integrity": "yXMHpCu12kyvTtizlphOAWz+13Tf4mh3saHld49wWSA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\modalHelper.js"
@@ -136,11 +178,32 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "dk1yxlhux4",
-      "Integrity": "bQHiQRhdJ+xFUJWA/17EltFlwefyejdvzQzMA7h9y8c=",
+      "Fingerprint": "jnc83b4g1n",
+      "Integrity": "DyG1pGBLhMRjvx2L6Q7sMXVtzMrQgRFMSYfhh4C7AUk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\js\\wizard.js",
+      "SourceId": "PayWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\",
+      "BasePath": "_content/PayWeb",
+      "RelativePath": "js/wizard#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "yzuwqapbfm",
+      "Integrity": "EonHMUz2nGqNIQZamJGddUo29/iV6OgYPy3P8StK7/s=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\wizard.js"
     },
     {
       "Identity": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
@@ -1342,6 +1405,88 @@
   ],
   "Endpoints": [
     {
+      "Route": "css/index.css",
+      "AssetFile": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\css\\index.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8932"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cuenNUHbdmNN3qRj8JKzXw34vsqLrm5eKIIJHP57enk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 21:17:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-cuenNUHbdmNN3qRj8JKzXw34vsqLrm5eKIIJHP57enk="
+        }
+      ]
+    },
+    {
+      "Route": "css/index.ux7xxoycwa.css",
+      "AssetFile": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\css\\index.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8932"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cuenNUHbdmNN3qRj8JKzXw34vsqLrm5eKIIJHP57enk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 21:17:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ux7xxoycwa"
+        },
+        {
+          "Name": "label",
+          "Value": "css/index.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-cuenNUHbdmNN3qRj8JKzXw34vsqLrm5eKIIJHP57enk="
+        }
+      ]
+    },
+    {
       "Route": "css/site.css",
       "AssetFile": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\css\\site.css",
       "Selectors": [],
@@ -1352,7 +1497,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "851"
+          "Value": "2227"
         },
         {
           "Name": "Content-Type",
@@ -1360,11 +1505,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"QH9hWNbtZH8nFbJDU9YKTUGQcAnkRBG+yw8AeiM4lNY=\""
+          "Value": "\"CEKVDQa6n+KZwUG9rB/mHl2Yo6mxt/DzXnYlq3GKebY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 01 Apr 2025 21:44:06 GMT"
+          "Value": "Thu, 08 May 2025 20:11:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1374,12 +1519,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-QH9hWNbtZH8nFbJDU9YKTUGQcAnkRBG+yw8AeiM4lNY="
+          "Value": "sha256-CEKVDQa6n+KZwUG9rB/mHl2Yo6mxt/DzXnYlq3GKebY="
         }
       ]
     },
     {
-      "Route": "css/site.spu70m1jcy.css",
+      "Route": "css/site.sv8ghbnwgp.css",
       "AssetFile": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1389,7 +1534,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "851"
+          "Value": "2227"
         },
         {
           "Name": "Content-Type",
@@ -1397,11 +1542,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"QH9hWNbtZH8nFbJDU9YKTUGQcAnkRBG+yw8AeiM4lNY=\""
+          "Value": "\"CEKVDQa6n+KZwUG9rB/mHl2Yo6mxt/DzXnYlq3GKebY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 01 Apr 2025 21:44:06 GMT"
+          "Value": "Thu, 08 May 2025 20:11:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1411,7 +1556,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "spu70m1jcy"
+          "Value": "sv8ghbnwgp"
         },
         {
           "Name": "label",
@@ -1419,7 +1564,89 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-QH9hWNbtZH8nFbJDU9YKTUGQcAnkRBG+yw8AeiM4lNY="
+          "Value": "sha256-CEKVDQa6n+KZwUG9rB/mHl2Yo6mxt/DzXnYlq3GKebY="
+        }
+      ]
+    },
+    {
+      "Route": "css/wizard.6b0ccia9xi.css",
+      "AssetFile": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\css\\wizard.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13466"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bn9EEMSGk/+vb1jwQULfk/AdpClJU/mJAe+H1u2/O4o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 21:21:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6b0ccia9xi"
+        },
+        {
+          "Name": "label",
+          "Value": "css/wizard.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-bn9EEMSGk/+vb1jwQULfk/AdpClJU/mJAe+H1u2/O4o="
+        }
+      ]
+    },
+    {
+      "Route": "css/wizard.css",
+      "AssetFile": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\css\\wizard.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13466"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bn9EEMSGk/+vb1jwQULfk/AdpClJU/mJAe+H1u2/O4o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 21:21:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-bn9EEMSGk/+vb1jwQULfk/AdpClJU/mJAe+H1u2/O4o="
         }
       ]
     },
@@ -1516,7 +1743,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "340"
+          "Value": "3813"
         },
         {
           "Name": "Content-Type",
@@ -1524,11 +1751,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"3yqRY/nnYWlqas1zEbhDmn7JAuAil/AkonvetdsjP7o=\""
+          "Value": "\"yXMHpCu12kyvTtizlphOAWz+13Tf4mh3saHld49wWSA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 03 Apr 2025 13:23:30 GMT"
+          "Value": "Thu, 08 May 2025 20:02:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1538,12 +1765,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-3yqRY/nnYWlqas1zEbhDmn7JAuAil/AkonvetdsjP7o="
+          "Value": "sha256-yXMHpCu12kyvTtizlphOAWz+13Tf4mh3saHld49wWSA="
         }
       ]
     },
     {
-      "Route": "js/modalHelper.vgcnke8mp8.js",
+      "Route": "js/modalHelper.rzjoxcq8kv.js",
       "AssetFile": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\js\\modalHelper.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1553,7 +1780,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "340"
+          "Value": "3813"
         },
         {
           "Name": "Content-Type",
@@ -1561,11 +1788,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"3yqRY/nnYWlqas1zEbhDmn7JAuAil/AkonvetdsjP7o=\""
+          "Value": "\"yXMHpCu12kyvTtizlphOAWz+13Tf4mh3saHld49wWSA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 03 Apr 2025 13:23:30 GMT"
+          "Value": "Thu, 08 May 2025 20:02:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1575,7 +1802,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "vgcnke8mp8"
+          "Value": "rzjoxcq8kv"
         },
         {
           "Name": "label",
@@ -1583,12 +1810,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-3yqRY/nnYWlqas1zEbhDmn7JAuAil/AkonvetdsjP7o="
+          "Value": "sha256-yXMHpCu12kyvTtizlphOAWz+13Tf4mh3saHld49wWSA="
         }
       ]
     },
     {
-      "Route": "js/site.dk1yxlhux4.js",
+      "Route": "js/site.jnc83b4g1n.js",
       "AssetFile": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\js\\site.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1598,7 +1825,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2478"
+          "Value": "1915"
         },
         {
           "Name": "Content-Type",
@@ -1606,11 +1833,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"bQHiQRhdJ+xFUJWA/17EltFlwefyejdvzQzMA7h9y8c=\""
+          "Value": "\"DyG1pGBLhMRjvx2L6Q7sMXVtzMrQgRFMSYfhh4C7AUk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 03 Apr 2025 13:18:38 GMT"
+          "Value": "Thu, 03 Apr 2025 19:45:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1620,7 +1847,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "dk1yxlhux4"
+          "Value": "jnc83b4g1n"
         },
         {
           "Name": "label",
@@ -1628,7 +1855,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-bQHiQRhdJ+xFUJWA/17EltFlwefyejdvzQzMA7h9y8c="
+          "Value": "sha256-DyG1pGBLhMRjvx2L6Q7sMXVtzMrQgRFMSYfhh4C7AUk="
         }
       ]
     },
@@ -1643,7 +1870,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2478"
+          "Value": "1915"
         },
         {
           "Name": "Content-Type",
@@ -1651,11 +1878,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"bQHiQRhdJ+xFUJWA/17EltFlwefyejdvzQzMA7h9y8c=\""
+          "Value": "\"DyG1pGBLhMRjvx2L6Q7sMXVtzMrQgRFMSYfhh4C7AUk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 03 Apr 2025 13:18:38 GMT"
+          "Value": "Thu, 03 Apr 2025 19:45:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1665,7 +1892,89 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-bQHiQRhdJ+xFUJWA/17EltFlwefyejdvzQzMA7h9y8c="
+          "Value": "sha256-DyG1pGBLhMRjvx2L6Q7sMXVtzMrQgRFMSYfhh4C7AUk="
+        }
+      ]
+    },
+    {
+      "Route": "js/wizard.js",
+      "AssetFile": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\js\\wizard.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3784"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EonHMUz2nGqNIQZamJGddUo29/iV6OgYPy3P8StK7/s=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 21:00:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-EonHMUz2nGqNIQZamJGddUo29/iV6OgYPy3P8StK7/s="
+        }
+      ]
+    },
+    {
+      "Route": "js/wizard.yzuwqapbfm.js",
+      "AssetFile": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\js\\wizard.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3784"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EonHMUz2nGqNIQZamJGddUo29/iV6OgYPy3P8StK7/s=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 21:00:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "yzuwqapbfm"
+        },
+        {
+          "Name": "label",
+          "Value": "js/wizard.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-EonHMUz2nGqNIQZamJGddUo29/iV6OgYPy3P8StK7/s="
         }
       ]
     },
@@ -6366,7 +6675,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 02 Apr 2025 20:55:16 GMT"
+          "Value": "Fri, 04 Apr 2025 13:30:12 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6403,7 +6712,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 02 Apr 2025 20:55:16 GMT"
+          "Value": "Fri, 04 Apr 2025 13:30:12 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6448,7 +6757,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 02 Apr 2025 20:55:16 GMT"
+          "Value": "Fri, 04 Apr 2025 13:30:12 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6493,7 +6802,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 02 Apr 2025 20:55:16 GMT"
+          "Value": "Fri, 04 Apr 2025 13:30:12 GMT"
         },
         {
           "Name": "Cache-Control",

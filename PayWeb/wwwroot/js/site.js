@@ -43,20 +43,6 @@
             body: JSON.stringify({ message: event.error.message, stack: event.error.stack })
         });
     });
-
-    // Function to enable buttons
-    document.addEventListener('DOMContentLoaded', function () {
-        var enableCardsButton = document.getElementById('enableCardsButton');
-        if (enableCardsButton) {
-            enableCardsButton.addEventListener('click', function (event) {
-                event.preventDefault();
-                var buttons = document.querySelectorAll('.card button');
-                buttons.forEach(function (button) {
-                    button.disabled = false;
-                });
-            });
-        }
-    });
 })();
 
 // Function to add highlight class on focus

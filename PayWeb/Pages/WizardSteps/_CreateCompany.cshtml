@@ -1,108 +1,104 @@
 ﻿@model WizardModel
 
-<h3>Creación de Compañia</h3>
-<!-- Campos para la creación de la compañía -->
-<div id="createCompanyForm" class="needs-validation" novalidate>
-    <div class="row mb-3">
-        <div class="col-md-6">
-            <label for="companyNumber" class="form-label">Número de Compañía</label>
-            <input type="text" class="form-control" id="companyNumber" name="companyNumber" disabled onfocus="AddHighlight(event)" onblur="RemoveHighlight(event)" />
-        </div>
-        <div class="col-md-6">
-            <label for="shortName" class="form-label">Nombre Corto</label>
-            <input type="text" class="form-control" id="shortName" name="shortName" maxlength="15" required autofocus onfocus="AddHighlight(event)" onblur="RemoveHighlight(event)" />
-            <div class="invalid-feedback">
-                El nombre corto es obligatorio y debe tener un máximo de 15 letras.
-            </div>
-        </div>
+<div class="container-fluid">
+    <div class="mb-4">
+        <h4>Creación de Compañía</h4>
+        <p class="text-muted">Complete la información para crear una nueva compañía</p>
     </div>
-    <div class="row mb-3">
-        <div class="col-md-6">
+
+    <!-- Primera fila - 3 inputs -->
+    <div class="row">
+        <div class="col-md-4 mb-3">
             <label for="bankNumber" class="form-label">Número Asignado por el Banco</label>
-            <input type="text" class="form-control" id="bankNumber" name="bankNumber" required onfocus="AddHighlight(event)" onblur="RemoveHighlight(event)" />
-            <div class="invalid-feedback">
-                El número asignado por el banco es obligatorio.
-            </div>
+            <input type="text" id="bankNumber" name="bankNumber" disabled class="form-control" required>
         </div>
-        <div class="col-md-6">
-            <label for="employerName" class="form-label">Nombre de Patrono</label>
-            <input type="text" class="form-control" id="employerName" name="employerName" required onfocus="AddHighlight(event)" onblur="RemoveHighlight(event)" />
-            <div class="invalid-feedback">
-                El nombre de patrono es obligatorio.
-            </div>
+        <div class="col-md-4 mb-3">
+            <label for="interfaceCode" class="form-label">Cod. Interfase</label>
+            <input type="text" id="interfaceCode" name="interfaceCode" class="form-control" required>
         </div>
-    </div>
-    <div class="row mb-3">
-        <div class="col-md-6">
-            <label for="workplaceName" class="form-label">Nombre de Lugar de Trabajo</label>
-            <input type="text" class="form-control" id="workplaceName" name="workplaceName" required onfocus="AddHighlight(event)" onblur="RemoveHighlight(event)" />
-            <div class="invalid-feedback">
-                El nombre de lugar de trabajo es obligatorio.
-            </div>
-        </div>
-        <div class="col-md-6">
-            <label for="fiscalAddress" class="form-label">Dirección Fiscal</label>
-            <textarea class="form-control" id="fiscalAddress" name="fiscalAddress" required onfocus="AddHighlight(event)" onblur="RemoveHighlight(event)"></textarea>
-            <div class="invalid-feedback">
-                La dirección fiscal es obligatoria.
-            </div>
-        </div>
-    </div>
-    <div class="row mb-3">
-        <div class="col-md-6">
+        <div class="col-md-4 mb-3">
             <label for="economicActivity" class="form-label">Actividad Económica</label>
-            <input type="text" class="form-control" id="economicActivity" name="economicActivity" required onfocus="AddHighlight(event)" onblur="RemoveHighlight(event)" />
-            <div class="invalid-feedback">
-                La actividad económica es obligatoria.
-            </div>
-        </div>
-        <div class="col-md-6">
-            <label for="legalRepresentative" class="form-label">Representante Legal</label>
-            <input type="text" class="form-control" id="legalRepresentative" name="legalRepresentative" required onfocus="AddHighlight(event)" onblur="RemoveHighlight(event)" />
-            <div class="invalid-feedback">
-                El representante legal es obligatorio.
-            </div>
+            <input type="text" id="economicActivity" name="economicActivity" class="form-control" required>
         </div>
     </div>
-    <div class="row mb-3">
-        <div class="col-md-6">
+
+    <!-- Segunda fila - 3 inputs -->
+    <div class="row">
+        <div class="col-md-4 mb-3">
+            <label for="license" class="form-label">Licencia</label>
+            <input type="text" id="license" name="license" class="form-control" required>
+        </div>
+        <div class="col-md-4 mb-3">
+            <label for="employerName" class="form-label">Nombre de Patrono</label>
+            <input type="text" id="employerName" name="employerName" class="form-control" required>
+        </div>
+        <div class="col-md-4 mb-3">
+            <label for="workplaceName" class="form-label">Nombre de Lugar de Trabajo</label>
+            <input type="text" id="workplaceName" name="workplaceName" class="form-control" required>
+        </div>
+    </div>
+
+    <!-- Tercera fila - 3 inputs -->
+    <div class="row">
+        <div class="col-md-4 mb-3">
+            <label for="fiscalAddress" class="form-label">Dirección Fiscal</label>
+            <input type="text" id="fiscalAddress" name="fiscalAddress" class="form-control" required>
+        </div>
+        <div class="col-md-4 mb-3">
+            <label for="legalRepresentative" class="form-label">Representante Legal</label>
+            <input type="text" id="legalRepresentative" name="legalRepresentative" class="form-control" required>
+        </div>
+        <div class="col-md-4 mb-3">
+            <label for="phone" class="form-label">Teléfono</label>
+            <input type="text" id="phone" name="phone" class="form-control" required>
+        </div>
+    </div>
+
+    <!-- Cuarta fila - 2 inputs -->
+    <div class="row">
+        <div class="col-md-6 mb-3">
             <label for="idType" class="form-label">Tipo de Identificación</label>
-            <select class="form-select" id="idType" name="idType" required onfocus="AddHighlight(event)" onblur="RemoveHighlight(event)">
-                <option value="">Seleccione...</option>
+            <select id="idType" name="idType" class="form-select" required>
+                <option value="" disabled selected></option>
                 <option value="legalId">Cédula Jurídica</option>
                 <option value="naturalId">Cédula Natural</option>
                 <option value="dv">DV</option>
             </select>
-            <div class="invalid-feedback">
-                El tipo de identificación es obligatorio.
-            </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 mb-3">
             <label for="idValue" class="form-label">Valor de Identificación</label>
-            <input type="text" class="form-control" id="idValue" name="idValue" required onfocus="AddHighlight(event)" onblur="RemoveHighlight(event)" />
-            <div class="invalid-feedback">
-                El valor de identificación es obligatorio.
+            <input type="text" id="idValue" name="idValue" class="form-control" required>
+        </div>
+    </div>
+
+    <!-- Quinta fila - Logo upload -->
+    <div class="row mb-3">
+        <div class="col-md-12">
+            <label for="logo" class="form-label">Logo de la Compañía</label>
+            <div class="input-group">
+                <input type="file" class="form-control" id="logo" name="logo">
+                <label class="input-group-text" for="logo">Subir</label>
             </div>
         </div>
     </div>
-    <div class="row mb-3">
-        <div class="col-md-6">
-            <label for="phone" class="form-label">Teléfono</label>
-            <input type="text" class="form-control" id="phone" name="phone" required onfocus="AddHighlight(event)" onblur="RemoveHighlight(event)" />
-            <div class="invalid-feedback">
-                El teléfono es obligatorio.
-            </div>
+
+    <!-- Sección separada para información de pagos -->
+    <div class="mt-4 mb-3 pt-3 border-top">
+        <h5>Información de Pagos</h5>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 mb-3">
+            <label for="lastThirteenthMonthPaid" class="form-label">Último XIII mes pagado</label>
+            <input type="month" id="lastThirteenthMonthPaid" name="lastThirteenthMonthPaid" class="form-control" required>
         </div>
-        <div class="col-md-6">
-            <label for="logo" class="form-label">Logo</label>
-            <input type="file" class="form-control" id="logo" name="logo" onfocus="AddHighlight(event)" onblur="RemoveHighlight(event)" />
-            <div class="invalid-feedback">
-                El logo es obligatorio.
-            </div>
+        <div class="col-md-4 mb-3">
+            <label for="lastPeriodPaid" class="form-label">Último periodo pagado</label>
+            <input type="month" id="lastPeriodPaid" name="lastPeriodPaid" class="form-control" required>
+        </div>
+        <div class="col-md-4 mb-3">
+            <label for="lastClosedYear" class="form-label">Último año cerrado</label>
+            <input type="number" id="lastClosedYear" name="lastClosedYear" min="2000" max="2099" step="1" class="form-control" required>
         </div>
     </div>
 </div>
-
-@section Scripts {
-    <script src="~/js/site.js"></script>
-}

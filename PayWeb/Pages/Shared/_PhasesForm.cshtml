@@ -1,0 +1,22 @@
+﻿@model PayWeb.Controllers.FormController.BranchViewModel
+
+<form id="phasesForm" method="post">
+    <div class="mb-3">
+        <label for="phaseName" class="form-label">Nombre de la Fase</label>
+        <input type="text" class="form-control" id="phaseName" name="PhaseName">
+    </div>
+    <div class="mb-3">
+        <label for="phaseCode" class="form-label">Código de la Fase</label>
+        <input type="text" class="form-control" id="phaseCode" name="PhaseCode">
+    </div>
+    <div class="mb-3">
+        <label for="projectId" class="form-label">Proyecto</label>
+        <select class="form-select" id="projectId" name="ProjectId">
+            <option value="">Seleccione un proyecto</option>
+            <option value="1">Proyecto 1</option>
+            <option value="2">Proyecto 2</option>
+            <option value="3">Proyecto 3</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+</form>

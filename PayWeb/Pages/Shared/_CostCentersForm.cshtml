@@ -1,0 +1,17 @@
+﻿@model PayWeb.Controllers.FormController.BranchViewModel
+
+<form id="costCentersForm" method="post">
+    <div class="mb-3">
+        <label for="costCenterName" class="form-label">Nombre del Centro de Costo</label>
+        <input type="text" class="form-control" id="costCenterName" name="CostCenterName">
+    </div>
+    <div class="mb-3">
+        <label for="costCenterCode" class="form-label">Código del Centro de Costo</label>
+        <input type="text" class="form-control" id="costCenterCode" name="CostCenterCode">
+    </div>
+    <div class="mb-3">
+        <label for="budget" class="form-label">Presupuesto</label>
+        <input type="number" step="0.01" class="form-control" id="budget" name="Budget">
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+</form>

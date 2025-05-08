@@ -1,0 +1,290 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Inicio";
+}
+
+<!-- Hero Section con diseño mejorado -->
+<div class="hero-section">
+    <div class="hero-background">
+        <div class="container py-5">
+            <div class="row align-items-center py-5">
+                <div class="col-lg-6 hero-content">
+                    <span class="badge bg-warning px-3 py-2 mb-3 animate-float">Solución de Nómina</span>
+                    <h1 class="display-4 fw-bold mb-4 text-white hero-title">Gestión de Nómina Simplificada</h1>
+                    <p class="lead mb-4 text-white-50">
+                        PayWeb transforma todos los procesos relacionados con la gestión de nómina, recursos humanos y pagos de su empresa en experiencias sencillas y eficientes.
+                    </p>
+                    <div class="d-grid gap-3 d-md-flex justify-content-md-start mt-5">
+                        <a asp-page="/Wizard" class="btn btn-primary btn-lg px-4 py-3 shadow-lg me-md-3 btn-hover-effect">
+                            <i class="fas fa-plus-circle me-2"></i>Crear Compañía
+                        </a>
+                        <a href="#funciones" class="btn btn-outline-light btn-lg px-4 py-3">
+                            <i class="fas fa-info-circle me-2"></i>Más Información
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block ps-5">
+                    <div class="hero-image-container">
+                        <img src="https://img.freepik.com/free-vector/business-team-discussing-ideas-startup_74855-4380.jpg" alt="PayWeb Dashboard" class="img-fluid rounded-3 shadow-lg hero-image" />
+                        <div class="hero-floating-box hero-box-1">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span>Gestión sin complicaciones</span>
+                            </div>
+                        </div>
+                        <div class="hero-floating-box hero-box-2">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-chart-line text-primary me-2"></i>
+                                <span>Reportes en tiempo real</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wave-container">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 280">
+            <path fill="#ffffff" fill-opacity="1" d="M0,96L40,106.7C80,117,160,139,240,133.3C320,128,400,96,480,106.7C560,117,640,171,720,176C800,181,880,139,960,122.7C1040,107,1120,117,1200,128C1280,139,1360,149,1400,154.7L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path>
+        </svg>
+    </div>
+</div>
+
+<!-- Stats Section -->
+<div class="container stats-section">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div class="row g-4 text-center">
+                <div class="col-md-3 col-6">
+                    <div class="stat-card shadow-sm">
+                        <div class="stat-icon-container">
+                            <i class="fas fa-building stat-icon"></i>
+                        </div>
+                        <div class="stat-count count-up">500+</div>
+                        <div class="stat-label">Empresas</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-card shadow-sm">
+                        <div class="stat-icon-container">
+                            <i class="fas fa-users stat-icon"></i>
+                        </div>
+                        <div class="stat-count count-up">50,000+</div>
+                        <div class="stat-label">Empleados</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-card shadow-sm">
+                        <div class="stat-icon-container">
+                            <i class="fas fa-money-bill-wave stat-icon"></i>
+                        </div>
+                        <div class="stat-count count-up">$100M+</div>
+                        <div class="stat-label">Pagos procesados</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-card shadow-sm">
+                        <div class="stat-icon-container">
+                            <i class="fas fa-globe stat-icon"></i>
+                        </div>
+                        <div class="stat-count count-up">15+</div>
+                        <div class="stat-label">Países</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Características principales -->
+<div class="container py-5" id="funciones">
+    <div class="text-center mb-5">
+        <span class="badge bg-primary px-3 py-2 mb-2">Características</span>
+        <h2 class="section-title">Soluciones integrales para su empresa</h2>
+        <p class="section-subtitle mx-auto">Descubra por qué PayWeb es la plataforma preferida por empresas de todos los tamaños para la gestión de su nómina y recursos humanos.</p>
+    </div>
+
+    <div class="row g-4 py-3">
+        <div class="col-md-4 mb-4">
+            <div class="feature-card h-100">
+                <div class="feature-icon">
+                    <i class="fas fa-calculator"></i>
+                </div>
+                <h4 class="feature-title">Gestión de Nómina</h4>
+                <p class="feature-text">Automatice sus procesos de cálculo de nómina, deducciones e impuestos con facilidad y precisión.</p>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check-circle me-2"></i>Cálculos automáticos</li>
+                    <li><i class="fas fa-check-circle me-2"></i>Recibos digitales</li>
+                    <li><i class="fas fa-check-circle me-2"></i>Reportes fiscales</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="feature-card h-100 featured">
+                <span class="badge bg-warning position-absolute top-0 end-0 mt-3 me-3">Popular</span>
+                <div class="feature-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h4 class="feature-title">Recursos Humanos</h4>
+                <p class="feature-text">Gestione toda la información de empleados, asistencia y evaluaciones en un solo lugar centralizado.</p>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check-circle me-2"></i>Expedientes digitales</li>
+                    <li><i class="fas fa-check-circle me-2"></i>Control de asistencia</li>
+                    <li><i class="fas fa-check-circle me-2"></i>Gestión de vacaciones</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="feature-card h-100">
+                <div class="feature-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h4 class="feature-title">Reportes Avanzados</h4>
+                <p class="feature-text">Obtenga informes detallados para tomar decisiones basadas en datos precisos y actualizados.</p>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check-circle me-2"></i>Dashboards personalizados</li>
+                    <li><i class="fas fa-check-circle me-2"></i>Exportación en múltiples formatos</li>
+                    <li><i class="fas fa-check-circle me-2"></i>Análisis predictivo</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Sección de testimonios -->
+<div class="testimonials-section py-5">
+    <div class="container py-3">
+        <div class="text-center mb-5">
+            <span class="badge bg-primary px-3 py-2 mb-2">Testimonios</span>
+            <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "PayWeb ha transformado completamente la manera en que gestionamos la nómina en nuestra empresa. Ahorramos horas de trabajo cada semana en procesos que antes eran manuales."
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Cliente" class="testimonial-avatar">
+                        <div>
+                            <h5 class="testimonial-name">Ana Rodríguez</h5>
+                            <p class="testimonial-position">Gerente de RRHH, Grupo ABC</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "La facilidad para generar reportes y la precisión en los cálculos es impresionante. El soporte técnico siempre está disponible cuando lo necesitamos."
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Cliente" class="testimonial-avatar">
+                        <div>
+                            <h5 class="testimonial-name">Carlos Méndez</h5>
+                            <p class="testimonial-position">Director Financiero, XYZ Inc.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 mx-auto">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Implementamos PayWeb hace un año y ha sido una de nuestras mejores decisiones. Los empleados aprecian la transparencia en sus pagos."
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Cliente" class="testimonial-avatar">
+                        <div>
+                            <h5 class="testimonial-name">Laura Sánchez</h5>
+                            <p class="testimonial-position">CEO, TechSolutions Inc.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CTA Section mejorada -->
+<div class="cta-section py-5">
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-7 mb-4 mb-lg-0">
+                <h2 class="display-5 fw-bold text-white mb-4">¿Listo para revolucionar su gestión de nómina?</h2>
+                <p class="lead text-white-50 mb-4">Únase a cientos de empresas que ya han transformado su forma de trabajar con PayWeb.</p>
+                <div class="cta-features">
+                    <div class="cta-feature">
+                        <i class="fas fa-rocket me-2"></i>
+                        <span>Implementación rápida</span>
+                    </div>
+                    <div class="cta-feature">
+                        <i class="fas fa-headset me-2"></i>
+                        <span>Soporte técnico 24/7</span>
+                    </div>
+                    <div class="cta-feature">
+                        <i class="fas fa-calendar-check me-2"></i>
+                        <span>30 días de prueba gratuita</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="cta-card">
+                    <h3 class="mb-4">Comience hoy mismo</h3>
+                    <p class="mb-4">Cree su primera compañía en PayWeb y comience a gestionar su nómina de manera eficiente.</p>
+                    <a asp-page="/Wizard" class="btn btn-primary btn-lg w-100 py-3">
+                        <i class="fas fa-building me-2"></i>Crear Compañía
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+<script>
+    // Animación para los contadores
+    document.addEventListener('DOMContentLoaded', function() {
+        // Detectar cuando los elementos entran en el viewport
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Agrega la clase para iniciar la animación
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        // Observar elementos con animación
+        document.querySelectorAll('.feature-card, .hero-content, .hero-image-container, .stat-card, .testimonial-card').forEach(el => {
+            observer.observe(el);
+        });
+    });
+</script>
+}
+
+@section Styles {
+<link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />
+}

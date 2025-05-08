@@ -1,44 +1,168 @@
 ﻿@page
 @model WizardModel
 @{
-    ViewData["Title"] = "Wizard";
+    ViewData["Title"] = "Crear Compañía";
 }
 
-<h2>PayDayWeb</h2>
+<div class="container wizard-container">
+    <nav aria-label="breadcrumb" class="mb-4 animate__animated animate__fadeIn">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-page="/Index">Inicio</a></li>
+            <li class="breadcrumb-item active">Crear Compañía</li>
+        </ol>
+    </nav>
 
-<div>
-    <form method="post">
-        <input type="hidden" asp-for="CurrentStep" />
-        @if (Model.CurrentStep == 1)
-        {
-            <partial name="WizardSteps/_CreateCompany" />
-        }
-        else if (Model.CurrentStep == 2)
-        {
-            <partial name="WizardSteps/_GeneralData" />
-        }
-        else if (Model.CurrentStep == 3)
-        {
-            <partial name="WizardSteps/_Banks" />
-        }
-        else if (Model.CurrentStep == 4)
-        {
-            <partial name="WizardSteps/_Employees" />
-        }
-
-        <div class="d-flex justify-content-end mt-3">
-            @if (Model.CurrentStep > 1)
-            {
-                <button type="submit" name="direction" value="previous" class="btn btn-secondary">Previous</button>
-            }
-            @if (Model.CurrentStep < 4)
-            {
-                <button type="submit" name="direction" value="next" class="btn btn-primary">Next</button>
-            }
-            else
-            {
-                <button type="submit" name="direction" value="finish" class="btn btn-success">Finish</button>
-            }
+    <div class="row animate__animated animate__fadeIn">
+        <div class="col-md-8">
+            <h2 class="mb-3">Asistente de Creación de Compañía</h2>
+            <p class="lead mb-4 text-muted">
+                Complete la siguiente información para crear una nueva compañía en el sistema.
+                Este asistente le guiará a través del proceso paso a paso.
+            </p>
         </div>
-    </form>
+        <div class="col-md-4 text-md-end mb-4">
+            <a href="#" class="btn btn-outline-secondary">
+                <i class="fas fa-question-circle me-2"></i>Ayuda
+            </a>
+        </div>
+    </div>
+
+    <!-- Barra de progreso -->
+    <div class="progress-container animate__animated animate__fadeIn">
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 20%;" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <div class="progress-text">Paso 1 de 5</div>
+    </div>
+
+    <div class="card shadow-sm mb-4 animate__animated animate__fadeIn">
+        <div class="card-body">
+            <div class="wizard-steps mb-4">
+                <div class="row">
+                    <div class="col step-wrapper">
+                        <div class="step active">
+                            <div class="step-icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="step-label">Compañía</div>
+                            <div class="step-description">Información básica</div>
+                        </div>
+                    </div>
+                    <div class="col step-wrapper">
+                        <div class="step">
+                            <div class="step-icon">
+                                <i class="fas fa-sitemap"></i>
+                            </div>
+                            <div class="step-label">Datos Generales</div>
+                            <div class="step-description">Estructura organizativa</div>
+                        </div>
+                    </div>
+                    <div class="col step-wrapper">
+                        <div class="step">
+                            <div class="step-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="step-label">Empleados</div>
+                            <div class="step-description">Configuración de personal</div>
+                        </div>
+                    </div>
+                    <div class="col step-wrapper">
+                        <div class="step">
+                            <div class="step-icon">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <div class="step-label">Bancos</div>
+                            <div class="step-description">Información financiera</div>
+                        </div>
+                    </div>
+                    <div class="col step-wrapper">
+                        <div class="step">
+                            <div class="step-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="step-label">Confirmación</div>
+                            <div class="step-description">Revisar y confirmar</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contenedor para las vistas del wizard -->
+            <div id="wizard-steps-container">
+                <!-- Paso 1: Crear Compañía -->
+                <div id="step-0" class="wizard-step active">
+                    @await Html.PartialAsync("WizardSteps/_CreateCompany")
+                </div>
+
+                <!-- Paso 2: Datos Generales -->
+                <div id="step-1" class="wizard-step">
+                    @await Html.PartialAsync("WizardSteps/_GeneralData")
+                </div>
+
+                <!-- Paso 3: Empleados -->
+                <div id="step-2" class="wizard-step">
+                    @await Html.PartialAsync("WizardSteps/_Employees")
+                </div>
+
+                <!-- Paso 4: Bancos -->
+                <div id="step-3" class="wizard-step">
+                    @await Html.PartialAsync("WizardSteps/_Banks")
+                </div>
+
+                <!-- Paso 5: Confirmación -->
+                <div id="step-4" class="wizard-step">
+                    @await Html.PartialAsync("WizardSteps/_Confirmation")
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between mt-4">
+                <button type="button" class="btn btn-outline-primary" id="prevStep">
+                    <i class="fas fa-arrow-left me-2"></i>Anterior
+                </button>
+                <button type="button" class="btn btn-primary" id="nextStep">
+                    Siguiente<i class="fas fa-arrow-right ms-2"></i>
+                </button>
+            </div>
+        </div>
+    </div>
 </div>
+
+@section Scripts {
+    <script src="~/js/wizard.js" asp-append-version="true"></script>
+    <script>
+        // Actualizar la barra de progreso
+        function updateProgressBar(step) {
+            const progress = ((step + 1) / 5) * 100;
+            const progressBar = document.querySelector('.progress-bar');
+            const progressText = document.querySelector('.progress-text');
+
+            progressBar.style.width = progress + '%';
+            progressBar.setAttribute('aria-valuenow', progress);
+            progressText.textContent = `Paso ${step + 1} de 5`;
+        }
+
+        // Agregar la clase completed a los pasos completados
+        function updateCompletedSteps(currentStep) {
+            document.querySelectorAll('.step').forEach((step, index) => {
+                if (index < currentStep) {
+                    step.classList.add('completed');
+                } else {
+                    step.classList.remove('completed');
+                }
+            });
+        }
+
+        // Sobrescribir la función updateWizard
+        const originalUpdateWizard = updateWizard;
+        updateWizard = function() {
+            originalUpdateWizard();
+            updateProgressBar(currentStep);
+            updateCompletedSteps(currentStep);
+        };
+    </script>
+}
+
+@section Styles {
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="~/css/wizard.css" asp-append-version="true" />
+}

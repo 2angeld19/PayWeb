@@ -39,11 +39,13 @@ app.UseAuthorization();
 app.MapRazorPages();
 app.MapBlazorHub();
 app.MapControllers(); // Ensure controllers are mapped
-
-// Set the default page to the wizard
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
+// Por esto:
 app.MapGet("/", context =>
 {
-    context.Response.Redirect("/Wizard");
+    context.Response.Redirect("/Index");
     return Task.CompletedTask;
 });
 

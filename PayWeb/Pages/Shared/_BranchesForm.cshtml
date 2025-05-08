@@ -1,0 +1,17 @@
+﻿@model PayWeb.Controllers.FormController.BranchViewModel
+
+<form id="branchesForm" method="post">
+    <div class="mb-3">
+        <label for="branchName" class="form-label">Nombre de la Sucursal</label>
+        <input type="text" class="form-control" id="branchName" name="BranchName" required>
+    </div>
+    <div class="mb-3">
+        <label for="branchAddress" class="form-label">Dirección</label>
+        <input type="text" class="form-control" id="branchAddress" name="BranchAddress" required>
+    </div>
+    <div class="mb-3">
+        <label for="branchPhone" class="form-label">Teléfono</label>
+        <input type="text" class="form-control" id="branchPhone" name="BranchPhone" required>
+    </div>
+    <button type="submit" class="btn btn-primary" onclick="submitForm('branchesForm', '/Form/SaveBranches')">Guardar</button>
+</form>

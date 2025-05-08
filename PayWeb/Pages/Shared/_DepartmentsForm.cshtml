@@ -1,0 +1,22 @@
+﻿@model PayWeb.Controllers.FormController.BranchViewModel
+
+<form id="departmentsForm" method="post">
+    <div class="mb-3">
+        <label for="departmentName" class="form-label">Nombre del Departamento</label>
+        <input type="text" class="form-control" id="departmentName" name="DepartmentName">
+    </div>
+    <div class="mb-3">
+        <label for="departmentCode" class="form-label">Código del Departamento</label>
+        <input type="text" class="form-control" id="departmentCode" name="DepartmentCode">
+    </div>
+    <div class="mb-3">
+        <label for="managerId" class="form-label">Gerente Responsable</label>
+        <select class="form-select" id="managerId" name="ManagerId">
+            <option value="">Seleccione un gerente</option>
+            <option value="1">Gerente 1</option>
+            <option value="2">Gerente 2</option>
+            <option value="3">Gerente 3</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+</form>

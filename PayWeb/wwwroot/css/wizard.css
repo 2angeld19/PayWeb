@@ -1,0 +1,641 @@
+﻿/* wizard.css - Estilos mejorados para el asistente de creación de compañía */
+
+/* Contenedor principal del wizard */
+.container {
+    max-width: 1200px;
+}
+
+/* Header del wizard */
+.breadcrumb {
+    background-color: transparent;
+    border-radius: 8px;
+    padding: 12px 15px;
+    border-left: 4px solid #0d6efd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin-top: 20px;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    color: #6c757d;
+}
+
+.breadcrumb-item a {
+    color: #0d6efd;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+    .breadcrumb-item a:hover {
+        color: #0b5ed7;
+        text-decoration: underline;
+    }
+
+.breadcrumb-item.active {
+    color: #495057;
+    font-weight: 600;
+}
+
+/* Tarjeta principal del wizard */
+.card.shadow-sm {
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08) !important;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+    .card.shadow-sm:hover {
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12) !important;
+        transform: translateY(-5px);
+    }
+
+.card-body {
+    padding: 35px;
+}
+
+/* Estilos para los pasos del wizard */
+.wizard-steps {
+    padding: 30px 0;
+    margin-bottom: 35px;
+    position: relative;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+}
+
+.step-wrapper {
+    position: relative;
+}
+
+    .step-wrapper:not(:last-child):after {
+        content: '';
+        position: absolute;
+        top: 35px;
+        right: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(90deg, #e9ecef 0%, #dee2e6 100%);
+        z-index: 0;
+    }
+
+.step {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    padding: 0 10px;
+}
+
+.step-icon {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #f0f0f0, #e6e6e6);
+    box-shadow: 5px 5px 15px #d1d1d1, -5px -5px 15px #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: #adb5bd;
+    margin-bottom: 15px;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+    .step-icon:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 50%);
+        transform: translateY(-50%);
+    }
+
+.step.active .step-icon {
+    background: linear-gradient(145deg, #0d6efd, #0b5ed7);
+    box-shadow: 0 10px 20px rgba(13, 110, 253, 0.25);
+    color: white;
+    transform: scale(1.1);
+}
+
+.step.completed .step-icon {
+    background: linear-gradient(145deg, #28a745, #218838);
+    box-shadow: 0 10px 20px rgba(40, 167, 69, 0.25);
+    color: white;
+}
+
+.step-label {
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-align: center;
+    color: #6c757d;
+    transition: all 0.3s ease;
+    margin-bottom: 5px;
+}
+
+.step-description {
+    font-size: 0.8rem;
+    text-align: center;
+    color: #adb5bd;
+    max-width: 120px;
+    margin: 0 auto;
+    display: none;
+}
+
+.step.active .step-label {
+    color: #0d6efd;
+    font-weight: 700;
+}
+
+.step.active .step-description {
+    display: block;
+}
+
+.step.completed .step-label {
+    color: #28a745;
+}
+
+/* Animación para los pasos */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.step.active .step-icon {
+    animation: pulse 2s infinite;
+}
+
+/* Estilos para los contenedores de pasos */
+.wizard-step {
+    display: none;
+    animation: fadeIn 0.5s ease forwards;
+    padding: 10px;
+    border-radius: 12px;
+}
+
+    .wizard-step.active {
+        display: block;
+    }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos para los campos de formulario en el wizard */
+.wizard-step .form-label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #495057;
+    margin-bottom: 8px;
+}
+
+.wizard-step .form-control,
+.wizard-step .form-select {
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    padding: 12px 15px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    background-color: #f8f9fa;
+}
+
+    .wizard-step .form-control:focus,
+    .wizard-step .form-select:focus {
+        border-color: #0d6efd;
+        box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+        background-color: #fff;
+    }
+
+    .wizard-step .form-control:hover,
+    .wizard-step .form-select:hover {
+        border-color: #0d6efd;
+    }
+
+    .wizard-step .form-control:disabled,
+    .wizard-step .form-select:disabled {
+        background-color: #e9ecef;
+        opacity: 0.8;
+    }
+
+/* Estilos para las tarjetas internas */
+.wizard-step .card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+    .wizard-step .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+    }
+
+.wizard-step .card-body {
+    padding: 25px;
+}
+
+.wizard-step .card-title {
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #343a40;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+    .wizard-step .card-title:after {
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 3px;
+        background: #0d6efd;
+        bottom: 0;
+        left: 0;
+        border-radius: 10px;
+    }
+
+.wizard-step .card-text {
+    color: #6c757d;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.wizard-step .card i.fa-3x {
+    color: #0d6efd;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.wizard-step .card:hover i.fa-3x {
+    transform: scale(1.1);
+}
+
+/* Iconos con degradado */
+.wizard-step .card i.fa-3x {
+    background: linear-gradient(45deg, #0d6efd, #0dcaf0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.wizard-step .card.border-warning i.fa-3x {
+    background: linear-gradient(45deg, #ffc107, #fd7e14);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Estilos para secciones dentro del paso */
+.wizard-step .section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #212529;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f8f9fa;
+}
+
+.wizard-step .section-subtitle {
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin-bottom: 20px;
+}
+
+/* Botones de navegación */
+.btn {
+    padding: 12px 24px;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #0d6efd, #0b5ed7);
+    border: none;
+    box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3);
+}
+
+    .btn-primary:hover {
+        background: linear-gradient(135deg, #0b5ed7, #0a58ca);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(13, 110, 253, 0.4);
+    }
+
+.btn-outline-primary {
+    border: 2px solid #0d6efd;
+    color: #0d6efd;
+    font-weight: 600;
+}
+
+    .btn-outline-primary:hover {
+        background-color: #0d6efd;
+        border-color: #0d6efd;
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(13, 110, 253, 0.2);
+    }
+
+/* Botón de ayuda */
+.btn-outline-secondary {
+    border: 2px solid #6c757d;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+    .btn-outline-secondary:hover {
+        background-color: #6c757d;
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(108, 117, 125, 0.2);
+    }
+
+/* Estilos para el switch de construcción */
+.form-check-input {
+    width: 3rem;
+    height: 1.5rem;
+    margin-top: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .form-check-input:checked {
+        background-color: #0d6efd;
+        border-color: #0d6efd;
+    }
+
+    .form-check-input:focus {
+        box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    }
+
+/* Efectos de hover para los botones de navegación */
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para los modales */
+.modal-content {
+    border-radius: 15px;
+    border: none;
+    overflow: hidden;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+    padding: 20px 25px;
+}
+
+.modal-title {
+    font-weight: 700;
+    color: #212529;
+}
+
+.modal-body {
+    padding: 25px;
+}
+
+.btn-close {
+    transition: transform 0.3s ease;
+}
+
+    .btn-close:hover {
+        transform: rotate(90deg);
+    }
+
+/* Efectos de carga y transición */
+.loading {
+    position: relative;
+}
+
+    .loading:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.7);
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+    }
+
+    .loading:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 40px;
+        height: 40px;
+        border: 3px solid rgba(13, 110, 253, 0.3);
+        border-radius: 50%;
+        border-top-color: #0d6efd;
+        animation: spin 1s linear infinite;
+        z-index: 3;
+    }
+
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Estilo de progreso */
+.progress-container {
+    position: relative;
+    height: 30px;
+    margin-bottom: 20px;
+}
+
+.progress {
+    height: 8px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    background-color: #e9ecef;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.progress-bar {
+    background: linear-gradient(to right, #0d6efd, #0dcaf0);
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(13, 110, 253, 0.3);
+    transition: width 0.5s ease;
+}
+
+.progress-text {
+    position: absolute;
+    right: 0;
+    top: -25px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #0d6efd;
+}
+
+/* Mejoras para el formulario de confirmación */
+.confirm-section {
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 4px solid #0d6efd;
+}
+
+    .confirm-section h5 {
+        color: #212529;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+
+.confirm-label {
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 5px;
+}
+
+.confirm-value {
+    color: #6c757d;
+    margin-bottom: 15px;
+}
+
+.checkbox-fancy {
+    margin-top: 30px;
+}
+
+    .checkbox-fancy .form-check-input {
+        width: 1.5em;
+        height: 1.5em;
+        margin-top: 0;
+        vertical-align: middle;
+        background-color: #fff;
+        border: 2px solid #0d6efd;
+    }
+
+        .checkbox-fancy .form-check-input:checked {
+            background-color: #0d6efd;
+        }
+
+        .checkbox-fancy .form-check-input:focus {
+            box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+        }
+
+    .checkbox-fancy .form-check-label {
+        padding-left: 10px;
+        font-weight: 500;
+        color: #212529;
+    }
+
+/* Responsive design */
+@media (max-width: 992px) {
+    .card-body {
+        padding: 25px;
+    }
+
+    .wizard-steps {
+        padding: 20px 0;
+    }
+
+    .step-icon {
+        width: 65px;
+        height: 65px;
+        font-size: 24px;
+    }
+
+    .step-label {
+        font-size: 0.85rem;
+    }
+
+    .step-wrapper:not(:last-child):after {
+        top: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .card-body {
+        padding: 20px;
+    }
+
+    .step-wrapper:not(:last-child):after {
+        display: none;
+    }
+
+    .step-icon {
+        width: 55px;
+        height: 55px;
+        font-size: 22px;
+    }
+
+    .step-label {
+        font-size: 0.75rem;
+    }
+
+    .wizard-steps {
+        padding: 15px 0;
+        margin-bottom: 25px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.85rem;
+    }
+
+    .wizard-step .form-control,
+    .wizard-step .form-select {
+        padding: 10px 12px;
+    }
+
+    .wizard-step .section-title {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .step-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+
+    .step-label {
+        font-size: 0.7rem;
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .d-flex.justify-content-between {
+        flex-direction: column;
+    }
+}

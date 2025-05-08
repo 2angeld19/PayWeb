@@ -32,3 +32,4 @@ C:\Users\angel\source\repos\PayWeb\PayWeb\obj\Debug\net8.0\refint\PayWeb.dll
 C:\Users\angel\source\repos\PayWeb\PayWeb\obj\Debug\net8.0\PayWeb.pdb
 C:\Users\angel\source\repos\PayWeb\PayWeb\obj\Debug\net8.0\PayWeb.genruntimeconfig.cache
 C:\Users\angel\source\repos\PayWeb\PayWeb\obj\Debug\net8.0\ref\PayWeb.dll
+C:\Users\angel\source\repos\PayWeb\PayWeb\obj\Debug\net8.0\PayWeb.sourcelink.json
