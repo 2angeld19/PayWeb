@@ -639,3 +639,84 @@
         flex-direction: column;
     }
 }
+/* Estilos para los toggle switches en la sección de configuración */
+.company-toggle-switch {
+    width: 3rem;
+    height: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form-check.form-switch {
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+}
+
+    .form-check.form-switch .form-check-input {
+        margin-right: 10px;
+        margin-left: 0;
+    }
+
+    .form-check.form-switch .form-check-label {
+        margin-left: 10px;
+        font-weight: 500;
+    }
+
+/* Estilos para las secciones del formulario de compañía */
+.company-data-section,
+.company-logo-section,
+.identification-section,
+.payment-config-section {
+    background-color: #ffffff;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+    .company-data-section:hover,
+    .company-logo-section:hover,
+    .identification-section:hover,
+    .payment-config-section:hover {
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
+    }
+
+/* Estilos para la sección del logo */
+.logo-preview-container {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.logo-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    min-height: 200px;
+    text-align: center;
+    border: 2px dashed #dee2e6;
+    border-radius: 8px;
+    margin: 15px;
+    background-color: white;
+}
+
+.logo-img {
+    max-height: 180px;
+    object-fit: contain;
+}
+
+/* Estilos para los títulos de sección */
+.company-data-section h5,
+.company-logo-section h5,
+.identification-section h5,
+.payment-config-section h5 {
+    color: #0d6efd;
+    font-weight: 600;
+}
+
+/* Estilos para el contenedor de opciones */
+.options-container {
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+}

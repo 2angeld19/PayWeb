@@ -1,0 +1,159 @@
+﻿@model PayWeb.Controllers.FormController.PaymentMethodViewModel
+
+<form id="paymentMethodsForm" method="post" action="/Form/SavePaymentMethods">
+    <div class="employee-section-card mb-4">
+        <div class="card-header d-flex align-items-center">
+            <i class="fas fa-money-bill-wave me-2 text-primary"></i>
+            <h6 class="mb-0 fw-bold">Información de Pago</h6>
+        </div>
+        <div class="card-body">
+            @await Html.PartialAsync("Employees/_EmployeeInfoPartial", new PayWeb.Controllers.FormController.EmployeeBaseInfoViewModel
+            {
+                EmployeeCode = null,
+                FirstName = null,
+                LastName = null
+            })
+
+            <!-- Segunda fila: Forma de Pago -->
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <label class="form-label d-block">Forma de Pago:</label>
+                    <div class="mt-2">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="PaymentType" id="paymentTypeCash" value="cash">
+                            <label class="form-check-label" for="paymentTypeCash">Efectivo</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="PaymentType" id="paymentTypeCheck" value="check">
+                            <label class="form-check-label" for="paymentTypeCheck">Cheque</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="PaymentType" id="paymentTypeACH" value="ach">
+                            <label class="form-check-label" for="paymentTypeACH">Depósito Directo - ACH</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="schedule" class="form-label">Horario:</label>
+                            <select class="form-select" id="schedule" name="Schedule">
+                                <option value="" selected disabled>Seleccione...</option>
+                                <option value="diurno">Diurno</option>
+                                <option value="nocturno">Nocturno</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="clockCardNumber" class="form-label"># Tarjeta de Reloj:</label>
+                            <input type="text" class="form-control" id="clockCardNumber" name="ClockCardNumber">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tercera fila: Número de cuenta y tipo de cuenta -->
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <label for="accountNumber" class="form-label">Número de Cuenta:</label>
+                    <input type="text" class="form-control" id="accountNumber" name="AccountNumber">
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="form-label d-block">Tipo de Cuenta:</label>
+                            <div class="mt-2">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="AccountType" id="accountTypeChecking" value="checking">
+                                    <label class="form-check-label" for="accountTypeChecking">Corriente</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="AccountType" id="accountTypeSavings" value="savings">
+                                    <label class="form-check-label" for="accountTypeSavings">Ahorro</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="employee" class="form-label">Trabajador:</label>
+                            <select class="form-select" id="employee" name="Employee">
+                                <option value="" selected disabled>Seleccione...</option>
+                                <option value="emp1">Juan Pérez</option>
+                                <option value="emp2">María González</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cuarta fila: Banco y información del proyecto -->
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <label for="bankRoute" class="form-label">Ruta/Trans del Banco:</label>
+                    <div class="input-group">
+                        <select class="form-select" id="bankRoute" name="BankRoute">
+                            <option value="" selected>[Sin Definir]</option>
+                            <option value="bank1">Banco Nacional</option>
+                            <option value="bank2">Banco General</option>
+                        </select>
+                    </div>
+                    <input type="text" class="form-control mt-2" id="routeNumber" name="RouteNumber" placeholder="Número de ruta">
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="project" class="form-label">Proyecto:</label>
+                            <select class="form-select" id="project" name="Project">
+                                <option value="" selected disabled>Seleccione...</option>
+                                <option value="proj1">Proyecto A</option>
+                                <option value="proj2">Proyecto B</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="phase" class="form-label">Fase:</label>
+                            <select class="form-select" id="phase" name="Phase">
+                                <option value="" selected disabled>Seleccione...</option>
+                                <option value="phase1">Fase 1</option>
+                                <option value="phase2">Fase 2</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quinta fila: Banco de pago y división -->
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <label for="paymentBank" class="form-label">El banco de donde la compañía va a pagar el salario:</label>
+                    <select class="form-select" id="paymentBank" name="PaymentBank">
+                        <option value="" selected disabled>Seleccione...</option>
+                        <option value="bank1">Banco Nacional</option>
+                        <option value="bank2">Banco General</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="division" class="form-label">División:</label>
+                    <select class="form-select" id="division" name="Division">
+                        <option value="" selected disabled>Seleccione...</option>
+                        <option value="div1">División Norte</option>
+                        <option value="div2">División Sur</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Sexta fila: Fechas -->
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <label for="lastModifiedDate" class="form-label">Fecha Última Modif. Datos:</label>
+                    <div class="input-group">
+                        <input type="date" class="form-control" id="lastModifiedDate" name="LastModifiedDate">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="lastPayDate" class="form-label">Último Día Pagado:</label>
+                    <div class="input-group">
+                        <input type="date" class="form-control" id="lastPayDate" name="LastPayDate">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

@@ -68,9 +68,9 @@
                         <p class="card-text text-muted flex-grow-1 text-center">
                             Configure información relacionada con @form.Value.ToLower() de construcción
                         </p>
-                        <!-- Quitamos el atributo disabled y agregamos una clase -->
+                        <!-- Añadimos el atributo disabled por defecto -->
                         <button type="button" class="btn btn-outline-warning w-100 mt-auto construction-button"
-                                onclick="showModal('@form.Key', '@form.Value')">
+                                onclick="showModal('@form.Key', '@form.Value')" disabled>
                             <i class="fas fa-cog me-2"></i>Configurar
                         </button>
                     </div>
@@ -79,44 +79,3 @@
         }
     </div>
 </div>
-
-<!-- Modal único que se utilizará para todos los formularios -->
-<div class="modal fade" id="dynamicModal" tabindex="-1" aria-labelledby="dynamicModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="dynamicModalLabel">Modal</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body" id="modalContent">
-                <!-- Aquí se cargará el contenido dinámicamente -->
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-    // Obtener elementos del DOM
-    const toggleSwitch = document.getElementById("toggleSwitch");
-    const constructionButtons = document.querySelectorAll(".construction-button");
-
-    // Función para alternar la apariencia de los botones de construcción (no el disabled)
-    function toggleConstructionButtons(enable) {
-        constructionButtons.forEach(button => {
-            if (enable) {
-                button.classList.add('btn-warning');
-                button.classList.remove('btn-outline-warning');
-            } else {
-                button.classList.remove('btn-warning');
-                button.classList.add('btn-outline-warning');
-            }
-            // Ya no usamos disabled
-            // button.disabled = !enable;
-        });
-    }
-
-    // Evento para el interruptor
-    toggleSwitch.addEventListener("change", function () {
-        toggleConstructionButtons(this.checked);
-    });
-</script>

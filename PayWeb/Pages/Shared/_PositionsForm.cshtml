@@ -1,22 +1,31 @@
 ﻿@model PayWeb.Controllers.FormController.BranchViewModel
 
 <form id="positionsForm" method="post">
-    <div class="mb-3">
-        <label for="positionName" class="form-label">Nombre del Cargo</label>
-        <input type="text" class="form-control" id="positionName" name="PositionName">
+    <div class="row">
+        <div class="col-md-3 mb-3">
+            <label for="code" class="form-label">Código</label>
+            <input type="text" class="form-control" id="code" name="code" required>
+        </div>
+        <div class="col-md-9 mb-3">
+            <label for="name" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
     </div>
-    <div class="mb-3">
-        <label for="positionCode" class="form-label">Código del Cargo</label>
-        <input type="text" class="form-control" id="positionCode" name="PositionCode">
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <label for="codinterfase" class="form-label">Cod. Interfase</label>
+            <input type="text" class="form-control" id="codinterfase" name="codinterfase" required>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label class="form-label d-block">Status</label>
+            <div class="form-check form-switch">
+                <input class="form-check-input company-toggle-switch" type="checkbox" id="isActive" name="isActive" checked>
+                <label class="form-check-label" for="isActive">Activo</label>
+            </div>
+            <div class="form-check form-switch">
+                <input class="form-check-input company-toggle-switch" type="checkbox" id="" name="isInactive">
+                <label class="form-check-label" for="isInactive">Inactivo</label>
+            </div> 
+        </div>
     </div>
-    <div class="mb-3">
-        <label for="departmentId" class="form-label">Departamento</label>
-        <select class="form-select" id="departmentId" name="DepartmentId">
-            <option value="">Seleccione un departamento</option>
-            <option value="1">Departamento 1</option>
-            <option value="2">Departamento 2</option>
-            <option value="3">Departamento 3</option>
-        </select>
-    </div>
-    <button type="submit" class="btn btn-primary">Guardar</button>
 </form>

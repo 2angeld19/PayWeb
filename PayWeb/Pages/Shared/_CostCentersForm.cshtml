@@ -1,17 +1,270 @@
 ﻿@model PayWeb.Controllers.FormController.BranchViewModel
+<!-- Estilos personalizados para 5 columnas -->
+<style>
+    .col-lg-5col {
+        width: 20%;
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+        max-width: 20%;
+        position: relative;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
 
+    @@media (max-width: 992px) {
+        .col-lg-5col {
+            width: 100%;
+            -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+</style>
 <form id="costCentersForm" method="post">
-    <div class="mb-3">
-        <label for="costCenterName" class="form-label">Nombre del Centro de Costo</label>
-        <input type="text" class="form-control" id="costCenterName" name="CostCenterName">
+    <!-- Sección de información básica -->
+    <div class="card border-0 shadow-sm mb-4">
+        <div class="card-body">
+            <h6 class="card-title mb-3 fw-bold">Información General</h6>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <label for="costCenterCode" class="form-label">Código</label>
+                    <input type="text" class="form-control" id="costCenterCode" name="CostCenterCode" required>
+                </div>
+                <div class="col-md-8 mb-3">
+                    <label for="costCenterName" class="form-label">Nombre del Centro de Costo</label>
+                    <input type="text" class="form-control" id="costCenterName" name="CostCenterName" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="exportCode" class="form-label">Código para Exportar a Mayor General</label>
+                    <input type="text" class="form-control" id="exportCode" name="ExportCode">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="budget" class="form-label">Presupuesto</label>
+                    <div class="input-group">
+                        <span class="input-group-text">$</span>
+                        <input type="number" step="0.01" class="form-control" id="budget" name="Budget">
+                    </div>
+                </div>
+            </div>
+            <div class="mt-2">
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="costCenterStatus" name="Status" checked>
+                    <label class="form-check-label" for="costCenterStatus">Activo</label>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="mb-3">
-        <label for="costCenterCode" class="form-label">Código del Centro de Costo</label>
-        <input type="text" class="form-control" id="costCenterCode" name="CostCenterCode">
+
+    <!-- Sección de cuentas de gastos -->
+    <div class="card border-0 shadow-sm mb-4">
+        <div class="card-body">
+            <h6 class="card-title mb-3 fw-bold">Cuentas de Gastos</h6>
+
+            <div class="row mb-4">
+                <div class="col-lg-5col">
+                    <h6 class="text-muted fs-6 mb-3">Salarios</h6>
+                    <div class="mb-2">
+                        <label for="regularSalary" class="form-label">Sal. Regular</label>
+                        <input type="text" class="form-control" id="regularSalary" name="RegularSalary">
+                    </div>
+                    <div class="mb-2">
+                        <label for="overtime" class="form-label">Sobre tiempo</label>
+                        <input type="text" class="form-control" id="overtime" name="Overtime">
+                    </div>
+                    <div class="mb-2">
+                        <label for="adjustments" class="form-label">Ajustes</label>
+                        <input type="text" class="form-control" id="adjustments" name="Adjustments">
+                    </div>
+                    <div class="mb-2">
+                        <label for="commission" class="form-label">Comisión</label>
+                        <input type="text" class="form-control" id="commission" name="Commission">
+                    </div>
+                </div>
+
+                <div class="col-lg-5col">
+                    <h6 class="text-muted fs-6 mb-3">Bonos</h6>
+                    <div class="mb-2">
+                        <label for="productivityBonus" class="form-label">Prima Prod.</label>
+                        <input type="text" class="form-control" id="productivityBonus" name="ProductivityBonus">
+                    </div>
+                    <div class="mb-2">
+                        <label for="bonuses" class="form-label">Bonificaciones</label>
+                        <input type="text" class="form-control" id="bonuses" name="Bonuses">
+                    </div>
+                    <div class="mb-2">
+                        <label for="benefits" class="form-label">Gratificaciones</label>
+                        <input type="text" class="form-control" id="benefits" name="Benefits">
+                    </div>
+                    <div class="mb-2">
+                        <label for="assistanceBonus" class="form-label">Bono Asist.</label>
+                        <input type="text" class="form-control" id="assistanceBonus" name="AssistanceBonus">
+                    </div>
+                </div>
+
+                <div class="col-lg-5col">
+                    <h6 class="text-muted fs-6 mb-3">Impuestos</h6>
+                    <div class="mb-2">
+                        <label for="incomeTax1" class="form-label">Dir1 Ingr</label>
+                        <input type="text" class="form-control" id="incomeTax1" name="IncomeTax1">
+                    </div>
+                    <div class="mb-2">
+                        <label for="incomeTax2" class="form-label">Dir2 Ingr</label>
+                        <input type="text" class="form-control" id="incomeTax2" name="IncomeTax2">
+                    </div>
+                    <div class="mb-2">
+                        <label for="incomeTax3" class="form-label">Dir3 Ingr</label>
+                        <input type="text" class="form-control" id="incomeTax3" name="IncomeTax3">
+                    </div>
+                    <div class="mb-2">
+                        <label for="incomeTax6" class="form-label">Ingreso 6%</label>
+                        <input type="text" class="form-control" id="incomeTax6" name="IncomeTax6">
+                    </div>
+                </div>
+
+                <div class="col-lg-5col">
+                    <h6 class="text-muted fs-6 mb-3">Vacaciones</h6>
+                    <div class="mb-2">
+                        <label for="vacations" class="form-label">Vacaciones</label>
+                        <input type="text" class="form-control" id="vacations" name="Vacations">
+                    </div>
+                    <div class="mb-2">
+                        <label for="vacationReserve" class="form-label">GR de Vac</label>
+                        <input type="text" class="form-control" id="vacationReserve" name="VacationReserve">
+                    </div>
+                    <div class="mb-2">
+                        <label for="thirteenthMonth" class="form-label">XIII mes</label>
+                        <input type="text" class="form-control" id="thirteenthMonth" name="ThirteenthMonth">
+                    </div>
+                    <div class="mb-2">
+                        <label for="thirteenthMonthImprovement" class="form-label">Mejora a XIII</label>
+                        <input type="text" class="form-control" id="thirteenthMonthImprovement" name="ThirteenthMonthImprovement">
+                    </div>
+                </div>
+
+                <div class="col-lg-5col">
+                    <h6 class="text-muted fs-6 mb-3">Seguridad Social</h6>
+                    <div class="mb-2">
+                        <label for="ssEmployer" class="form-label">SS Patronal</label>
+                        <input type="text" class="form-control" id="ssEmployer" name="SSEmployer">
+                    </div>
+                    <div class="mb-2">
+                        <label for="seEmployer" class="form-label">SE Patronal</label>
+                        <input type="text" class="form-control" id="seEmployer" name="SEEmployer">
+                    </div>
+                    <div class="mb-2">
+                        <label for="profRisk" class="form-label">Riesgo Prof.</label>
+                        <input type="text" class="form-control" id="profRisk" name="ProfRisk">
+                    </div>
+                    <div class="mb-2">
+                        <label for="profitSharing" class="form-label">Part. Util.</label>
+                        <input type="text" class="form-control" id="profitSharing" name="ProfitSharing">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-5col">
+                    <h6 class="text-muted fs-6 mb-3">Gastos</h6>
+                    <div class="mb-2">
+                        <label for="transportAllowance" class="form-label">Gtos Trans.</label>
+                        <input type="text" class="form-control" id="transportAllowance" name="TransportAllowance">
+                    </div>
+                    <div class="mb-2">
+                        <label for="travelAllowance" class="form-label">Viáticos</label>
+                        <input type="text" class="form-control" id="travelAllowance" name="TravelAllowance">
+                    </div>
+                    <div class="mb-2">
+                        <label for="representationExpenses" class="form-label">Gtos Repre.</label>
+                        <input type="text" class="form-control" id="representationExpenses" name="RepresentationExpenses">
+                    </div>
+                    <div class="mb-2">
+                        <label for="diet" class="form-label">Dieta</label>
+                        <input type="text" class="form-control" id="diet" name="Diet">
+                    </div>
+                </div>
+
+                <div class="col-lg-5col">
+                    <h6 class="text-muted fs-6 mb-3">Direcciones</h6>
+                    <div class="mb-2">
+                        <label for="expense1" class="form-label">Dir1 Gast</label>
+                        <input type="text" class="form-control" id="expense1" name="Expense1">
+                    </div>
+                    <div class="mb-2">
+                        <label for="expense2" class="form-label">Dir2 Gast</label>
+                        <input type="text" class="form-control" id="expense2" name="Expense2">
+                    </div>
+                    <div class="mb-2">
+                        <label for="expense3" class="form-label">Dir3 Gast</label>
+                        <input type="text" class="form-control" id="expense3" name="Expense3">
+                    </div>
+                    <div class="mb-2">
+                        <label for="expense4" class="form-label">Dir4 Gast</label>
+                        <input type="text" class="form-control" id="expense4" name="Expense4">
+                    </div>
+                </div>
+
+                <div class="col-lg-5col">
+                    <h6 class="text-muted fs-6 mb-3">Construcción</h6>
+                    <div class="mb-2">
+                        <label for="expense5" class="form-label">Dir5 Gast</label>
+                        <input type="text" class="form-control" id="expense5" name="Expense5">
+                    </div>
+                    <div class="mb-2">
+                        <label for="prenotice" class="form-label">Preaviso</label>
+                        <input type="text" class="form-control" id="prenotice" name="Prenotice">
+                    </div>
+                    <div class="mb-2">
+                        <label for="seniority" class="form-label">Prima Ant.</label>
+                        <input type="text" class="form-control" id="seniority" name="Seniority">
+                    </div>
+                    <div class="mb-2">
+                        <label for="indemnity" class="form-label">Indemni.</label>
+                        <input type="text" class="form-control" id="indemnity" name="Indemnity">
+                    </div>
+                </div>
+
+                <div class="col-lg-5col">
+                    <h6 class="text-muted fs-6 mb-3">Alturas</h6>
+                    <div class="mb-2">
+                        <label for="construction" class="form-label">Construcción</label>
+                        <input type="text" class="form-control" id="construction" name="Construction">
+                    </div>
+                    <div class="mb-2">
+                        <label for="heightUpTo125" class="form-label">Altura hasta 1.25 m</label>
+                        <input type="text" class="form-control" id="heightUpTo125" name="HeightUpTo125">
+                    </div>
+                    <div class="mb-2">
+                        <label for="heightAbove125" class="form-label">Altura > 1.25 m</label>
+                        <input type="text" class="form-control" id="heightAbove125" name="HeightAbove125">
+                    </div>
+                    <div class="mb-2">
+                        <label for="depth" class="form-label">Profundidad</label>
+                        <input type="text" class="form-control" id="depth" name="Depth">
+                    </div>
+                </div>
+
+                <div class="col-lg-5col">
+                    <h6 class="text-muted fs-6 mb-3">Herramientas</h6>
+                    <div class="mb-2">
+                        <label for="tunnel" class="form-label">Túnel</label>
+                        <input type="text" class="form-control" id="tunnel" name="Tunnel">
+                    </div>
+                    <div class="mb-2">
+                        <label for="hammer" class="form-label">Martillo</label>
+                        <input type="text" class="form-control" id="hammer" name="Hammer">
+                    </div>
+                    <div class="mb-2">
+                        <label for="rake" class="form-label">Rastrillo</label>
+                        <input type="text" class="form-control" id="rake" name="Rake">
+                    </div>
+                    <div class="mb-2">
+                        <label for="rain" class="form-label">Lluvia</label>
+                        <input type="text" class="form-control" id="rain" name="Rain">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="mb-3">
-        <label for="budget" class="form-label">Presupuesto</label>
-        <input type="number" step="0.01" class="form-control" id="budget" name="Budget">
-    </div>
-    <button type="submit" class="btn btn-primary">Guardar</button>
 </form>

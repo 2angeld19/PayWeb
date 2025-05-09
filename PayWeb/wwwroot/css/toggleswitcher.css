@@ -1,0 +1,66 @@
+﻿/* toggleSwitcher.css - Estilos para los toggle switches */
+
+/* Tamaño y estilo básico para los toggle switches */
+.form-switch .form-check-input {
+    width: 2.5em;
+    height: 1.25em;
+    cursor: pointer;
+    margin-right: 0.5rem;
+}
+
+/* Colores personalizados para los toggle switches */
+.form-switch .form-check-input:checked {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* Hover y focus */
+.form-switch .form-check-input:hover {
+    border-color: var(--primary-color);
+}
+
+.form-switch .form-check-input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Estilo para el contenedor */
+.form-switch {
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+    margin-bottom: 0.5rem;
+}
+
+/* Etiqueta dentro del switch */
+.form-switch .form-check-label {
+    margin-left: 0.5rem;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+/* Para checkboxes que están dentro de un .d-block o .form-label d-block */
+.form-label.d-block + .form-check.form-switch,
+.d-block + .form-check.form-switch,
+.form-label.d-block + div .form-check.form-switch {
+    margin-top: 0.25rem;
+}
+
+/* Estilo para alinear mejor los checkboxes con otros elementos de formulario */
+.row .form-switch {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* Tamaño más grande para switches importantes */
+.form-switch.form-switch-lg .form-check-input {
+    width: 3em;
+    height: 1.5em;
+}
+
+/* Tamaño más pequeño para switches compactos */
+.form-switch.form-switch-sm .form-check-input {
+    width: 2em;
+    height: 1em;
+}

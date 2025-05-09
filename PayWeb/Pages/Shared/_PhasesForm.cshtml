@@ -2,21 +2,28 @@
 
 <form id="phasesForm" method="post">
     <div class="mb-3">
-        <label for="phaseName" class="form-label">Nombre de la Fase</label>
-        <input type="text" class="form-control" id="phaseName" name="PhaseName">
+        <label for="phaseCode" class="form-label">Código:</label>
+        <input type="text" class="form-control bg-light" id="phaseCode" name="PhaseCode">
     </div>
     <div class="mb-3">
-        <label for="phaseCode" class="form-label">Código de la Fase</label>
-        <input type="text" class="form-control" id="phaseCode" name="PhaseCode">
+        <label for="phaseDescription" class="form-label">Descripción:</label>
+        <input type="text" class="form-control" id="phaseDescription" name="PhaseDescription">
     </div>
     <div class="mb-3">
-        <label for="projectId" class="form-label">Proyecto</label>
-        <select class="form-select" id="projectId" name="ProjectId">
-            <option value="">Seleccione un proyecto</option>
-            <option value="1">Proyecto 1</option>
-            <option value="2">Proyecto 2</option>
-            <option value="3">Proyecto 3</option>
-        </select>
+        <label class="form-label">Status:</label>
+        <div class="ms-2">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Status" id="statusActive" value="active" checked>
+                <label class="form-check-label" for="statusActive">Activo</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Status" id="statusCancelled" value="cancelled">
+                <label class="form-check-label" for="statusCancelled">Cancelado</label>
+            </div>
+        </div>
     </div>
-    <button type="submit" class="btn btn-primary">Guardar</button>
+    <div class="mb-3">
+        <label for="generalLedgerCode" class="form-label">Código para Exportar a Mayor General</label>
+        <input type="text" class="form-control" id="generalLedgerCode" name="GeneralLedgerCode">
+    </div>
 </form>

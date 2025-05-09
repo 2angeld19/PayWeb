@@ -160,6 +160,17 @@
             updateCompletedSteps(currentStep);
         };
     </script>
+    <script>
+        // Verificar si Bootstrap está disponible
+        document.addEventListener('DOMContentLoaded', function() {
+            // Comprobar si Bootstrap está cargado correctamente
+            if (typeof bootstrap === 'undefined') {
+                console.error('Bootstrap no está cargado correctamente. Esto puede causar problemas con los modales.');
+            } else {
+                console.log('Bootstrap cargado correctamente, versión: ' + bootstrap.Tooltip.VERSION);
+            }
+        });
+    </script>
 }
 
 @section Styles {

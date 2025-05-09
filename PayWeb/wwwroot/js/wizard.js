@@ -67,10 +67,12 @@ function updateWizardVisibility() {
 }
 
 function initCurrentStepFunctionality() {
+    console.log(`Inicializando funcionalidad para paso ${currentStep}`);
+
     // Inicializar funcionalidades específicas según el paso actual
     switch (currentStep) {
         case 1: // _GeneralData
-            initGeneralDataStep();
+            setTimeout(initGeneralDataStep, 100); // Usar setTimeout para asegurar que el DOM esté listo
             break;
         case 2: // _Employees
             // Inicializar funcionalidad específica para empleados
@@ -85,23 +87,51 @@ function initCurrentStepFunctionality() {
 }
 
 function initGeneralDataStep() {
+    console.log("Inicializando funcionalidad para Datos Generales");
+
     // Inicializar el toggle switch para construcción
     const toggleSwitch = document.getElementById("toggleSwitch");
-    if (toggleSwitch) {
-        toggleSwitch.addEventListener("change", function () {
-            // Ya no cambiamos el estado disabled de los botones de construcción
-            // En su lugar, podemos usar clases para cambiar su apariencia
-            document.querySelectorAll(".construction-button").forEach(button => {
-                if (this.checked) {
-                    button.classList.add('active-construction');
-                    // button.disabled = !this.checked; <- Eliminado
-                } else {
-                    button.classList.remove('active-construction');
-                    // button.disabled = !this.checked; <- Eliminado
-                }
-            });
+    const constructionButtons = document.querySelectorAll(".construction-button");
+
+    if (toggleSwitch && constructionButtons.length > 0) {
+        console.log("Toggle switch y botones encontrados");
+
+        // Estado inicial - por defecto los botones están deshabilitados
+        constructionButtons.forEach(button => {
+            button.disabled = !toggleSwitch.checked;
+            console.log("Botón establecido como: " + (button.disabled ? "deshabilitado" : "habilitado"));
         });
+
+        // Evento para el interruptor - eliminar event listeners anteriores para evitar duplicidad
+        toggleSwitch.removeEventListener("change", handleToggleChange);
+        toggleSwitch.addEventListener("change", handleToggleChange);
+
+        console.log("Event listener agregado al toggle switch");
+    } else {
+        console.warn("No se encontró el toggle switch o los botones de construcción");
     }
+}
+
+// Función separada para manejar el cambio del toggle - permite eliminar el listener fácilmente
+function handleToggleChange() {
+    console.log("Toggle cambiado a: " + (this.checked ? "activado" : "desactivado"));
+
+    const constructionButtons = document.querySelectorAll(".construction-button");
+    constructionButtons.forEach(button => {
+        // Cambiar disabled según el estado del toggle
+        button.disabled = !this.checked;
+
+        // Actualizar clases para cambiar la apariencia
+        if (this.checked) {
+            button.classList.add('btn-warning');
+            button.classList.remove('btn-outline-warning');
+        } else {
+            button.classList.remove('btn-warning');
+            button.classList.add('btn-outline-warning');
+        }
+
+        console.log("Botón actualizado a: " + (button.disabled ? "deshabilitado" : "habilitado"));
+    });
 }
 
 // Inicializar la navegación al cargar la página

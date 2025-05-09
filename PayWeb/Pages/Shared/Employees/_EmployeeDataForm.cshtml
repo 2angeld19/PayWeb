@@ -1,0 +1,320 @@
+﻿@model PayWeb.Controllers.FormController.EmployeeViewModel
+
+<form id="employeeDataForm" method="post" action="/Form/SaveEmployeeData">
+    <!-- Sección de información básica - visible en primer plano -->
+    <div class="employee-section-card mb-4">
+        <div class="card-header d-flex align-items-center">
+            <i class="fas fa-user-circle me-2 text-primary"></i>
+            <h6 class="mb-0 fw-bold">Información Personal</h6>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-3">
+                    <label for="employeeId" class="form-label">Código</label>
+                    <input type="text" class="form-control" id="employeeId" name="EmployeeId" required>
+                </div>
+                <div class="col-md-5">
+                    <label for="firstName" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="firstName" name="FirstName" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="lastName" class="form-label">Apellido</label>
+                    <input type="text" class="form-control" id="lastName" name="LastName" required>
+                </div>
+            </div>
+
+            <div class="row mt-3">
+                <div class="col-md-3">
+                    <label for="identificationNumber" class="form-label">S. Soc:</label>
+                    <input type="text" class="form-control" id="identificationNumber" name="IdentificationNumber" required>
+                </div>
+                <div class="col-md-5">
+                    <label for="lastReportedId" class="form-label">Última Cédula Reportada a CSS</label>
+                    <input type="text" class="form-control" id="lastReportedId" name="LastReportedId">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label d-block">Grupo ISR</label>
+                    <select class="form-select" id="taxGroup" name="TaxGroup">
+                        <option value="" selected disabled>Seleccione...</option>
+                        <option value="normal">Normal</option>
+                        <option value="especial">Especial</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row mt-3">
+                <div class="col-md-3">
+                    <label for="nationalId" class="form-label">Cédula</label>
+                    <input type="text" class="form-control" id="nationalId" name="NationalId">
+                </div>
+                <div class="col-md-5 d-flex align-items-center">
+                    <div class="form-check mt-4">
+                        <input class="form-check-input" type="checkbox" id="isPassport" name="IsPassport">
+                        <label class="form-check-label" for="isPassport">¿Es Pasaporte?</label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="dependents" class="form-label"># Depe</label>
+                    <input type="number" class="form-control" id="dependents" name="Dependents" value="0">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección de Status y pago -->
+    <div class="employee-section-card mb-4">
+        <div class="card-header d-flex align-items-center">
+            <i class="fas fa-user-check me-2 text-primary"></i>
+            <h6 class="mb-0 fw-bold">Status y Pago</h6>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-3">
+                    <label for="dv" class="form-label">DV:</label>
+                    <input type="text" class="form-control" id="dv" name="DV" maxlength="2">
+                </div>
+                <div class="col-md-5">
+                    <label class="form-label d-block">Status</label>
+                    <div class="mt-2">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="Status" id="statusActive" value="active" checked>
+                            <label class="form-check-label" for="statusActive">Activo</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="Status" id="statusVacation" value="vacation">
+                            <label class="form-check-label" for="statusVacation">Vacaciones</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="Status" id="statusSuspended" value="suspended">
+                            <label class="form-check-label" for="statusSuspended">Suspendido</label>
+                        </div>
+                    </div>
+                    <div class="mt-1">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="Status" id="statusLeave" value="leave">
+                            <label class="form-check-label" for="statusLeave">Licencia</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="Status" id="statusInactive" value="inactive">
+                            <label class="form-check-label" for="statusInactive">Cesante</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="agreedSalary" class="form-label">Salario pactado</label>
+                    <div class="input-group">
+                        <input type="number" class="form-control" id="agreedSalary" name="AgreedSalary" step="0.01" value="0.00">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-3">
+                <div class="col-md-4">
+                    <label for="payGroup" class="form-label">Grupo de pago:</label>
+                    <select class="form-select" id="payGroup" name="PayGroup">
+                        <option value="" selected disabled>Seleccione...</option>
+                        <option value="quincenal">Quincenal</option>
+                        <option value="mensual">Mensual</option>
+                        <option value="semanal">Semanal</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label for="baseHours" class="form-label">Horas Base</label>
+                    <input type="number" class="form-control" id="baseHours" name="BaseHours" step="0.01" value="0.00">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label d-block">Tipo de Salario</label>
+                    <div class="mt-2">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="SalaryType" id="salaryTypeMonthly" value="monthly" checked>
+                            <label class="form-check-label" for="salaryTypeMonthly">Mensual</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="SalaryType" id="salaryTypeHourly" value="hourly">
+                            <label class="form-check-label" for="salaryTypeHourly">Hora</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección de fechas -->
+    <div class="employee-section-card mb-4">
+        <div class="card-header d-flex align-items-center">
+            <i class="fas fa-calendar-alt me-2 text-primary"></i>
+            <h6 class="mb-0 fw-bold">Fechas</h6>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="entryDate" class="form-label">Fecha de Ingreso</label>
+                    <input type="date" class="form-control" id="entryDate" name="EntryDate">
+                </div>
+                <div class="col-md-4">
+                    <label for="vacationEndDate" class="form-label">Fecha Venc. Contrato</label>
+                    <input type="date" class="form-control" id="vacationEndDate" name="VacationEndDate">
+                </div>
+                <div class="col-md-4">
+                    <label for="terminationDate" class="form-label">Fecha de Liquidación</label>
+                    <input type="date" class="form-control" id="terminationDate" name="TerminationDate">
+                </div>
+            </div>
+
+            <div class="row mt-3">
+                <div class="col-md-4">
+                    <label for="birthDate" class="form-label">Fecha de Nacimiento</label>
+                    <input type="date" class="form-control" id="birthDate" name="DateOfBirth">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección de departamento y cálculo de ISR -->
+    <div class="employee-section-card mb-4">
+        <div class="card-header d-flex align-items-center">
+            <i class="fas fa-building me-2 text-primary"></i>
+            <h6 class="mb-0 fw-bold">Departamento y Cálculo de I.S.R.</h6>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="branch" class="form-label">Sucursal</label>
+                    <select class="form-select" id="branch" name="Branch">
+                        <option value="" selected disabled>Seleccione...</option>
+                        <option value="central">Central</option>
+                        <option value="oeste">Oeste</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label for="department" class="form-label">Depart.</label>
+                    <select class="form-select" id="department" name="Department">
+                        <option value="" selected disabled>Seleccione...</option>
+                        <option value="admin">Administración</option>
+                        <option value="finance">Finanzas</option>
+                        <option value="hr">Recursos Humanos</option>
+                        <option value="it">TI</option>
+                        <option value="operations">Operaciones</option>
+                        <option value="sales">Ventas</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label for="costCenter" class="form-label">Centro de Costo</label>
+                    <select class="form-select" id="costCenter" name="CostCenter">
+                        <option value="" selected disabled>Seleccione...</option>
+                        <option value="cc1">CC-001</option>
+                        <option value="cc2">CC-002</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row mt-3">
+                <div class="col-md-8">
+                    <label class="form-label d-block">MÉTODOS DE CÁLCULO DE I.S.R.</label>
+                    <div class="mt-2">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="TaxCalculationMethod" id="taxMethodAvg" value="average" checked>
+                            <label class="form-check-label" for="taxMethodAvg">Promedio</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="TaxCalculationMethod" id="taxMethodImmediate" value="immediate">
+                            <label class="form-check-label" for="taxMethodImmediate">Inmediato</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="TaxCalculationMethod" id="taxMethodTable" value="table">
+                            <label class="form-check-label" for="taxMethodTable">Tabla</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="TaxCalculationMethod" id="taxMethodModifiedTable" value="modifiedTable">
+                            <label class="form-check-label" for="taxMethodModifiedTable">Tabla Modificada</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="TaxCalculationMethod" id="taxMethodFixed" value="fixed">
+                            <label class="form-check-label" for="taxMethodFixed">Fijo</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="additionalAmount" class="form-label">Adicional</label>
+                    <input type="number" class="form-control" id="additionalAmount" name="AdditionalAmount" step="0.01" value="0.00">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección de tipo de empleado -->
+    <div class="employee-section-card mb-4">
+        <div class="card-header d-flex align-items-center">
+            <i class="fas fa-user-tag me-2 text-primary"></i>
+            <h6 class="mb-0 fw-bold">Tipo de Empleado</h6>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="mt-2">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="EmployeeType" id="employeeTypePermanent" value="permanent" checked>
+                            <label class="form-check-label" for="employeeTypePermanent">Permanente</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="EmployeeType" id="employeeTypeEventual" value="temporary">
+                            <label class="form-check-label" for="employeeTypeEventual">Eventual</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección de información de contacto -->
+    <div class="employee-section-card mb-4">
+        <div class="card-header d-flex align-items-center">
+            <i class="fas fa-address-book me-2 text-primary"></i>
+            <h6 class="mb-0 fw-bold">Información de Contacto</h6>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="email" class="form-label">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="email" name="Email">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="phoneNumber" class="form-label">Teléfono</label>
+                    <input type="tel" class="form-control" id="phoneNumber" name="PhoneNumber">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 mb-3">
+                    <label for="address" class="form-label">Dirección</label>
+                    <textarea class="form-control" id="address" name="Address" rows="2"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección de información adicional -->
+    <div class="employee-section-card mb-4">
+        <div class="card-header d-flex align-items-center">
+            <i class="fas fa-info-circle me-2 text-primary"></i>
+            <h6 class="mb-0 fw-bold">Información Adicional</h6>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="nationality" class="form-label">Nacionalidad</label>
+                    <input type="text" class="form-control" id="nationality" name="Nationality">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="maritalStatus" class="form-label">Estado Civil</label>
+                    <select class="form-select" id="maritalStatus" name="MaritalStatus">
+                        <option value="" selected disabled>Seleccione...</option>
+                        <option value="single">Soltero/a</option>
+                        <option value="married">Casado/a</option>
+                        <option value="divorced">Divorciado/a</option>
+                        <option value="widowed">Viudo/a</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

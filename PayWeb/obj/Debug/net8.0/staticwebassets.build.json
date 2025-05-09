@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "z4blK5LLi2YBpkQLdsEGpP1AxQBVBLd7VqAetdN05Lw=",
+  "Hash": "7qgTbNFv2DP+33YUb+a4FI9kvetuQLUXD0BBBfJeE0A=",
   "Source": "PayWeb",
   "BasePath": "_content/PayWeb",
   "Mode": "Default",
@@ -59,6 +59,27 @@
       "OriginalItemSpec": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\PayWeb.bundle.scp.css"
     },
     {
+      "Identity": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\css\\employees.css",
+      "SourceId": "PayWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\",
+      "BasePath": "_content/PayWeb",
+      "RelativePath": "css/employees#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "j1b4b38wc6",
+      "Integrity": "52dRpQdfwA5J9F5O5es1yyF1zdQwsmXJATG/FYcKFxw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\employees.css"
+    },
+    {
       "Identity": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\css\\index.css",
       "SourceId": "PayWeb",
       "SourceType": "Discovered",
@@ -101,6 +122,27 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
+      "Identity": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\css\\toggleswitcher.css",
+      "SourceId": "PayWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\",
+      "BasePath": "_content/PayWeb",
+      "RelativePath": "css/toggleswitcher#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "a2q34ylzw0",
+      "Integrity": "sgJy1Rq/n48T3/Fqr28KoXwrME3/n5dezO79dXidv9Q=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\toggleswitcher.css"
+    },
+    {
       "Identity": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\css\\wizard.css",
       "SourceId": "PayWeb",
       "SourceType": "Discovered",
@@ -115,8 +157,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "6b0ccia9xi",
-      "Integrity": "bn9EEMSGk/+vb1jwQULfk/AdpClJU/mJAe+H1u2/O4o=",
+      "Fingerprint": "4z58wrhhg4",
+      "Integrity": "wHP0/dAPDq+Mn2TFCTqoGMFo0rrY22QU5wkLhV5ZC3E=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\wizard.css"
@@ -143,6 +185,48 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\js\\costcenterform.js",
+      "SourceId": "PayWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\",
+      "BasePath": "_content/PayWeb",
+      "RelativePath": "js/costcenterform#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8ffsrnn0l5",
+      "Integrity": "FGSgMOcx/Q9xrjLELYOeateCx7LpPd0N9NLdODfPRnc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\costcenterform.js"
+    },
+    {
+      "Identity": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\js\\employees.js",
+      "SourceId": "PayWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\",
+      "BasePath": "_content/PayWeb",
+      "RelativePath": "js/employees#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "x1nweqvrhb",
+      "Integrity": "tWITBsbMR+wWwCOlMaAdPEYwl21jbWM4quVVhyvmcvk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\employees.js"
+    },
+    {
       "Identity": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\js\\modalHelper.js",
       "SourceId": "PayWeb",
       "SourceType": "Discovered",
@@ -157,11 +241,32 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "rzjoxcq8kv",
-      "Integrity": "yXMHpCu12kyvTtizlphOAWz+13Tf4mh3saHld49wWSA=",
+      "Fingerprint": "eusytqwz9u",
+      "Integrity": "epSFf5BMWUOeItuTqnTCYfjHSEBCnnn+u62tJPFvis4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\modalHelper.js"
+    },
+    {
+      "Identity": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\js\\scheduleform.js",
+      "SourceId": "PayWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\",
+      "BasePath": "_content/PayWeb",
+      "RelativePath": "js/scheduleform#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "szu7kce9hd",
+      "Integrity": "qPxNBFM9dzFtTay2zsjPxLHrgi9hFno6Xnw58R5RiHQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\scheduleform.js"
     },
     {
       "Identity": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\js\\site.js",
@@ -185,6 +290,27 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
+      "Identity": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\js\\toggleswitchers.js",
+      "SourceId": "PayWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\",
+      "BasePath": "_content/PayWeb",
+      "RelativePath": "js/toggleswitchers#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "2t02xfg3d8",
+      "Integrity": "anJIryqvdai/aEPZriGDKYpDKszdNyEf0MRWtoX4PGs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\toggleswitchers.js"
+    },
+    {
       "Identity": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\js\\wizard.js",
       "SourceId": "PayWeb",
       "SourceType": "Discovered",
@@ -199,8 +325,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "yzuwqapbfm",
-      "Integrity": "EonHMUz2nGqNIQZamJGddUo29/iV6OgYPy3P8StK7/s=",
+      "Fingerprint": "swhx33rr0f",
+      "Integrity": "FOjHnCEU+c/MBq5TdYBBmjOCjr3N2eZritmNnsImwLc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\wizard.js"
@@ -1405,6 +1531,88 @@
   ],
   "Endpoints": [
     {
+      "Route": "css/employees.css",
+      "AssetFile": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\css\\employees.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2326"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"52dRpQdfwA5J9F5O5es1yyF1zdQwsmXJATG/FYcKFxw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 09 May 2025 21:13:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-52dRpQdfwA5J9F5O5es1yyF1zdQwsmXJATG/FYcKFxw="
+        }
+      ]
+    },
+    {
+      "Route": "css/employees.j1b4b38wc6.css",
+      "AssetFile": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\css\\employees.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2326"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"52dRpQdfwA5J9F5O5es1yyF1zdQwsmXJATG/FYcKFxw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 09 May 2025 21:13:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "j1b4b38wc6"
+        },
+        {
+          "Name": "label",
+          "Value": "css/employees.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-52dRpQdfwA5J9F5O5es1yyF1zdQwsmXJATG/FYcKFxw="
+        }
+      ]
+    },
+    {
       "Route": "css/index.css",
       "AssetFile": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\css\\index.css",
       "Selectors": [],
@@ -1569,8 +1777,8 @@
       ]
     },
     {
-      "Route": "css/wizard.6b0ccia9xi.css",
-      "AssetFile": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\css\\wizard.css",
+      "Route": "css/toggleswitcher.a2q34ylzw0.css",
+      "AssetFile": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\css\\toggleswitcher.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1579,7 +1787,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "13466"
+          "Value": "1685"
         },
         {
           "Name": "Content-Type",
@@ -1587,11 +1795,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"bn9EEMSGk/+vb1jwQULfk/AdpClJU/mJAe+H1u2/O4o=\""
+          "Value": "\"sgJy1Rq/n48T3/Fqr28KoXwrME3/n5dezO79dXidv9Q=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 08 May 2025 21:21:43 GMT"
+          "Value": "Fri, 09 May 2025 19:30:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1601,7 +1809,89 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "6b0ccia9xi"
+          "Value": "a2q34ylzw0"
+        },
+        {
+          "Name": "label",
+          "Value": "css/toggleswitcher.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-sgJy1Rq/n48T3/Fqr28KoXwrME3/n5dezO79dXidv9Q="
+        }
+      ]
+    },
+    {
+      "Route": "css/toggleswitcher.css",
+      "AssetFile": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\css\\toggleswitcher.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1685"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sgJy1Rq/n48T3/Fqr28KoXwrME3/n5dezO79dXidv9Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 09 May 2025 19:30:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-sgJy1Rq/n48T3/Fqr28KoXwrME3/n5dezO79dXidv9Q="
+        }
+      ]
+    },
+    {
+      "Route": "css/wizard.4z58wrhhg4.css",
+      "AssetFile": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\css\\wizard.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15321"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wHP0/dAPDq+Mn2TFCTqoGMFo0rrY22QU5wkLhV5ZC3E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 09 May 2025 14:52:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4z58wrhhg4"
         },
         {
           "Name": "label",
@@ -1609,7 +1899,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-bn9EEMSGk/+vb1jwQULfk/AdpClJU/mJAe+H1u2/O4o="
+          "Value": "sha256-wHP0/dAPDq+Mn2TFCTqoGMFo0rrY22QU5wkLhV5ZC3E="
         }
       ]
     },
@@ -1624,7 +1914,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "13466"
+          "Value": "15321"
         },
         {
           "Name": "Content-Type",
@@ -1632,11 +1922,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"bn9EEMSGk/+vb1jwQULfk/AdpClJU/mJAe+H1u2/O4o=\""
+          "Value": "\"wHP0/dAPDq+Mn2TFCTqoGMFo0rrY22QU5wkLhV5ZC3E=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 08 May 2025 21:21:43 GMT"
+          "Value": "Fri, 09 May 2025 14:52:46 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1646,7 +1936,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-bn9EEMSGk/+vb1jwQULfk/AdpClJU/mJAe+H1u2/O4o="
+          "Value": "sha256-wHP0/dAPDq+Mn2TFCTqoGMFo0rrY22QU5wkLhV5ZC3E="
         }
       ]
     },
@@ -1733,6 +2023,215 @@
       ]
     },
     {
+      "Route": "js/costcenterform.8ffsrnn0l5.js",
+      "AssetFile": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\js\\costcenterform.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9504"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FGSgMOcx/Q9xrjLELYOeateCx7LpPd0N9NLdODfPRnc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 09 May 2025 19:23:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8ffsrnn0l5"
+        },
+        {
+          "Name": "label",
+          "Value": "js/costcenterform.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-FGSgMOcx/Q9xrjLELYOeateCx7LpPd0N9NLdODfPRnc="
+        }
+      ]
+    },
+    {
+      "Route": "js/costcenterform.js",
+      "AssetFile": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\js\\costcenterform.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9504"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FGSgMOcx/Q9xrjLELYOeateCx7LpPd0N9NLdODfPRnc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 09 May 2025 19:23:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-FGSgMOcx/Q9xrjLELYOeateCx7LpPd0N9NLdODfPRnc="
+        }
+      ]
+    },
+    {
+      "Route": "js/employees.js",
+      "AssetFile": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\js\\employees.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12627"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tWITBsbMR+wWwCOlMaAdPEYwl21jbWM4quVVhyvmcvk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 09 May 2025 21:13:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-tWITBsbMR+wWwCOlMaAdPEYwl21jbWM4quVVhyvmcvk="
+        }
+      ]
+    },
+    {
+      "Route": "js/employees.x1nweqvrhb.js",
+      "AssetFile": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\js\\employees.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12627"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tWITBsbMR+wWwCOlMaAdPEYwl21jbWM4quVVhyvmcvk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 09 May 2025 21:13:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "x1nweqvrhb"
+        },
+        {
+          "Name": "label",
+          "Value": "js/employees.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-tWITBsbMR+wWwCOlMaAdPEYwl21jbWM4quVVhyvmcvk="
+        }
+      ]
+    },
+    {
+      "Route": "js/modalHelper.eusytqwz9u.js",
+      "AssetFile": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\js\\modalHelper.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7144"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"epSFf5BMWUOeItuTqnTCYfjHSEBCnnn+u62tJPFvis4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 09 May 2025 16:10:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "eusytqwz9u"
+        },
+        {
+          "Name": "label",
+          "Value": "js/modalHelper.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-epSFf5BMWUOeItuTqnTCYfjHSEBCnnn+u62tJPFvis4="
+        }
+      ]
+    },
+    {
       "Route": "js/modalHelper.js",
       "AssetFile": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\js\\modalHelper.js",
       "Selectors": [],
@@ -1743,7 +2242,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3813"
+          "Value": "7144"
         },
         {
           "Name": "Content-Type",
@@ -1751,11 +2250,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"yXMHpCu12kyvTtizlphOAWz+13Tf4mh3saHld49wWSA=\""
+          "Value": "\"epSFf5BMWUOeItuTqnTCYfjHSEBCnnn+u62tJPFvis4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 08 May 2025 20:02:59 GMT"
+          "Value": "Fri, 09 May 2025 16:10:38 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1765,13 +2264,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-yXMHpCu12kyvTtizlphOAWz+13Tf4mh3saHld49wWSA="
+          "Value": "sha256-epSFf5BMWUOeItuTqnTCYfjHSEBCnnn+u62tJPFvis4="
         }
       ]
     },
     {
-      "Route": "js/modalHelper.rzjoxcq8kv.js",
-      "AssetFile": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\js\\modalHelper.js",
+      "Route": "js/scheduleform.js",
+      "AssetFile": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\js\\scheduleform.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1780,7 +2279,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3813"
+          "Value": "5863"
         },
         {
           "Name": "Content-Type",
@@ -1788,11 +2287,48 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"yXMHpCu12kyvTtizlphOAWz+13Tf4mh3saHld49wWSA=\""
+          "Value": "\"qPxNBFM9dzFtTay2zsjPxLHrgi9hFno6Xnw58R5RiHQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 08 May 2025 20:02:59 GMT"
+          "Value": "Fri, 09 May 2025 16:21:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-qPxNBFM9dzFtTay2zsjPxLHrgi9hFno6Xnw58R5RiHQ="
+        }
+      ]
+    },
+    {
+      "Route": "js/scheduleform.szu7kce9hd.js",
+      "AssetFile": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\js\\scheduleform.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5863"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qPxNBFM9dzFtTay2zsjPxLHrgi9hFno6Xnw58R5RiHQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 09 May 2025 16:21:01 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1802,15 +2338,15 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "rzjoxcq8kv"
+          "Value": "szu7kce9hd"
         },
         {
           "Name": "label",
-          "Value": "js/modalHelper.js"
+          "Value": "js/scheduleform.js"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-yXMHpCu12kyvTtizlphOAWz+13Tf4mh3saHld49wWSA="
+          "Value": "sha256-qPxNBFM9dzFtTay2zsjPxLHrgi9hFno6Xnw58R5RiHQ="
         }
       ]
     },
@@ -1897,6 +2433,88 @@
       ]
     },
     {
+      "Route": "js/toggleswitchers.2t02xfg3d8.js",
+      "AssetFile": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\js\\toggleswitchers.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4807"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"anJIryqvdai/aEPZriGDKYpDKszdNyEf0MRWtoX4PGs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 09 May 2025 19:28:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2t02xfg3d8"
+        },
+        {
+          "Name": "label",
+          "Value": "js/toggleswitchers.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-anJIryqvdai/aEPZriGDKYpDKszdNyEf0MRWtoX4PGs="
+        }
+      ]
+    },
+    {
+      "Route": "js/toggleswitchers.js",
+      "AssetFile": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\js\\toggleswitchers.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4807"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"anJIryqvdai/aEPZriGDKYpDKszdNyEf0MRWtoX4PGs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 09 May 2025 19:28:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-anJIryqvdai/aEPZriGDKYpDKszdNyEf0MRWtoX4PGs="
+        }
+      ]
+    },
+    {
       "Route": "js/wizard.js",
       "AssetFile": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\js\\wizard.js",
       "Selectors": [],
@@ -1907,7 +2525,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3784"
+          "Value": "5115"
         },
         {
           "Name": "Content-Type",
@@ -1915,11 +2533,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"EonHMUz2nGqNIQZamJGddUo29/iV6OgYPy3P8StK7/s=\""
+          "Value": "\"FOjHnCEU+c/MBq5TdYBBmjOCjr3N2eZritmNnsImwLc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 08 May 2025 21:00:21 GMT"
+          "Value": "Thu, 08 May 2025 21:43:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1929,12 +2547,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-EonHMUz2nGqNIQZamJGddUo29/iV6OgYPy3P8StK7/s="
+          "Value": "sha256-FOjHnCEU+c/MBq5TdYBBmjOCjr3N2eZritmNnsImwLc="
         }
       ]
     },
     {
-      "Route": "js/wizard.yzuwqapbfm.js",
+      "Route": "js/wizard.swhx33rr0f.js",
       "AssetFile": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\js\\wizard.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1944,7 +2562,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3784"
+          "Value": "5115"
         },
         {
           "Name": "Content-Type",
@@ -1952,11 +2570,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"EonHMUz2nGqNIQZamJGddUo29/iV6OgYPy3P8StK7/s=\""
+          "Value": "\"FOjHnCEU+c/MBq5TdYBBmjOCjr3N2eZritmNnsImwLc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 08 May 2025 21:00:21 GMT"
+          "Value": "Thu, 08 May 2025 21:43:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1966,7 +2584,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "yzuwqapbfm"
+          "Value": "swhx33rr0f"
         },
         {
           "Name": "label",
@@ -1974,7 +2592,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-EonHMUz2nGqNIQZamJGddUo29/iV6OgYPy3P8StK7/s="
+          "Value": "sha256-FOjHnCEU+c/MBq5TdYBBmjOCjr3N2eZritmNnsImwLc="
         }
       ]
     },

@@ -1,0 +1,257 @@
+﻿@model PayWeb.Controllers.FormController.DefaultIncomeViewModel
+
+<form id="defaultIncomeForm" method="post" action="/Form/SaveDefaultIncome">
+    <div class="employee-section-card mb-4">
+        <div class="card-header d-flex align-items-center">
+            <i class="fas fa-dollar-sign me-2 text-primary"></i>
+            <h6 class="mb-0 fw-bold">Información Básica</h6>
+        </div>
+        <div class="card-body">
+            @await Html.PartialAsync("Employees/_EmployeeInfoPartial", new PayWeb.Controllers.FormController.EmployeeBaseInfoViewModel
+            {
+                EmployeeCode = null,
+                FirstName = null,
+                LastName = null
+            })
+        </div>
+    </div>
+
+    <div class="employee-section-card mb-4">
+        <div class="card-header d-flex align-items-center">
+            <i class="fas fa-money-bill-wave me-2 text-primary"></i>
+            <h6 class="mb-0 fw-bold">Ingresos Predeterminados</h6>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-header bg-light">
+                            <h6 class="mb-0">Otros Ingresos</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Concepto</th>
+                                            <th>Valor</th>
+                                            <th>Frecuencia</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Otr1 Ingr</td>
+                                            <td>
+                                                <input type="number" class="form-control form-control-sm text-end"
+                                                       name="DefaultIncomes[0].DefaultAmount" step="0.01" value="0.00">
+                                                <input type="hidden" name="DefaultIncomes[0].IncomeType" value="Otr1Ingr">
+                                                <input type="hidden" name="DefaultIncomes[0].IncomeCode" value="OI1">
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-secondary btn-sm w-100">Cambiar</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Otr2 Ingr</td>
+                                            <td>
+                                                <input type="number" class="form-control form-control-sm text-end"
+                                                       name="DefaultIncomes[1].DefaultAmount" step="0.01" value="0.00">
+                                                <input type="hidden" name="DefaultIncomes[1].IncomeType" value="Otr2Ingr">
+                                                <input type="hidden" name="DefaultIncomes[1].IncomeCode" value="OI2">
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-secondary btn-sm w-100">Cambiar</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Otr3 Ingr</td>
+                                            <td>
+                                                <input type="number" class="form-control form-control-sm text-end"
+                                                       name="DefaultIncomes[2].DefaultAmount" step="0.01" value="0.00">
+                                                <input type="hidden" name="DefaultIncomes[2].IncomeType" value="Otr3Ingr">
+                                                <input type="hidden" name="DefaultIncomes[2].IncomeCode" value="OI3">
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-secondary btn-sm w-100">Cambiar</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ajustes</td>
+                                            <td>
+                                                <input type="number" class="form-control form-control-sm text-end"
+                                                       name="DefaultIncomes[3].DefaultAmount" step="0.01" value="0.00">
+                                                <input type="hidden" name="DefaultIncomes[3].IncomeType" value="Ajustes">
+                                                <input type="hidden" name="DefaultIncomes[3].IncomeCode" value="AJ">
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-secondary btn-sm w-100">Cambiar</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Hrs Ajuste</td>
+                                            <td>
+                                                <input type="number" class="form-control form-control-sm text-end"
+                                                       name="DefaultIncomes[4].DefaultAmount" step="0.01" value="0.00">
+                                                <input type="hidden" name="DefaultIncomes[4].IncomeType" value="HrsAjuste">
+                                                <input type="hidden" name="DefaultIncomes[4].IncomeCode" value="HAJ">
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-secondary btn-sm w-100">Cambiar</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-header bg-light">
+                            <h6 class="mb-0">Gastos</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Concepto</th>
+                                            <th>Valor</th>
+                                            <th>Frecuencia</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Gasto Rep.</td>
+                                            <td>
+                                                <input type="number" class="form-control form-control-sm text-end"
+                                                       name="DefaultIncomes[5].DefaultAmount" step="0.01" value="0.00">
+                                                <input type="hidden" name="DefaultIncomes[5].IncomeType" value="GastoRep">
+                                                <input type="hidden" name="DefaultIncomes[5].IncomeCode" value="GR">
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-secondary btn-sm w-100">Cambiar</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Transporte</td>
+                                            <td>
+                                                <input type="number" class="form-control form-control-sm text-end"
+                                                       name="DefaultIncomes[6].DefaultAmount" step="0.01" value="0.00">
+                                                <input type="hidden" name="DefaultIncomes[6].IncomeType" value="Transporte">
+                                                <input type="hidden" name="DefaultIncomes[6].IncomeCode" value="TR">
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-secondary btn-sm w-100">Cambiar</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Viáticos</td>
+                                            <td>
+                                                <input type="number" class="form-control form-control-sm text-end"
+                                                       name="DefaultIncomes[7].DefaultAmount" step="0.01" value="0.00">
+                                                <input type="hidden" name="DefaultIncomes[7].IncomeType" value="Viaticos">
+                                                <input type="hidden" name="DefaultIncomes[7].IncomeCode" value="VI">
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-secondary btn-sm w-100">Cambiar</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Otr1 Gast</td>
+                                            <td>
+                                                <input type="number" class="form-control form-control-sm text-end"
+                                                       name="DefaultIncomes[8].DefaultAmount" step="0.01" value="0.00">
+                                                <input type="hidden" name="DefaultIncomes[8].IncomeType" value="Otr1Gast">
+                                                <input type="hidden" name="DefaultIncomes[8].IncomeCode" value="OG1">
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-secondary btn-sm w-100">Cambiar</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Otr2 Gast</td>
+                                            <td>
+                                                <input type="number" class="form-control form-control-sm text-end"
+                                                       name="DefaultIncomes[9].DefaultAmount" step="0.01" value="0.00">
+                                                <input type="hidden" name="DefaultIncomes[9].IncomeType" value="Otr2Gast">
+                                                <input type="hidden" name="DefaultIncomes[9].IncomeCode" value="OG2">
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-secondary btn-sm w-100">Cambiar</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Otr3 Gast</td>
+                                            <td>
+                                                <input type="number" class="form-control form-control-sm text-end"
+                                                       name="DefaultIncomes[10].DefaultAmount" step="0.01" value="0.00">
+                                                <input type="hidden" name="DefaultIncomes[10].IncomeType" value="Otr3Gast">
+                                                <input type="hidden" name="DefaultIncomes[10].IncomeCode" value="OG3">
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-secondary btn-sm w-100">Cambiar</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Otr4 Gast</td>
+                                            <td>
+                                                <input type="number" class="form-control form-control-sm text-end"
+                                                       name="DefaultIncomes[11].DefaultAmount" step="0.01" value="0.00">
+                                                <input type="hidden" name="DefaultIncomes[11].IncomeType" value="Otr4Gast">
+                                                <input type="hidden" name="DefaultIncomes[11].IncomeCode" value="OG4">
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-secondary btn-sm w-100">Cambiar</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Otr5 Gast</td>
+                                            <td>
+                                                <input type="number" class="form-control form-control-sm text-end"
+                                                       name="DefaultIncomes[12].DefaultAmount" step="0.01" value="0.00">
+                                                <input type="hidden" name="DefaultIncomes[12].IncomeType" value="Otr5Gast">
+                                                <input type="hidden" name="DefaultIncomes[12].IncomeCode" value="OG5">
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-secondary btn-sm w-100">Cambiar</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<div class="modal fade" id="frequencyModal" tabindex="-1" aria-labelledby="frequencyModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="frequencyModalLabel">Frecuencia</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="frequencyType" class="form-label">Tipo de Frecuencia:</label>
+                    <select class="form-select" id="frequencyType">
+                        <option value="monthly">Mensual</option>
+                        <option value="biweekly">Quincenal</option>
+                        <option value="weekly">Semanal</option>
+                        <option value="daily">Diario</option>
+                        <option value="once">Una vez</option>
+                    </select>
+                </div>
+                <input type="hidden" id="currentIncomeIndex" value="">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary" id="applyFrequencyBtn">Aplicar</button>
+            </div>
+        </div>
+    </div>
+</div>

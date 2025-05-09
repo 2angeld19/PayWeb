@@ -1,0 +1,19 @@
+﻿@model PayWeb.Controllers.FormController.EmployeeNotesViewModel
+
+<form id="employeeNotesForm" method="post" action="/Form/SaveEmployeeNotes">
+    <div class="container-fluid p-0">
+        @await Html.PartialAsync("Employees/_EmployeeInfoPartial", new PayWeb.Controllers.FormController.EmployeeBaseInfoViewModel
+        {
+            EmployeeCode = Model?.EmployeeId,
+            FirstName = null,  // Cambiado de Model?.FirstName a null
+            LastName = null    // Cambiado de Model?.LastName a null
+        })
+
+        <div class="row">
+            <div class="col-12">
+                <label for="observations" class="form-label">Observaciones:</label>
+                <textarea class="form-control" id="observations" name="Observations" rows="12"></textarea>
+            </div>
+        </div>
+    </div>
+</form>

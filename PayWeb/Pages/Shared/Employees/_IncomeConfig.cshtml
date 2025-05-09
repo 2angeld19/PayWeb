@@ -1,0 +1,209 @@
+﻿@model PayWeb.Controllers.FormController.IncomeConfigViewModel
+
+<form id="incomeConfigForm" method="post" action="/Form/SaveIncomeConfig">
+    <div class="employee-section-card mb-4">
+        <div class="card-header d-flex align-items-center">
+            <i class="fas fa-money-bill-wave me-2 text-primary"></i>
+            <h6 class="mb-0 fw-bold">Información Básica</h6>
+        </div>
+        <div class="card-body">
+            @await Html.PartialAsync("Employees/_EmployeeInfoPartial", new PayWeb.Controllers.FormController.EmployeeBaseInfoViewModel
+            {
+                EmployeeCode = null,
+                FirstName = null,
+                LastName = null
+            })
+        </div>
+    </div>
+
+    <div class="employee-section-card mb-4">
+        <div class="card-header d-flex align-items-center">
+            <i class="fas fa-dollar-sign me-2 text-primary"></i>
+            <h6 class="mb-0 fw-bold">Otros Números del Empleado</h6>
+        </div>
+        <div class="card-body">
+            <div class="row mb-3">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header bg-light">
+                            <h6 class="mb-0">Asignados por el banco para el</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="severanceFund" class="form-label">Fondo Cesantía:</label>
+                                        <input type="number" class="form-control" id="severanceFund" name="SeveranceFund" value="0">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="socialSecurity" class="form-label">Seguro Social:</label>
+                                        <input type="number" class="form-control" id="socialSecurity" name="SocialSecurity" value="0">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="directDeposit" class="form-label">Depósito Directo:</label>
+                                        <input type="text" class="form-control" id="directDeposit" name="DirectDeposit">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="mainSubAccount" class="form-label">Subcuenta Mayor General:</label>
+                                        <input type="text" class="form-control" id="mainSubAccount" name="MainSubAccount">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="mb-3">
+                                        <label for="electronicFileId" class="form-label">ID Ficha Electrónica:</label>
+                                        <input type="text" class="form-control" id="electronicFileId" name="ElectronicFileId">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="mb-3">
+                                        <label for="interfaceCode1" class="form-label">Cod. Interfase 1:</label>
+                                        <input type="text" class="form-control" id="interfaceCode1" name="InterfaceCode1">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="mb-3">
+                                        <label for="interfaceCode2" class="form-label">Cod. Interfase 2:</label>
+                                        <input type="text" class="form-control" id="interfaceCode2" name="InterfaceCode2">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="employee-section-card mb-4">
+        <div class="card-header d-flex align-items-center">
+            <i class="fas fa-tasks me-2 text-primary"></i>
+            <h6 class="mb-0 fw-bold">Opciones Adicionales</h6>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="isSquadLeader" name="IsSquadLeader">
+                            <label class="form-check-label" for="isSquadLeader">
+                                Es Jefe de Cuadrilla / Calcular Bonificación SUNTRAC
+                            </label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="printTimeCardLabel" name="PrintTimeCardLabel">
+                            <label class="form-check-label" for="printTimeCardLabel">
+                                Imprimir Etiqueta Tarjeta Tiempo
+                            </label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="makeISRDeclaration" name="MakeISRDeclaration">
+                            <label class="form-check-label" for="makeISRDeclaration">
+                                Hace Declaración de I.S.R.
+                            </label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="isSyndicateMember" name="IsSyndicateMember">
+                            <label class="form-check-label" for="isSyndicateMember">
+                                Pertenece al Sindicato
+                            </label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="receivePanamaVoucher" name="ReceivePanamaVoucher">
+                            <label class="form-check-label" for="receivePanamaVoucher">
+                                Recibe Vale Panamá o Similares
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="maxDeductionPercentage" class="form-label">Porc. Máximo de los Descuentos:</label>
+                        <input type="number" class="form-control" id="maxDeductionPercentage" name="MaxDeductionPercentage" value="0">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="lastIncreaseDate" class="form-label">Fecha Último Aumento:</label>
+                        <input type="date" class="form-control" id="lastIncreaseDate" name="LastIncreaseDate">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="accumulatedOvertimeHours" class="form-label">Hrs. ST Acumulado en la Semana:</label>
+                        <input type="number" class="form-control" id="accumulatedOvertimeHours" name="AccumulatedOvertimeHours" step="0.01" value="0.00">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="employee-section-card mb-4">
+        <div class="card-header d-flex align-items-center">
+            <i class="fas fa-calendar-alt me-2 text-primary"></i>
+            <h6 class="mb-0 fw-bold">Datos del Año Actual</h6>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="daysWithoutContract" class="form-label">Días sin contrato:</label>
+                        <input type="number" class="form-control" id="daysWithoutContract" name="DaysWithoutContract" value="0">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="absenceLeaveDays" class="form-label">Días Ausente x Licencia, Riesgos:</label>
+                        <input type="number" class="form-control" id="absenceLeaveDays" name="AbsenceLeaveDays" value="0">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="employee-section-card mb-4">
+        <div class="card-header d-flex align-items-center">
+            <i class="fas fa-umbrella-beach me-2 text-primary"></i>
+            <h6 class="mb-0 fw-bold">Vacaciones</h6>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="timeTakenUntil" class="form-label">Tiempo Tomado Hasta:</label>
+                        <input type="date" class="form-control" id="timeTakenUntil" name="TimeTakenUntil">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="paidUntil" class="form-label">Dinero Pagado Hasta:</label>
+                        <input type="date" class="form-control" id="paidUntil" name="PaidUntil">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

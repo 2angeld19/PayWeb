@@ -6,6 +6,7 @@
     <title>@ViewData["Title"] - PayWeb</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/toggleswitcher.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     @await RenderSectionAsync("Styles", required: false)
@@ -86,10 +87,34 @@
             </div>
         </div>
     </footer>
-
+    <!-- Modal compartido para toda la aplicación -->
+    <div class="modal fade" id="sharedModal" tabindex="-1" aria-labelledby="sharedModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="sharedModalLabel">Modal</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="sharedModalContent">
+                    <!-- Aquí se cargará el contenido dinámicamente -->
+                </div>
+                <div class="modal-footer">
+                    <div class="d-flex justify-content-end w-100">
+                        <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary" id="sharedModalSaveButton">
+                            <i class="fas fa-save me-2"></i>Guardar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/modalHelper.js"></script>
+    <script src="~/js/scheduleForm.js"></script>
+    <script src="~/js/costcenterform.js"></script>
+    <script src="~/js/toggleswitchers.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>

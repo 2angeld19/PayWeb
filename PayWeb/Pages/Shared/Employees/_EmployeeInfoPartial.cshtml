@@ -1,0 +1,16 @@
+﻿@model PayWeb.Controllers.FormController.EmployeeBaseInfoViewModel
+
+<div class="row mb-2">
+    <div class="col-md-4">
+        <label for="employeeCode" class="form-label">Código:</label>
+        <input type="text" class="form-control" id="employeeCode" name="EmployeeCode" value="@Model?.EmployeeCode">
+    </div>
+    <div class="col-md-4">
+        <label for="firstName" class="form-label">Nombre:</label>
+        <input type="text" class="form-control" id="firstName" name="FirstName" value="@Model?.FirstName">
+    </div>
+    <div class="col-md-4">
+        <label for="lastName" class="form-label">Apellido:</label>
+        <input type="text" class="form-control" id="lastName" name="LastName" value="@Model?.LastName">
+    </div>
+</div>

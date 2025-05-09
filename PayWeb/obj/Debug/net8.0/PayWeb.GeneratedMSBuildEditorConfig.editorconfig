@@ -24,6 +24,34 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/angel/source/repos/PayWeb/PayWeb/Pages/Shared/Employees/_DefaultIncome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXEVtcGxveWVlc1xfRGVmYXVsdEluY29tZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/angel/source/repos/PayWeb/PayWeb/Pages/Shared/Employees/_EmployeeDataForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXEVtcGxveWVlc1xfRW1wbG95ZWVEYXRhRm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/angel/source/repos/PayWeb/PayWeb/Pages/Shared/Employees/_EmployeeInfoPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXEVtcGxveWVlc1xfRW1wbG95ZWVJbmZvUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/angel/source/repos/PayWeb/PayWeb/Pages/Shared/Employees/_EmployeeNotes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXEVtcGxveWVlc1xfRW1wbG95ZWVOb3Rlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/angel/source/repos/PayWeb/PayWeb/Pages/Shared/Employees/_GeneralEmployeeData.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXEVtcGxveWVlc1xfR2VuZXJhbEVtcGxveWVlRGF0YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/angel/source/repos/PayWeb/PayWeb/Pages/Shared/Employees/_IncomeConfig.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXEVtcGxveWVlc1xfSW5jb21lQ29uZmlnLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/angel/source/repos/PayWeb/PayWeb/Pages/Shared/Employees/_PaymentMethodsForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXEVtcGxveWVlc1xfUGF5bWVudE1ldGhvZHNGb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/angel/source/repos/PayWeb/PayWeb/Pages/Shared/_BranchesForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9CcmFuY2hlc0Zvcm0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

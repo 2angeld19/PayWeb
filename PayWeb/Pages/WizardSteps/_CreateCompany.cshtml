@@ -6,99 +6,260 @@
         <p class="text-muted">Complete la información para crear una nueva compañía</p>
     </div>
 
-    <!-- Primera fila - 3 inputs -->
-    <div class="row">
-        <div class="col-md-4 mb-3">
-            <label for="bankNumber" class="form-label">Número Asignado por el Banco</label>
-            <input type="text" id="bankNumber" name="bankNumber" disabled class="form-control" required>
-        </div>
-        <div class="col-md-4 mb-3">
-            <label for="interfaceCode" class="form-label">Cod. Interfase</label>
-            <input type="text" id="interfaceCode" name="interfaceCode" class="form-control" required>
-        </div>
-        <div class="col-md-4 mb-3">
-            <label for="economicActivity" class="form-label">Actividad Económica</label>
-            <input type="text" id="economicActivity" name="economicActivity" class="form-control" required>
-        </div>
-    </div>
+    <!-- Sección 1: Información básica y logo -->
+    <div class="row mb-4">
+        <!-- Información básica de la compañía -->
+        <div class="col-md-7">
+            <div class="company-data-section p-3 rounded shadow-sm border">
+                <h5 class="mb-3 border-bottom pb-2">Datos Básicos</h5>
 
-    <!-- Segunda fila - 3 inputs -->
-    <div class="row">
-        <div class="col-md-4 mb-3">
-            <label for="license" class="form-label">Licencia</label>
-            <input type="text" id="license" name="license" class="form-control" required>
-        </div>
-        <div class="col-md-4 mb-3">
-            <label for="employerName" class="form-label">Nombre de Patrono</label>
-            <input type="text" id="employerName" name="employerName" class="form-control" required>
-        </div>
-        <div class="col-md-4 mb-3">
-            <label for="workplaceName" class="form-label">Nombre de Lugar de Trabajo</label>
-            <input type="text" id="workplaceName" name="workplaceName" class="form-control" required>
-        </div>
-    </div>
+                <!-- Fila 1 - Número y Nombre corto -->
+                <div class="row">
+                    <div class="col-md-3 mb-3">
+                        <label for="companyNumber" class="form-label">Compañía Id</label>
+                        <input type="number" id="companyNumber" name="companyNumber" class="form-control" required>
+                    </div>
+                    <div class="col-md-9 mb-3">
+                        <label for="shortName" class="form-label">Nombre corto (15 letras)</label>
+                        <input type="text" id="shortName" name="shortName" maxlength="15" class="form-control" required>
+                    </div>
+                </div>
 
-    <!-- Tercera fila - 3 inputs -->
-    <div class="row">
-        <div class="col-md-4 mb-3">
-            <label for="fiscalAddress" class="form-label">Dirección Fiscal</label>
-            <input type="text" id="fiscalAddress" name="fiscalAddress" class="form-control" required>
-        </div>
-        <div class="col-md-4 mb-3">
-            <label for="legalRepresentative" class="form-label">Representante Legal</label>
-            <input type="text" id="legalRepresentative" name="legalRepresentative" class="form-control" required>
-        </div>
-        <div class="col-md-4 mb-3">
-            <label for="phone" class="form-label">Teléfono</label>
-            <input type="text" id="phone" name="phone" class="form-control" required>
-        </div>
-    </div>
+                <!-- Fila 2 - Número de Banco y Código Interfase -->
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="bankNumber" class="form-label">Número Asignado por el Banco</label>
+                        <div class="input-group">
+                            <input type="text" id="bankNumber" name="bankNumber" class="form-control" required>
+                            <span class="input-group-text text-muted">(Para Fondo de Cesantía)</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="interfaceCode" class="form-label">Cod. Interfase</label>
+                        <input type="text" id="interfaceCode" name="interfaceCode" class="form-control" required>
+                    </div>
+                </div>
 
-    <!-- Cuarta fila - 2 inputs -->
-    <div class="row">
-        <div class="col-md-6 mb-3">
-            <label for="idType" class="form-label">Tipo de Identificación</label>
-            <select id="idType" name="idType" class="form-select" required>
-                <option value="" disabled selected></option>
-                <option value="legalId">Cédula Jurídica</option>
-                <option value="naturalId">Cédula Natural</option>
-                <option value="dv">DV</option>
-            </select>
-        </div>
-        <div class="col-md-6 mb-3">
-            <label for="idValue" class="form-label">Valor de Identificación</label>
-            <input type="text" id="idValue" name="idValue" class="form-control" required>
-        </div>
-    </div>
+                <!-- Fila 3 - Nombres -->
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="employerName" class="form-label">Nombre del Patrono</label>
+                        <input type="text" id="employerName" name="employerName" class="form-control" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="workplaceName" class="form-label">Nombre del lugar de Trabajo</label>
+                        <input type="text" id="workplaceName" name="workplaceName" class="form-control" required>
+                    </div>
+                </div>
 
-    <!-- Quinta fila - Logo upload -->
-    <div class="row mb-3">
-        <div class="col-md-12">
-            <label for="logo" class="form-label">Logo de la Compañía</label>
-            <div class="input-group">
-                <input type="file" class="form-control" id="logo" name="logo">
-                <label class="input-group-text" for="logo">Subir</label>
+                <!-- Fila 4 - Representante y dirección fiscal -->
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="legalRepresentative" class="form-label">Representante Legal</label>
+                        <input type="text" id="legalRepresentative" name="legalRepresentative" class="form-control" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="fiscalAddress" class="form-label">Dirección Fiscal</label>
+                        <input type="text" id="fiscalAddress" name="fiscalAddress" class="form-control" required>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección del logo -->
+        <div class="col-md-5">
+            <div class="company-logo-section p-3 rounded shadow-sm border h-100">
+                <h5 class="mb-3 border-bottom pb-2">Logo de la Compañía</h5>
+                <div class="logo-preview-container">
+                    <div class="logo-preview" id="logoPreview">
+                        <i class="fas fa-building fa-4x text-muted"></i>
+                        <p class="text-muted mt-2">Vista previa del logo</p>
+                    </div>
+                    <div class="logo-actions mt-3">
+                        <div class="input-group mb-3">
+                            <input type="file" class="form-control" id="logo" name="logo" accept="image/*" onchange="previewLogo(this)">
+                            <label class="input-group-text" for="logo">Subir</label>
+                        </div>
+                        <div class="path-display">
+                            <label for="logoPath" class="form-label">Ruta de Archivo de Logo</label>
+                            <div class="input-group">
+                                <input type="text" id="logoPath" name="logoPath" class="form-control" readonly>
+                                <button class="btn btn-outline-secondary" type="button" onclick="openFileBrowser()">...</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- Sección separada para información de pagos -->
-    <div class="mt-4 mb-3 pt-3 border-top">
-        <h5>Información de Pagos</h5>
-    </div>
+    <!-- Secciones de Identificación y Configuración una al lado de la otra -->
+    <div class="row mb-4">
+        <!-- Sección de Identificación y Actividad - 50% -->
+        <div class="col-md-6 mb-3 mb-md-0">
+            <div class="identification-section p-4 rounded shadow-sm border h-100">
+                <h5 class="mb-3 border-bottom pb-2">Identificación y Actividad</h5>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="economicActivity" class="form-label">Actividad Económica</label>
+                        <input type="text" id="economicActivity" name="economicActivity" class="form-control" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="license" class="form-label">Licencia</label>
+                        <input type="text" id="license" name="license" class="form-control" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Columna 1 -->
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="correlationNumber" class="form-label">Número correlativo</label>
+                                <input type="number" id="correlationNumber" name="correlationNumber" class="form-control">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="employerNumber" class="form-label">Número Patronal</label>
+                                <input type="text" id="employerNumber" name="employerNumber" class="form-control">
+                            </div>
+                        </div>  
+                    </div>
 
-    <div class="row">
-        <div class="col-md-4 mb-3">
-            <label for="lastThirteenthMonthPaid" class="form-label">Último XIII mes pagado</label>
-            <input type="month" id="lastThirteenthMonthPaid" name="lastThirteenthMonthPaid" class="form-control" required>
+                    <!-- Columna 2 -->
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="legalId" class="form-label">Cédula Jurídica</label>
+                                <input type="text" id="legalId" name="legalId" class="form-control">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="dv" class="form-label">DV</label>
+                                <input type="text" id="dv" name="dv" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="naturalId" class="form-label">Cédula Natural</label>
+                                <input type="text" id="naturalId" name="naturalId" class="form-control">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="phone" class="form-label">Teléfono</label>
+                                <input type="text" id="phone" name="phone" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 mb-3">
+                                <label for="fax" class="form-label">Fax</label>
+                                <input type="text" id="fax" name="fax" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-md-4 mb-3">
-            <label for="lastPeriodPaid" class="form-label">Último periodo pagado</label>
-            <input type="month" id="lastPeriodPaid" name="lastPeriodPaid" class="form-control" required>
-        </div>
-        <div class="col-md-4 mb-3">
-            <label for="lastClosedYear" class="form-label">Último año cerrado</label>
-            <input type="number" id="lastClosedYear" name="lastClosedYear" min="2000" max="2099" step="1" class="form-control" required>
+
+        <!-- Sección de Configuración - 50% -->
+        <div class="col-md-6">
+            <div class="payment-config-section p-4 rounded shadow-sm border h-100">
+                <h5 class="mb-3 border-bottom pb-2">Configuración</h5>
+
+                <div class="row">
+                    <!-- Columna izquierda - Información de pagos -->
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-md-5 mb-3">
+                                <label for="lastThirteenthMonthPaid" class="form-label">Último XIII Mes Pagado</label>
+                                <input type="number" id="lastThirteenthMonthPaid" name="lastThirteenthMonthPaid" class="form-control">
+                            </div>
+                            <div class="col-md-7 mb-3">
+                                <label for="lastPeriodPaid" class="form-label">Último Periodo Pagado</label>
+                                <input type="month" id="lastPeriodPaid" name="lastPeriodPaid" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 mb-3">
+                                <label for="lastClosedYear" class="form-label">  Año Cerrado</label>
+                                <input type="number" id="lastClosedYear" name="lastClosedYear" min="2000" max="2099" step="1" class="form-control" required>
+                            </div>
+                            <div class="col-md-8 mb-3">
+                                <label for="lastPaymentToCreditors" class="form-label">Último Periodo pagado a Acreedores</label>
+                                <input type="month" id="lastPaymentToCreditors" name="lastPaymentToCreditors" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 mb-3">
+                                <label for="dataPath" class="form-label">Path (Los datos están en)</label>
+                                <input type="text" id="dataPath" name="dataPath" class="form-control" readonly>
+                            </div>
+                        </div>
+
+                        <!-- Opciones adicionales con toggle switches -->
+                        <div class="options-container p-3 bg-light rounded mt-3">
+                            <div class="mb-3">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input company-toggle-switch" type="checkbox" id="isConstructionCompany" name="isConstructionCompany">
+                                    <label class="form-check-label" for="isConstructionCompany">
+                                        Es Compañía de Construcción
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input company-toggle-switch" type="checkbox" id="isAgricultureCompany" name="isAgricultureCompany">
+                                    <label class="form-check-label" for="isAgricultureCompany">
+                                        Es Compañía Agropecuaria
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input company-toggle-switch" type="checkbox" id="costBreakdownByActivities" name="costBreakdownByActivities">
+                                    <label class="form-check-label" for="costBreakdownByActivities">
+                                        Desglose de Costos por Actividades
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input company-toggle-switch" type="checkbox" id="isSemVisa" name="isSemVisa">
+                                    <label class="form-check-label" for="isSemVisa">
+                                        Es Visa SEM
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+
+<script>
+    function previewLogo(input) {
+        const preview = document.getElementById('logoPreview');
+
+        if (input.files && input.files[0]) {
+            const reader = new FileReader();
+
+            reader.onload = function(e) {
+                // Limpiar contenido actual
+                preview.innerHTML = '';
+
+                // Crear imagen
+                const img = document.createElement('img');
+                img.src = e.target.result;
+                img.classList.add('img-fluid', 'logo-img');
+                preview.appendChild(img);
+
+                // Actualizar el campo de ruta
+                document.getElementById('logoPath').value = input.value.split('\\').pop();
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    function openFileBrowser() {
+        document.getElementById('logo').click();
+    }
+</script>

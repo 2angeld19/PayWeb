@@ -1,21 +1,120 @@
 ﻿@model PayWeb.Controllers.FormController.BranchViewModel
 
 <form id="schedulesForm" method="post">
-    <div class="mb-3">
-        <label for="scheduleName" class="form-label">Nombre del Horario</label>
-        <input type="text" class="form-control" id="scheduleName" name="ScheduleName">
+    <div class="card border-0 shadow-sm mb-4">
+        <div class="card-body">
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="scheduleCode" class="form-label">Código</label>
+                    <input type="text" class="form-control" id="scheduleCode" name="ScheduleCode" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="scheduleName" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="scheduleName" name="ScheduleName" required>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="mb-3">
-        <label for="startTime" class="form-label">Hora de Inicio</label>
-        <input type="time" class="form-control" id="startTime" name="StartTime">
+
+    <div class="card border-0 shadow-sm mb-4">
+        <div class="card-body">
+            <h6 class="card-title mb-3 fw-bold">Horarios por día</h6>
+
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead class="table-light">
+                        <tr>
+                            <th scope="col" width="100"></th>
+                            <th scope="col" class="text-center">Lun</th>
+                            <th scope="col" class="text-center">Mar</th>
+                            <th scope="col" class="text-center">Mié</th>
+                            <th scope="col" class="text-center">Jue</th>
+                            <th scope="col" class="text-center">Vie</th>
+                            <th scope="col" class="text-center">Sáb</th>
+                            <th scope="col" class="text-center">Dom</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row" class="table-light">Entrada</th>
+                            @for (int i = 0; i < 7; i++)
+                            {
+                                <td>
+                                    <input type="time" class="form-control form-control-sm"
+                                           name="EntryTime_@i" id="EntryTime_@i">
+                                </td>
+                            }
+                        </tr>
+                        <tr>
+                            <th scope="row" class="table-light">Salida</th>
+                            @for (int i = 0; i < 7; i++)
+                            {
+                                <td>
+                                    <input type="time" class="form-control form-control-sm"
+                                           name="ExitTime_@i" id="ExitTime_@i">
+                                </td>
+                            }
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Opciones</label>
+                    <div class="card">
+                        <div class="card-body py-2 px-3">
+                            <div class="mb-3">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="calcAbsencesDelays" name="CalcAbsencesDelays">
+                                    <label class="form-check-label" for="calcAbsencesDelays">
+                                        Calc. Ausencias y Tardanzas
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="strictSchedule" name="StrictSchedule">
+                                    <label class="form-check-label" for="strictSchedule">
+                                        Horario Estricto
+                                    </label>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="authorizeOvertime" name="AuthorizeOvertime">
+                                    <label class="form-check-label" for="authorizeOvertime">
+                                        Autorizar Sobre Tiempos
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label for="timeMethod" class="form-label">Método de Captura de Horas</label>
+                    <select class="form-select" id="timeMethod" name="TimeMethod">
+                        <option value="1">1. S.T. Entrada</option>
+                        <option value="2" selected>2. S.T. Entrada/S.T. Salida</option>
+                        <option value="3">3. Entrada/Salida</option>
+                        <option value="4">4. Entrada/Salida/Tiempo Total</option>
+                    </select>
+
+                    <div class="mt-3">
+                        <label for="lunchBreak" class="form-label">Tiempo de Almuerzo (minutos)</label>
+                        <input type="number" class="form-control" id="lunchBreak" name="LunchBreak"
+                               min="0" max="180" step="5" value="60">
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-3">
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="scheduleStatus" name="Status" checked>
+                    <label class="form-check-label" for="scheduleStatus">Activo</label>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="mb-3">
-        <label for="endTime" class="form-label">Hora de Fin</label>
-        <input type="time" class="form-control" id="endTime" name="EndTime">
-    </div>
-    <div class="mb-3">
-        <label for="lunchBreak" class="form-label">Tiempo de Almuerzo (minutos)</label>
-        <input type="number" class="form-control" id="lunchBreak" name="LunchBreak">
-    </div>
-    <button type="submit" class="btn btn-primary">Guardar</button>
 </form>

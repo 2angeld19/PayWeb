@@ -5,12 +5,20 @@
       "PackagePath": "staticwebassets\\PayWeb.hfdpi38cix.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\css\\employees.css",
+      "PackagePath": "staticwebassets\\css\\employees.css"
+    },
+    {
       "Id": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\css\\index.css",
       "PackagePath": "staticwebassets\\css\\index.css"
     },
     {
       "Id": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\css\\toggleswitcher.css",
+      "PackagePath": "staticwebassets\\css\\toggleswitcher.css"
     },
     {
       "Id": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\css\\wizard.css",
@@ -21,12 +29,28 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\js\\costcenterform.js",
+      "PackagePath": "staticwebassets\\js\\costcenterform.js"
+    },
+    {
+      "Id": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\js\\employees.js",
+      "PackagePath": "staticwebassets\\js\\employees.js"
+    },
+    {
       "Id": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\js\\modalHelper.js",
       "PackagePath": "staticwebassets\\js\\modalHelper.js"
     },
     {
+      "Id": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\js\\scheduleform.js",
+      "PackagePath": "staticwebassets\\js\\scheduleform.js"
+    },
+    {
       "Id": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\js\\toggleswitchers.js",
+      "PackagePath": "staticwebassets\\js\\toggleswitchers.js"
     },
     {
       "Id": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\js\\wizard.js",

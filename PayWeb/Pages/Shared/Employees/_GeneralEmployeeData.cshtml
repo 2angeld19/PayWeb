@@ -1,0 +1,167 @@
+﻿@model PayWeb.Controllers.FormController.GeneralEmployeeDataViewModel
+
+<form id="generalEmployeeDataForm" method="post" action="/Form/SaveGeneralEmployeeData" enctype="multipart/form-data">
+    <div class="employee-section-card mb-4">
+        <div class="card-header d-flex align-items-center">
+            <i class="fas fa-user-circle me-2 text-primary"></i>
+            <h6 class="mb-0 fw-bold">Información Personal</h6>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                @await Html.PartialAsync("Employees/_EmployeeInfoPartial", new PayWeb.Controllers.FormController.EmployeeBaseInfoViewModel
+                {
+                    EmployeeCode = null,
+                    FirstName = null,
+                    LastName = null
+                })
+            </div>
+
+            <div class="row mt-3">
+                <div class="col-md-4">
+                    <label for="birthDate" class="form-label">Fecha Nacim:</label>
+                    <div class="input-group">
+                        <input type="date" class="form-control" id="birthDate" name="BirthDate">
+                        <span class="input-group-text"><i class="fas fa-calendar"></i></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="nationality" class="form-label">Nacionalidad:</label>
+                    <input type="text" class="form-control" id="nationality" name="Nationality">
+                </div>
+                <div class="col-md-4">
+                    <label for="bloodType" class="form-label">Tipo Sangre:</label>
+                    <input type="text" class="form-control" id="bloodType" name="BloodType" maxlength="3">
+                </div>
+            </div>
+
+            <div class="row mt-3">
+                <div class="col-md-8">
+                    <label for="position" class="form-label">Cargo:</label>
+                    <select class="form-select" id="position" name="Position">
+                        <option value="" selected>** SIN DEFINIR **</option>
+                        <option value="gerente">Gerente</option>
+                        <option value="asistente">Asistente</option>
+                        <option value="analista">Analista</option>
+                        <option value="coordinador">Coordinador</option>
+                        <option value="tecnico">Técnico</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label d-block">Sexo:</label>
+                    <div class="mt-2">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="Gender" id="genderMale" value="male">
+                            <label class="form-check-label" for="genderMale">Masculino</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="Gender" id="genderFemale" value="female">
+                            <label class="form-check-label" for="genderFemale">Femenino</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="employee-section-card mb-4">
+        <div class="card-header d-flex align-items-center">
+            <i class="fas fa-address-book me-2 text-primary"></i>
+            <h6 class="mb-0 fw-bold">Contacto</h6>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-12 mb-3">
+                    <label for="address" class="form-label">Dirección:</label>
+                    <input type="text" class="form-control" id="address" name="Address">
+                </div>
+            </div>
+            <div class="row mt-1">
+                <div class="col-md-12 mb-3">
+                    <input type="text" class="form-control" id="addressLine2" name="AddressLine2" placeholder="Continuación dirección (opcional)">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="email" class="form-label">E-mail:</label>
+                    <input type="email" class="form-control" id="email" name="Email">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="apartado" class="form-label">Apartado:</label>
+                    <input type="text" class="form-control" id="apartado" name="PostalBox">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="phoneNumber" class="form-label">Teléfono:</label>
+                    <div class="input-group">
+                        <input type="tel" class="form-control" id="phoneNumber" name="PhoneNumber">
+                        <span class="input-group-text">Ext:</span>
+                        <input type="text" class="form-control" id="extension" name="Extension" style="max-width: 80px;">
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="maritalStatus" class="form-label">Estado Civil:</label>
+                    <select class="form-select" id="maritalStatus" name="MaritalStatus">
+                        <option value="" selected disabled>Seleccione...</option>
+                        <option value="single">Soltero/a</option>
+                        <option value="married">Casado/a</option>
+                        <option value="divorced">Divorciado/a</option>
+                        <option value="widowed">Viudo/a</option>
+                        <option value="separated">Separado/a</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="employee-section-card mb-4">
+        <div class="card-header d-flex align-items-center">
+            <i class="fas fa-camera me-2 text-primary"></i>
+            <h6 class="mb-0 fw-bold">Fotografía</h6>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="photo-upload-container">
+                        <div class="photo-preview" id="photoPreview">
+                            <div class="placeholder">
+                                <i class="fas fa-user fa-5x text-muted"></i>
+                            </div>
+                        </div>
+                        <div class="mt-3">
+                            <div class="input-group">
+                                <input type="file" class="form-control" id="photoUpload" name="Photo" accept="image/*">
+                                <button class="btn btn-outline-primary" type="button" id="takePhotoButton">
+                                    <i class="fas fa-camera me-2"></i>Tomar Foto
+                                </button>
+                            </div>
+                            <small class="text-muted">Formatos permitidos: JPG, PNG. Máx: 2MB</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="cssNotice" name="CSSNotice">
+                            <label class="form-check-label" for="cssNotice">
+                                Aviso de Entrada a CSS
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="photoPath" class="form-label">Ruta del archivo de foto:</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="photoPath" name="PhotoPath" readonly>
+                            <button class="btn btn-outline-secondary" type="button" id="browseButton">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

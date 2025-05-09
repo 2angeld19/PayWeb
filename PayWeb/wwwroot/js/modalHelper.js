@@ -1,104 +1,192 @@
-﻿window.modalHelper = {
-    showModal: function (modalId) {
-        console.log("Llamando a showModal para elemento: " + modalId);
-        var modalElement = document.getElementById(modalId);
-        if (modalElement) {
-            console.log("Elemento modal encontrado");
+﻿// modalHelper.js - versión mejorada
+window.modalHelper = (function () {
+    // Variable para almacenar la instancia del modal
+    let modalInstance = null;
+
+    // Inicializar el modal compartido
+    function initSharedModal() {
+        const modalElement = document.getElementById('sharedModal');
+        if (modalElement && !modalInstance) {
             try {
-                var modal = new bootstrap.Modal(modalElement);
-                modal.show();
+                modalInstance = new bootstrap.Modal(modalElement);
+                console.log("Modal compartido inicializado correctamente");
+            } catch (error) {
+                console.error("Error al inicializar el modal compartido:", error);
+            }
+        }
+    }
+
+    // Función para mostrar el modal compartido
+    function showSharedModal(title, content) {
+        // Inicializar si aún no se ha hecho
+        if (!modalInstance) {
+            initSharedModal();
+        }
+
+        if (modalInstance) {
+            // Actualizar título
+            const titleElement = document.getElementById('sharedModalLabel');
+            if (titleElement) {
+                titleElement.textContent = title || 'Modal';
+            }
+
+            // Actualizar contenido
+            const contentElement = document.getElementById('sharedModalContent');
+            if (contentElement) {
+                contentElement.innerHTML = content || '';
+            }
+
+            // Mostrar el modal
+            try {
+                modalInstance.show();
                 console.log("Modal mostrado correctamente");
             } catch (error) {
-                console.error("Error al crear o mostrar el modal: " + error);
+                console.error("Error al mostrar el modal:", error);
             }
         } else {
-            console.error('Elemento modal no encontrado: ' + modalId);
+            console.error("No se pudo inicializar el modal compartido");
         }
-    },
+    }
 
-    // Función para habilitar los botones del módulo de construcción
-    enableConstructionButtons: function () {
+    // Función para mostrar formularios en modal
+    function showFormModal(formName, title) {
+        // Verificar si es un formulario de construcción
+        const isConstructionForm = ['Projects', 'Phases', 'Division'].includes(formName);
+
+        // Aplicar la clase adecuada
+        const modalElement = document.getElementById('sharedModal');
+        if (modalElement) {
+            if (isConstructionForm) {
+                modalElement.classList.add('construction-modal');
+            } else {
+                modalElement.classList.remove('construction-modal');
+            }
+        }
+
+        // Mostrar un indicador de carga
+        showSharedModal(title, '<div class="text-center p-4"><i class="fas fa-spinner fa-spin fa-3x"></i><p class="mt-3">Cargando...</p></div>');
+
+        // Cargar el contenido del formulario vía AJAX
+        fetch(`/Form/${formName}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Error al cargar el formulario: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(html => {
+                // Actualizar contenido
+                const contentElement = document.getElementById('sharedModalContent');
+                if (contentElement) {
+                    contentElement.innerHTML = html;
+                }
+            })
+            .catch(error => {
+                console.error('Error al cargar el formulario:', error);
+                const contentElement = document.getElementById('sharedModalContent');
+                if (contentElement) {
+                    contentElement.innerHTML = `
+                        <div class="alert alert-danger">
+                            <i class="fas fa-exclamation-circle me-2"></i>
+                            Error al cargar el formulario: ${error.message}
+                        </div>
+                    `;
+                }
+            });
+    }
+
+    // Función para habilitar los botones de construcción
+    function enableConstructionButtons() {
         const toggleSwitch = document.getElementById('toggleSwitch');
-
         if (toggleSwitch) {
             toggleSwitch.addEventListener('change', function () {
-                // Habilitar todos los botones de construcción
                 document.querySelectorAll('.construction-button').forEach(button => {
-                    button.disabled = !this.checked;
+                    if (this.checked) {
+                        button.classList.add('btn-warning');
+                        button.classList.remove('btn-outline-warning');
+                    } else {
+                        button.classList.remove('btn-warning');
+                        button.classList.add('btn-outline-warning');
+                    }
                 });
             });
         }
     }
-};
 
-// Función global para mostrar modal con formulario
-function showModal(formName, title) {
-    // Actualizar el título del modal
-    document.getElementById('dynamicModalLabel').textContent = title;
+    // Función para enviar formularios
+    function submitForm(formId, url) {
+        const form = document.getElementById(formId);
+        if (!form) {
+            console.error('Formulario no encontrado:', formId);
+            return;
+        }
 
-    // Obtener el elemento modal
-    const modalElement = document.getElementById('dynamicModal');
+        const formData = new FormData(form);
 
-    // Verificar si es un formulario de construcción
-    const isConstructionForm = ['Projects', 'Phases', 'Division'].includes(formName);
+        // Mostrar indicador de carga
+        const submitButton = form.querySelector('[type="submit"]');
+        if (submitButton) {
+            submitButton.disabled = true;
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Procesando...';
+        }
 
-    // Aplicar la clase adecuada
-    if (isConstructionForm) {
-        modalElement.classList.add('construction-modal');
-    } else {
-        modalElement.classList.remove('construction-modal');
+        fetch(url, {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    if (modalInstance) {
+                        modalInstance.hide();
+                    }
+
+                    // Mostrar notificación de éxito
+                    showNotification('Éxito', 'Datos guardados correctamente', 'success');
+                } else {
+                    showNotification('Error', data.message || 'Error al guardar los datos', 'error');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                showNotification('Error', 'Error al procesar la solicitud', 'error');
+            })
+            .finally(() => {
+                // Restaurar botón
+                if (submitButton) {
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = 'Guardar';
+                }
+            });
     }
 
-    // Cargar el contenido del formulario vía AJAX
-    fetch(`/Form/${formName}`)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.text();
-        })
-        .then(html => {
-            document.getElementById('modalContent').innerHTML = html;
-            // Eliminar la llamada a transformInputFields();
-            var modal = new bootstrap.Modal(modalElement);
-            modal.show();
-        })
-        .catch(error => {
-            console.error('Error al cargar el formulario:', error);
-            document.getElementById('modalContent').innerHTML = '<div class="alert alert-danger">Error al cargar el formulario</div>';
-            var modal = new bootstrap.Modal(modalElement);
-            modal.show();
-        });
+    // Función para mostrar notificaciones
+    function showNotification(title, message, type) {
+        // Si tienes una librería de notificaciones, úsala aquí
+        // De lo contrario, un simple alert
+        alert(`${title}: ${message}`);
+    }
+
+    // Inicializar cuando el DOM esté listo
+    document.addEventListener('DOMContentLoaded', function () {
+        initSharedModal();
+        enableConstructionButtons();
+    });
+
+    // Exponer funciones públicas
+    return {
+        showModal: showSharedModal,
+        showFormModal: showFormModal,
+        submitForm: submitForm,
+        enableConstructionButtons: enableConstructionButtons
+    };
+})();
+
+// Para compatibilidad con el código existente
+function showModal(formName, title) {
+    window.modalHelper.showFormModal(formName, title);
 }
 
-// Eliminar toda la función transformInputFields()
-
-// Función para enviar formularios
 function submitForm(formId, url) {
-    const form = document.getElementById(formId);
-    const formData = new FormData(form);
-
-    fetch(url, {
-        method: 'POST',
-        body: formData
-    })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                bootstrap.Modal.getInstance(document.getElementById('dynamicModal')).hide();
-                alert('Datos guardados con éxito');
-            } else {
-                alert('Error al guardar los datos: ' + data.message);
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('Error al procesar la solicitud');
-        });
+    window.modalHelper.submitForm(formId, url);
 }
-
-// Inicializar las funcionalidades cuando el DOM esté listo
-document.addEventListener('DOMContentLoaded', function () {
-    // Habilitar los botones de construcción
-    modalHelper.enableConstructionButtons();
-});
