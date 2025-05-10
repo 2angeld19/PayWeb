@@ -1,4 +1,4 @@
-﻿@model PayWeb.Controllers.FormController.DefaultIncomeViewModel
+﻿@model PayWeb.Controllers.EmployeesController.DefaultIncomeViewModel
 
 <form id="defaultIncomeForm" method="post" action="/Form/SaveDefaultIncome">
     <div class="employee-section-card mb-4">
@@ -7,7 +7,7 @@
             <h6 class="mb-0 fw-bold">Información Básica</h6>
         </div>
         <div class="card-body">
-            @await Html.PartialAsync("Employees/_EmployeeInfoPartial", new PayWeb.Controllers.FormController.EmployeeBaseInfoViewModel
+            @await Html.PartialAsync("Employees/_EmployeeInfoPartial", new PayWeb.Controllers.EmployeesController.EmployeeBaseInfoViewModel
             {
                 EmployeeCode = null,
                 FirstName = null,

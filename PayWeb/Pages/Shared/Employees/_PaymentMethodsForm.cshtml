@@ -1,4 +1,4 @@
-﻿@model PayWeb.Controllers.FormController.PaymentMethodViewModel
+﻿@model PayWeb.Controllers.BanksController.PaymentMethodViewModel
 
 <form id="paymentMethodsForm" method="post" action="/Form/SavePaymentMethods">
     <div class="employee-section-card mb-4">
@@ -7,7 +7,7 @@
             <h6 class="mb-0 fw-bold">Información de Pago</h6>
         </div>
         <div class="card-body">
-            @await Html.PartialAsync("Employees/_EmployeeInfoPartial", new PayWeb.Controllers.FormController.EmployeeBaseInfoViewModel
+            @await Html.PartialAsync("Employees/_EmployeeInfoPartial", new PayWeb.Controllers.EmployeesController.EmployeeBaseInfoViewModel
             {
                 EmployeeCode = null,
                 FirstName = null,

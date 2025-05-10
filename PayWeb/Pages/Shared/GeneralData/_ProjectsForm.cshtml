@@ -1,0 +1,128 @@
+﻿@model PayWeb.Controllers.GeneralDataController.BranchViewModel
+
+<form id="projectsForm" method="post">
+    <div class="container-fluid p-2">
+        <!-- Selector de Proyecto con botón -->
+        <div class="row mb-3">
+            <div class="col-3">
+                <label class="form-label mt-1">Seleccionar Proyecto:</label>
+            </div>
+            <div class="col-9">
+                <button type="button" class="btn btn-primary" id="btnProjectData">Datos del Proyecto</button>
+            </div>
+        </div>
+
+        <!-- Campos de Código y Descripción -->
+        <div class="row mb-3">
+            <div class="col-2">
+                <label for="projectCode" class="form-label">Código:</label>
+            </div>
+            <div class="col-4">
+                <input type="text" class="form-control" id="projectCode" name="ProjectCode">
+            </div>
+            <div class="col-6">
+                <input type="text" class="form-control" id="projectDescription" name="ProjectDescription">
+            </div>
+        </div>
+
+        <!-- Código para Exportar y Status -->
+        <div class="row mb-3">
+            <div class="col-5">
+                <label for="generalLedgerCode" class="form-label">Código para Exportar a Mayor General:</label>
+            </div>
+            <div class="col-3">
+                <input type="text" class="form-control" id="generalLedgerCode" name="GeneralLedgerCode">
+            </div>
+            <div class="col-1">
+                <label class="form-label">Status:</label>
+            </div>
+            <div class="col-3">
+                <div class="border p-1">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Status" id="statusActive" value="active" checked>
+                        <label class="form-check-label" for="statusActive">Activo</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Status" id="statusCancelled" value="cancelled">
+                        <label class="form-check-label" for="statusCancelled">Cancelado</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Selector de Fases (sistema de dos columnas con botones en el medio) -->
+        <div class="row">
+            <div class="col-6">
+                <label class="form-label">Fases para Seleccionar</label>
+                <select multiple class="form-select" id="availablePhases" name="AvailablePhases" size="8">
+                    <!-- Aquí se cargarían dinámicamente las fases disponibles -->
+                </select>
+            </div>
+            <div class="col-1 d-flex flex-column justify-content-center align-items-center">
+                <button type="button" class="btn btn-sm btn-outline-secondary mb-2" id="btnMoveRight">></button>
+                <button type="button" class="btn btn-sm btn-outline-secondary mb-2" id="btnMoveAllRight">>></button>
+                <button type="button" class="btn btn-sm btn-outline-secondary mb-2" id="btnMoveLeft"><</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary" id="btnMoveAllLeft"><<</button>
+            </div>
+            <div class="col-5">
+                <label class="form-label">Fases Seleccionadas</label>
+                <select multiple class="form-select" id="selectedPhases" name="SelectedPhases" size="8">
+                    <!-- Aquí se cargarían las fases seleccionadas -->
+                </select>
+            </div>
+        </div>
+
+        <!-- Checkbox para asignar gastos -->
+        <div class="row mt-3">
+            <div class="col-12">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="assignCostCenter" name="AssignCostCenter">
+                    <label class="form-check-label" for="assignCostCenter">Asignar Gastos al Centro de Costo</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Botones para mover elementos entre las listas
+        document.getElementById('btnMoveRight').addEventListener('click', function() {
+            moveSelectedOptions('availablePhases', 'selectedPhases');
+        });
+
+        document.getElementById('btnMoveAllRight').addEventListener('click', function() {
+            moveAllOptions('availablePhases', 'selectedPhases');
+        });
+
+        document.getElementById('btnMoveLeft').addEventListener('click', function() {
+            moveSelectedOptions('selectedPhases', 'availablePhases');
+        });
+
+        document.getElementById('btnMoveAllLeft').addEventListener('click', function() {
+            moveAllOptions('selectedPhases', 'availablePhases');
+        });
+
+        function moveSelectedOptions(fromSelectId, toSelectId) {
+            const fromSelect = document.getElementById(fromSelectId);
+            const toSelect = document.getElementById(toSelectId);
+
+            for (let i = 0; i < fromSelect.options.length; i++) {
+                if (fromSelect.options[i].selected) {
+                    toSelect.appendChild(fromSelect.options[i].cloneNode(true));
+                    fromSelect.remove(i);
+                    i--;
+                }
+            }
+        }
+
+        function moveAllOptions(fromSelectId, toSelectId) {
+            const fromSelect = document.getElementById(fromSelectId);
+            const toSelect = document.getElementById(toSelectId);
+
+            while (fromSelect.options.length > 0) {
+                toSelect.appendChild(fromSelect.options[0]);
+            }
+        }
+    });
+</script>

@@ -1,0 +1,29 @@
+﻿@model PayWeb.Controllers.GeneralDataController.BranchViewModel
+
+<form id="phasesForm" method="post">
+    <div class="mb-3">
+        <label for="phaseCode" class="form-label">Código:</label>
+        <input type="text" class="form-control bg-light" id="phaseCode" name="PhaseCode">
+    </div>
+    <div class="mb-3">
+        <label for="phaseDescription" class="form-label">Descripción:</label>
+        <input type="text" class="form-control" id="phaseDescription" name="PhaseDescription">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Status:</label>
+        <div class="ms-2">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Status" id="statusActive" value="active" checked>
+                <label class="form-check-label" for="statusActive">Activo</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Status" id="statusCancelled" value="cancelled">
+                <label class="form-check-label" for="statusCancelled">Cancelado</label>
+            </div>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="generalLedgerCode" class="form-label">Código para Exportar a Mayor General</label>
+        <input type="text" class="form-control" id="generalLedgerCode" name="GeneralLedgerCode">
+    </div>
+</form>

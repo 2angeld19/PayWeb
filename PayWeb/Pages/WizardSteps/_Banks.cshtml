@@ -6,92 +6,184 @@
         <p class="text-muted">Configure la información bancaria y métodos de pago</p>
     </div>
 
-    <div class="row g-4">
-        <div class="col-md-6 mb-3">
-            <div class="card h-100 shadow-sm">
-                <div class="card-body d-flex flex-column">
-                    <div class="text-center mb-3">
-                        <i class="fas fa-university fa-3x text-primary mb-3"></i>
-                        <h5 class="card-title">Bancos</h5>
-                    </div>
-                    <p class="card-text text-muted flex-grow-1 text-center">
-                        Configure los bancos con los que trabaja su empresa
-                    </p>
-                    <button type="button" class="btn btn-outline-primary w-100 mt-auto"
-                            onclick="showModal('Banks', 'Bancos')">
-                        <i class="fas fa-cog me-2"></i>Configurar
-                    </button>
+    <form id="bankForm" class="bg-light p-3 rounded">
+        <div class="row mb-3">
+            <div class="col-md-3">
+                <label for="bankNumber" class="form-label">Nº Banco:</label>
+                <div class="input-group">
+                    <input type="number" class="form-control" id="bankNumber" name="BankNumber" value="0">
                 </div>
             </div>
-        </div>
-        <div class="col-md-6 mb-3">
-            <div class="card h-100 shadow-sm">
-                <div class="card-body d-flex flex-column">
-                    <div class="text-center mb-3">
-                        <i class="fas fa-credit-card fa-3x text-primary mb-3"></i>
-                        <h5 class="card-title">Métodos de Pago</h5>
-                    </div>
-                    <p class="card-text text-muted flex-grow-1 text-center">
-                        Configure los diferentes métodos de pago para nóminas
-                    </p>
-                    <button type="button" class="btn btn-outline-primary w-100 mt-auto"
-                            onclick="showModal('PaymentMethods', 'Métodos de Pago')">
-                        <i class="fas fa-cog me-2"></i>Configurar
-                    </button>
-                </div>
+            <div class="col-md-9">
+                <label for="bankName" class="form-label">&nbsp;</label>
+                <input type="text" class="form-control" id="bankName" name="BankName">
             </div>
         </div>
-    </div>
 
-    <div class="row g-4 mt-2">
-        <div class="col-md-6 mb-3">
-            <div class="card h-100 shadow-sm">
-                <div class="card-body d-flex flex-column">
-                    <div class="text-center mb-3">
-                        <i class="fas fa-exchange-alt fa-3x text-primary mb-3"></i>
-                        <h5 class="card-title">Frecuencia de Pago</h5>
+        <div class="row mb-3">
+            <div class="col-md-5">
+                <label for="assignedNumber" class="form-label">Número Asignado por el Banco:</label>
+                <input type="text" class="form-control" id="assignedNumber" name="AssignedNumber">
+            </div>
+            <div class="col-md-7">
+                <label for="interfaceCode" class="form-label">Cod. Interfase:</label>
+                <input type="text" class="form-control" id="interfaceCode" name="InterfaceCode">
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <h6>Información sobre la Cuenta</h6>
+
+                <div class="mb-3">
+                    <label for="lastCheckUsed" class="form-label">Último cheque usado:</label>
+                    <input type="number" class="form-control" id="lastCheckUsed" name="LastCheckUsed" value="0">
+                </div>
+
+                <div class="mb-3">
+                    <label for="bankAccountNumber" class="form-label">No. de Cta. Bancaria:</label>
+                    <input type="text" class="form-control" id="bankAccountNumber" name="BankAccountNumber">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label d-block">Tipo de Cuenta:</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="AccountType" id="accountTypeCurrent" value="current">
+                        <label class="form-check-label" for="accountTypeCurrent">Corriente</label>
                     </div>
-                    <p class="card-text text-muted flex-grow-1 text-center">
-                        Configure los ciclos y frecuencias de pago de nómina
-                    </p>
-                    <button type="button" class="btn btn-outline-primary w-100 mt-auto"
-                            onclick="showModal('PayFrequency', 'Frecuencia de Pago')">
-                        <i class="fas fa-cog me-2"></i>Configurar
-                    </button>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="AccountType" id="accountTypeSavings" value="savings">
+                        <label class="form-check-label" for="accountTypeSavings">Ahorro</label>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="bankRoute" class="form-label">Ruta/Tránsito del Banco:</label>
+                    <div class="input-group mb-2">
+                        <select class="form-select" id="bankRoute" name="BankRoute">
+                            <option value="" selected>[Sin Definir]</option>
+                            <option value="route1">Ruta 1</option>
+                            <option value="route2">Ruta 2</option>
+                        </select>
+                    </div>
+                    <input type="text" class="form-control" id="routeNumber" name="RouteNumber">
+                </div>
+
+                <div class="mb-3">
+                    <label for="achFormat" class="form-label">El formato de ACH:</label>
+                    <select class="form-select" id="achFormat" name="AchFormat">
+                        <option value="" selected>[Sin Definir]</option>
+                        <option value="format1">Formato 1</option>
+                        <option value="format2">Formato 2</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="generalLedgerAccount" class="form-label">Cuenta del Mayor:</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="generalLedgerAccount" name="GeneralLedgerAccount">
+                        <button class="btn btn-outline-secondary" type="button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="controlAchSequence" name="ControlAchSequence">
+                        <label class="form-check-label" for="controlAchSequence">
+                            Controlar Secuencia de Ach
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="mb-4">
+                    <h6>La carta debe estar dirigida a:</h6>
+                    <textarea class="form-control" id="letterAddress" name="LetterAddress" rows="5"></textarea>
+                </div>
+
+                <div class="mb-4">
+                    <h6>y Firmada por:</h6>
+                    <input type="text" class="form-control" id="signature" name="Signature">
+                </div>
+
+                <div class="mb-4">
+                    <h6>Nuestro Contacto es:</h6>
+                    <input type="text" class="form-control" id="ourContact" name="OurContact">
+                </div>
+
+                <div class="mb-4">
+                    <h6>Copiar Configuración de Cheques de:</h6>
+                    <select class="form-select" id="copyCheckConfig" name="CopyCheckConfig">
+                        <option value="" selected></option>
+                        <option value="bank1">Banco 1</option>
+                        <option value="bank2">Banco 2</option>
+                    </select>
+                </div>
+
+                <div class="row mb-2">
+                    <div class="col-md-6">
+                        <label for="employeeAchSequence" class="form-label">Secuencia ACH Empleados:</label>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="number" class="form-control" id="employeeAchSequence" name="EmployeeAchSequence" value="0">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="supplierAchSequence" class="form-label">Secuencia ACH Acreedores:</label>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="number" class="form-control" id="supplierAchSequence" name="SupplierAchSequence" value="0">
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-6 mb-3">
-            <div class="card h-100 shadow-sm">
-                <div class="card-body d-flex flex-column">
-                    <div class="text-center mb-3">
-                        <i class="fas fa-file-invoice-dollar fa-3x text-primary mb-3"></i>
-                        <h5 class="card-title">Formatos de Archivo</h5>
-                    </div>
-                    <p class="card-text text-muted flex-grow-1 text-center">
-                        Configure los formatos de archivo para pagos bancarios
-                    </p>
-                    <button type="button" class="btn btn-outline-primary w-100 mt-auto"
-                            onclick="showModal('FileFormats', 'Formatos de Archivo')">
-                        <i class="fas fa-cog me-2"></i>Configurar
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
+    </form>
 </div>
 
-<!-- Modal único que se utilizará para todos los formularios -->
-<div class="modal fade" id="dynamicModal" tabindex="-1" aria-labelledby="dynamicModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="dynamicModalLabel">Modal</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body" id="modalContent">
-                <!-- Aquí se cargará el contenido dinámicamente -->
-            </div>
-        </div>
-    </div>
-</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('bankForm');
+
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                const formData = new FormData(form);
+
+                fetch('/Form/SaveBanks', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        showToast('Éxito', 'La información del banco se ha guardado correctamente', 'success');
+                    } else {
+                        showToast('Error', 'Hubo un problema al guardar la información', 'error');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    showToast('Error', 'Hubo un problema al procesar la solicitud', 'error');
+                });
+            });
+        }
+
+        // Si el formulario está dentro de un modal...
+        const saveButton = document.getElementById('sharedModalSaveButton');
+        if (saveButton && form) {
+            saveButton.addEventListener('click', function() {
+                const event = new Event('submit', {
+                    'bubbles': true,
+                    'cancelable': true
+                });
+                form.dispatchEvent(event);
+            });
+        }
+    });
+</script>

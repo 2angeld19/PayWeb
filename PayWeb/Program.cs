@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.EntityFrameworkCore;
+using PayWeb.Data;
 using System;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +11,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddControllers(); // Add this to register controllers
+
+// Configurar Entity Framework Core con SQL Server
+builder.Services.AddDbContext<PayWebDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Add session services BEFORE building the app
 builder.Services.AddSession(options =>

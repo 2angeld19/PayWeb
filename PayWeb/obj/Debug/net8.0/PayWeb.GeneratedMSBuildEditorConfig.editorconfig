@@ -1,11 +1,19 @@
 is_global = true
 build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = PayWeb
 build_property.RootNamespace = PayWeb
@@ -52,36 +60,36 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXEVtcGxveWVlc1xfUGF5bWVudE1ldGhvZHNGb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/angel/source/repos/PayWeb/PayWeb/Pages/Shared/_BranchesForm.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9CcmFuY2hlc0Zvcm0uY3NodG1s
+[C:/Users/angel/source/repos/PayWeb/PayWeb/Pages/Shared/GeneralData/_BranchesForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXEdlbmVyYWxEYXRhXF9CcmFuY2hlc0Zvcm0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/angel/source/repos/PayWeb/PayWeb/Pages/Shared/_CostCentersForm.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9Db3N0Q2VudGVyc0Zvcm0uY3NodG1s
+[C:/Users/angel/source/repos/PayWeb/PayWeb/Pages/Shared/GeneralData/_CostCentersForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXEdlbmVyYWxEYXRhXF9Db3N0Q2VudGVyc0Zvcm0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/angel/source/repos/PayWeb/PayWeb/Pages/Shared/_DepartmentsForm.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9EZXBhcnRtZW50c0Zvcm0uY3NodG1s
+[C:/Users/angel/source/repos/PayWeb/PayWeb/Pages/Shared/GeneralData/_DepartmentsForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXEdlbmVyYWxEYXRhXF9EZXBhcnRtZW50c0Zvcm0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/angel/source/repos/PayWeb/PayWeb/Pages/Shared/_DivisionForm.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9EaXZpc2lvbkZvcm0uY3NodG1s
+[C:/Users/angel/source/repos/PayWeb/PayWeb/Pages/Shared/GeneralData/_DivisionForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXEdlbmVyYWxEYXRhXF9EaXZpc2lvbkZvcm0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/angel/source/repos/PayWeb/PayWeb/Pages/Shared/_PhasesForm.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9QaGFzZXNGb3JtLmNzaHRtbA==
+[C:/Users/angel/source/repos/PayWeb/PayWeb/Pages/Shared/GeneralData/_PhasesForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXEdlbmVyYWxEYXRhXF9QaGFzZXNGb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/angel/source/repos/PayWeb/PayWeb/Pages/Shared/_PositionsForm.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9Qb3NpdGlvbnNGb3JtLmNzaHRtbA==
+[C:/Users/angel/source/repos/PayWeb/PayWeb/Pages/Shared/GeneralData/_PositionsForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXEdlbmVyYWxEYXRhXF9Qb3NpdGlvbnNGb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/angel/source/repos/PayWeb/PayWeb/Pages/Shared/_ProjectsForm.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9Qcm9qZWN0c0Zvcm0uY3NodG1s
+[C:/Users/angel/source/repos/PayWeb/PayWeb/Pages/Shared/GeneralData/_ProjectsForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXEdlbmVyYWxEYXRhXF9Qcm9qZWN0c0Zvcm0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/angel/source/repos/PayWeb/PayWeb/Pages/Shared/_SchedulesForm.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9TY2hlZHVsZXNGb3JtLmNzaHRtbA==
+[C:/Users/angel/source/repos/PayWeb/PayWeb/Pages/Shared/GeneralData/_SchedulesForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXEdlbmVyYWxEYXRhXF9TY2hlZHVsZXNGb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/angel/source/repos/PayWeb/PayWeb/Pages/Shared/_ValidationScriptsPartial.cshtml]

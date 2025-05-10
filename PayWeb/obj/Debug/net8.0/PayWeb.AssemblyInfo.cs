@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PayWeb")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2f9a8b053a8ea6d6df8b70363454da87b3922d07")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+282de2234c81da0a9201c233ba6e5ac3d8f3c0e1")]
 [assembly: System.Reflection.AssemblyProductAttribute("PayWeb")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PayWeb")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

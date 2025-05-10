@@ -1,8 +1,8 @@
-﻿@model PayWeb.Controllers.FormController.EmployeeNotesViewModel
+﻿@model PayWeb.Controllers.EmployeesController.EmployeeNotesViewModel
 
 <form id="employeeNotesForm" method="post" action="/Form/SaveEmployeeNotes">
     <div class="container-fluid p-0">
-        @await Html.PartialAsync("Employees/_EmployeeInfoPartial", new PayWeb.Controllers.FormController.EmployeeBaseInfoViewModel
+        @await Html.PartialAsync("Employees/_EmployeeInfoPartial", new PayWeb.Controllers.EmployeesController.EmployeeBaseInfoViewModel
         {
             EmployeeCode = Model?.EmployeeId,
             FirstName = null,  // Cambiado de Model?.FirstName a null

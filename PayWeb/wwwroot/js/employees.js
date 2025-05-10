@@ -128,7 +128,7 @@ function initEmployeeNotesForm() {
     const saveButton = document.getElementById('sharedModalSaveButton');
     if (saveButton) {
         saveButton.addEventListener('click', function () {
-            submitFormWithFetch(form, '/Form/SaveEmployeeNotes', 'Las observaciones del empleado se han guardado correctamente');
+            submitFormWithFetch(form, '/Employees/SaveEmployeeNotes', 'Las observaciones del empleado se han guardado correctamente');
         });
     }
 }
@@ -144,7 +144,7 @@ function initPaymentMethodsForm() {
     const saveButton = document.getElementById('sharedModalSaveButton');
     if (saveButton) {
         saveButton.addEventListener('click', function () {
-            submitFormWithFetch(form, '/Form/SavePaymentMethods', 'La información de pago se ha guardado correctamente');
+            submitFormWithFetch(form, '/Banks/SavePaymentMethods', 'La información de pago se ha guardado correctamente');
         });
     }
 }
@@ -160,7 +160,7 @@ function initIncomeConfigForm() {
     const saveButton = document.getElementById('sharedModalSaveButton');
     if (saveButton) {
         saveButton.addEventListener('click', function () {
-            submitFormWithFetch(form, '/Form/SaveIncomeConfig', 'La configuración de ingresos se ha guardado correctamente');
+            submitFormWithFetch(form, '/Employees/SaveIncomeConfig', 'La configuración de ingresos se ha guardado correctamente');
         });
     }
 }
@@ -176,7 +176,7 @@ function initDefaultIncomeForm() {
     const saveButton = document.getElementById('sharedModalSaveButton');
     if (saveButton) {
         saveButton.addEventListener('click', function () {
-            submitFormWithFetch(form, '/Form/SaveDefaultIncome', 'Los ingresos predeterminados se han guardado correctamente');
+            submitFormWithFetch(form, '/Employees/SaveDefaultIncome', 'Los ingresos predeterminados se han guardado correctamente');
         });
     }
 
@@ -243,7 +243,7 @@ function initGeneralEmployeeDataForm() {
     const saveButton = document.getElementById('sharedModalSaveButton');
     if (saveButton) {
         saveButton.addEventListener('click', function () {
-            submitFormWithFetch(form, '/Form/SaveGeneralEmployeeData', 'Los datos generales se han guardado correctamente');
+            submitFormWithFetch(form, '/Employees/SaveGeneralEmployeeData', 'Los datos generales se han guardado correctamente');
         });
     }
 
