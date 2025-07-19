@@ -1,0 +1,131 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\angel\\source\\repos\\PayWeb\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2D04670-CC3F-4B14-90A8-5818D610E74A}|PayWeb\\PayWeb.csproj|c:\\users\\angel\\source\\repos\\payweb\\payweb\\wwwroot\\js\\modalhelper.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2D04670-CC3F-4B14-90A8-5818D610E74A}|PayWeb\\PayWeb.csproj|solutionrelative:payweb\\wwwroot\\js\\modalhelper.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2D04670-CC3F-4B14-90A8-5818D610E74A}|PayWeb\\PayWeb.csproj|c:\\users\\angel\\source\\repos\\payweb\\payweb\\pages\\shared\\generaldata\\_positionsform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2D04670-CC3F-4B14-90A8-5818D610E74A}|PayWeb\\PayWeb.csproj|solutionrelative:payweb\\pages\\shared\\generaldata\\_positionsform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2D04670-CC3F-4B14-90A8-5818D610E74A}|PayWeb\\PayWeb.csproj|c:\\users\\angel\\source\\repos\\payweb\\payweb\\pages\\shared\\generaldata\\_departmentsform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2D04670-CC3F-4B14-90A8-5818D610E74A}|PayWeb\\PayWeb.csproj|solutionrelative:payweb\\pages\\shared\\generaldata\\_departmentsform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2D04670-CC3F-4B14-90A8-5818D610E74A}|PayWeb\\PayWeb.csproj|c:\\users\\angel\\source\\repos\\payweb\\payweb\\pages\\shared\\_datatable.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2D04670-CC3F-4B14-90A8-5818D610E74A}|PayWeb\\PayWeb.csproj|solutionrelative:payweb\\pages\\shared\\_datatable.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2D04670-CC3F-4B14-90A8-5818D610E74A}|PayWeb\\PayWeb.csproj|c:\\users\\angel\\source\\repos\\payweb\\payweb\\pages\\shared\\generaldata\\_branchesform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2D04670-CC3F-4B14-90A8-5818D610E74A}|PayWeb\\PayWeb.csproj|solutionrelative:payweb\\pages\\shared\\generaldata\\_branchesform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2D04670-CC3F-4B14-90A8-5818D610E74A}|PayWeb\\PayWeb.csproj|c:\\users\\angel\\source\\repos\\payweb\\payweb\\models\\datatableviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2D04670-CC3F-4B14-90A8-5818D610E74A}|PayWeb\\PayWeb.csproj|solutionrelative:payweb\\models\\datatableviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_BranchesForm.cshtml",
+              "DocumentMoniker": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\Pages\\Shared\\GeneralData\\_BranchesForm.cshtml",
+              "RelativeDocumentMoniker": "PayWeb\\Pages\\Shared\\GeneralData\\_BranchesForm.cshtml",
+              "ToolTip": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\Pages\\Shared\\GeneralData\\_BranchesForm.cshtml",
+              "RelativeToolTip": "PayWeb\\Pages\\Shared\\GeneralData\\_BranchesForm.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-10T15:57:23.219Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_PositionsForm.cshtml",
+              "DocumentMoniker": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\Pages\\Shared\\GeneralData\\_PositionsForm.cshtml",
+              "RelativeDocumentMoniker": "PayWeb\\Pages\\Shared\\GeneralData\\_PositionsForm.cshtml",
+              "ToolTip": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\Pages\\Shared\\GeneralData\\_PositionsForm.cshtml",
+              "RelativeToolTip": "PayWeb\\Pages\\Shared\\GeneralData\\_PositionsForm.cshtml",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAgwEoAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-10T16:54:04.057Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_DepartmentsForm.cshtml",
+              "DocumentMoniker": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\Pages\\Shared\\GeneralData\\_DepartmentsForm.cshtml",
+              "RelativeDocumentMoniker": "PayWeb\\Pages\\Shared\\GeneralData\\_DepartmentsForm.cshtml",
+              "ToolTip": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\Pages\\Shared\\GeneralData\\_DepartmentsForm.cshtml",
+              "RelativeToolTip": "PayWeb\\Pages\\Shared\\GeneralData\\_DepartmentsForm.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAMcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-10T16:54:01.555Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "modalHelper.js",
+              "DocumentMoniker": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\js\\modalHelper.js",
+              "RelativeDocumentMoniker": "PayWeb\\wwwroot\\js\\modalHelper.js",
+              "ToolTip": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\js\\modalHelper.js",
+              "RelativeToolTip": "PayWeb\\wwwroot\\js\\modalHelper.js",
+              "ViewState": "AgIAANUAAAAAAAAAAAAmwOUAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-05-10T16:41:55.941Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_DataTable.cshtml",
+              "DocumentMoniker": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\Pages\\Shared\\_DataTable.cshtml",
+              "RelativeDocumentMoniker": "PayWeb\\Pages\\Shared\\_DataTable.cshtml",
+              "ToolTip": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\Pages\\Shared\\_DataTable.cshtml",
+              "RelativeToolTip": "PayWeb\\Pages\\Shared\\_DataTable.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAK0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-10T16:26:40.786Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DataTableViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\Models\\DataTableViewModel.cs",
+              "RelativeDocumentMoniker": "PayWeb\\Models\\DataTableViewModel.cs",
+              "ToolTip": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\Models\\DataTableViewModel.cs",
+              "RelativeToolTip": "PayWeb\\Models\\DataTableViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T16:12:47.239Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

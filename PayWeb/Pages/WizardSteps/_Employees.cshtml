@@ -1,117 +1,336 @@
 ﻿@model WizardModel
 <link rel="stylesheet" href="~/css/employees.css" asp-append-version="true" />
+<!-- Referencias DataTables -->
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css" />
+<script type="text/javascript" src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+
 <div class="container-fluid">
-    <div class="mb-4">
-        <h4>Gestión de Empleados</h4>
-        <p class="text-muted">Configure la información relacionada con empleados y nómina</p>
-    </div>
+    <!-- Pestañas para alternar entre configuración y listado de empleados -->
+    <ul class="nav nav-tabs mb-4" id="employeeTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="config-tab" data-bs-toggle="tab" data-bs-target="#config-content"
+                    type="button" role="tab" aria-controls="config-content" aria-selected="true">
+                <i class="fas fa-cogs me-2"></i>Configuración
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="employees-tab" data-bs-toggle="tab" data-bs-target="#employees-list"
+                    type="button" role="tab" aria-controls="employees-list" aria-selected="false">
+                <i class="fas fa-users me-2"></i>Listado de Empleados
+            </button>
+        </li>
+    </ul>
 
-    <div class="row g-4">
-        <div class="col-md-6 mb-3">
-            <div class="card h-100 shadow-sm">
-                <div class="card-body d-flex flex-column">
-                    <div class="text-center mb-3">
-                        <i class="fas fa-id-card fa-3x text-primary mb-3"></i>
-                        <h5 class="card-title">Datos del Empleado</h5>
-                    </div>
-                    <p class="card-text text-muted flex-grow-1 text-center">
-                        Gestione la información personal y laboral de sus empleados
-                    </p>
-                    <button type="button" class="btn btn-outline-primary w-100 mt-auto"
-                            onclick="showModal('EmployeeData', 'Datos del Empleado')">
-                        <i class="fas fa-cog me-2"></i>Configurar
-                    </button>
-                </div>
+    <div class="tab-content" id="employeeTabContent">
+        <!-- Contenido de configuración (tarjetas) -->
+        <div class="tab-pane fade show active" id="config-content" role="tabpanel" aria-labelledby="config-tab">
+            <div class="mb-4">
+                <h4>Gestión de Empleados</h4>
+                <p class="text-muted">Configure la información relacionada con empleados y nómina</p>
             </div>
-        </div>
-        <div class="col-md-6 mb-3">
-            <div class="card h-100 shadow-sm">
-                <div class="card-body d-flex flex-column">
-                    <div class="text-center mb-3">
-                        <i class="fas fa-credit-card fa-3x text-primary mb-3"></i>
-                        <h5 class="card-title">Forma de Pago</h5>
-                    </div>
-                    <p class="card-text text-muted flex-grow-1 text-center">
-                        Configure los métodos de pago para la nómina de sus empleados
-                    </p>
-                    <button type="button" class="btn btn-outline-primary w-100 mt-auto"
-                            onclick="showModal('PaymentMethods', 'Forma de Pago')">
-                        <i class="fas fa-cog me-2"></i>Configurar
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <div class="row g-4 mt-2">
-        <div class="col-md-3 mb-3">
-            <div class="card h-100 shadow-sm">
-                <div class="card-body d-flex flex-column">
-                    <div class="text-center mb-3">
-                        <i class="fas fa-database fa-3x text-primary mb-3"></i>
-                        <h5 class="card-title">Datos Generales</h5>
+            <div class="row g-4">
+                <div class="col-md-6 mb-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body d-flex flex-column">
+                            <div class="text-center mb-3">
+                                <i class="fas fa-id-card fa-3x text-primary mb-3"></i>
+                                <h5 class="card-title">Datos del Empleado</h5>
+                            </div>
+                            <p class="card-text text-muted flex-grow-1 text-center">
+                                Gestione la información personal y laboral de sus empleados
+                            </p>
+                            <button type="button" class="btn btn-outline-primary w-100 mt-auto"
+                                    onclick="showModal('EmployeeData', 'Datos del Empleado')">
+                                <i class="fas fa-cog me-2"></i>Configurar
+                            </button>
+                        </div>
                     </div>
-                    <p class="card-text text-muted flex-grow-1 text-center">
-                        Configure información general compartida para todos los empleados
-                    </p>
-                    <button type="button" class="btn btn-outline-primary w-100 mt-auto"
-                            onclick="showModal('GeneralEmployeeData', 'Datos Generales')">
-                        <i class="fas fa-cog me-2"></i>Configurar
-                    </button>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body d-flex flex-column">
+                            <div class="text-center mb-3">
+                                <i class="fas fa-credit-card fa-3x text-primary mb-3"></i>
+                                <h5 class="card-title">Forma de Pago</h5>
+                            </div>
+                            <p class="card-text text-muted flex-grow-1 text-center">
+                                Configure los métodos de pago para la nómina de sus empleados
+                            </p>
+                            <button type="button" class="btn btn-outline-primary w-100 mt-auto"
+                                    onclick="showModal('PaymentMethods', 'Forma de Pago')">
+                                <i class="fas fa-cog me-2"></i>Configurar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4 mt-2">
+                <div class="col-md-3 mb-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body d-flex flex-column">
+                            <div class="text-center mb-3">
+                                <i class="fas fa-database fa-3x text-primary mb-3"></i>
+                                <h5 class="card-title">Datos Generales</h5>
+                            </div>
+                            <p class="card-text text-muted flex-grow-1 text-center">
+                                Configure información general compartida para todos los empleados
+                            </p>
+                            <button type="button" class="btn btn-outline-primary w-100 mt-auto"
+                                    onclick="showModal('GeneralEmployeeData', 'Datos Generales')">
+                                <i class="fas fa-cog me-2"></i>Configurar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body d-flex flex-column">
+                            <div class="text-center mb-3">
+                                <i class="fas fa-sliders-h fa-3x text-primary mb-3"></i>
+                                <h5 class="card-title">Configuración Ingresos</h5>
+                            </div>
+                            <p class="card-text text-muted flex-grow-1 text-center">
+                                Configure los parámetros de ingresos para los empleados
+                            </p>
+                            <button type="button" class="btn btn-outline-primary w-100 mt-auto"
+                                    onclick="showModal('IncomeConfig', 'Configuración de Ingresos')">
+                                <i class="fas fa-cog me-2"></i>Configurar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body d-flex flex-column">
+                            <div class="text-center mb-3">
+                                <i class="fas fa-money-bill-wave fa-3x text-primary mb-3"></i>
+                                <h5 class="card-title">Ingresos Predeterminados</h5>
+                            </div>
+                            <p class="card-text text-muted flex-grow-1 text-center">
+                                Configure los ingresos predeterminados para los empleados
+                            </p>
+                            <button type="button" class="btn btn-outline-primary w-100 mt-auto"
+                                    onclick="showModal('DefaultIncome', 'Ingresos Predeterminados')">
+                                <i class="fas fa-cog me-2"></i>Configurar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body d-flex flex-column">
+                            <div class="text-center mb-3">
+                                <i class="fas fa-comment-alt fa-3x text-primary mb-3"></i>
+                                <h5 class="card-title">Observaciones</h5>
+                            </div>
+                            <p class="card-text text-muted flex-grow-1 text-center">
+                                Gestione notas y observaciones relacionadas con los empleados
+                            </p>
+                            <button type="button" class="btn btn-outline-primary w-100 mt-auto"
+                                    onclick="showModal('EmployeeNotes', 'Observaciones')">
+                                <i class="fas fa-cog me-2"></i>Configurar
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-3 mb-3">
-            <div class="card h-100 shadow-sm">
-                <div class="card-body d-flex flex-column">
-                    <div class="text-center mb-3">
-                        <i class="fas fa-sliders-h fa-3x text-primary mb-3"></i>
-                        <h5 class="card-title">Configuración Ingresos</h5>
-                    </div>
-                    <p class="card-text text-muted flex-grow-1 text-center">
-                        Configure los parámetros de ingresos para los empleados
-                    </p>
-                    <button type="button" class="btn btn-outline-primary w-100 mt-auto"
-                            onclick="showModal('IncomeConfig', 'Configuración de Ingresos')">
-                        <i class="fas fa-cog me-2"></i>Configurar
-                    </button>
-                </div>
+
+        <!-- Contenido del listado de empleados (DataTable) -->
+        <div class="tab-pane fade" id="employees-list" role="tabpanel" aria-labelledby="employees-tab">
+            <div class="mb-4">
+                <h4>Listado de Empleados</h4>
+                <p class="text-muted">Consulte y gestione la información de todos los empleados</p>
             </div>
-        </div>
-        <div class="col-md-3 mb-3">
-            <div class="card h-100 shadow-sm">
-                <div class="card-body d-flex flex-column">
-                    <div class="text-center mb-3">
-                        <i class="fas fa-money-bill-wave fa-3x text-primary mb-3"></i>
-                        <h5 class="card-title">Ingresos Predeterminados</h5>
+
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <!-- Controles superiores -->
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-primary" id="btnNuevoEmpleado">
+                                    <i class="fas fa-plus me-1"></i> Nuevo Empleado
+                                </button>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fas fa-file-export me-1"></i> Exportar
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#"><i class="fas fa-file-excel me-2"></i>Excel</a></li>
+                                        <li><a class="dropdown-item" href="#"><i class="fas fa-file-pdf me-2"></i>PDF</a></li>
+                                        <li><a class="dropdown-item" href="#"><i class="fas fa-file-csv me-2"></i>CSV</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex justify-content-md-end align-items-center gap-2">
+                                <label for="ordenDefault" class="form-label mb-0">Orden Default:</label>
+                                <select class="form-select" style="width: auto" id="ordenDefault">
+                                    <option value="nombre">Apellido, Nombre</option>
+                                    <option value="codigo">Código de Empleado</option>
+                                    <option value="cedula">Cédula</option>
+                                    <option value="departamento">Departamento</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
-                    <p class="card-text text-muted flex-grow-1 text-center">
-                        Configure los ingresos predeterminados para los empleados
-                    </p>
-                    <button type="button" class="btn btn-outline-primary w-100 mt-auto"
-                            onclick="showModal('DefaultIncome', 'Ingresos Predeterminados')">
-                        <i class="fas fa-cog me-2"></i>Configurar
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 mb-3">
-            <div class="card h-100 shadow-sm">
-                <div class="card-body d-flex flex-column">
-                    <div class="text-center mb-3">
-                        <i class="fas fa-comment-alt fa-3x text-primary mb-3"></i>
-                        <h5 class="card-title">Observaciones</h5>
+
+                    <!-- DataTable de empleados -->
+                    <div class="table-responsive">
+                        <table id="empleadosTable" class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="selectAll">
+                                        </div>
+                                    </th>
+                                    <th>Código</th>
+                                    <th>Nombre Empleado</th>
+                                    <th>Cédula</th>
+                                    <th>Depto.</th>
+                                    <th>C. de Costo</th>
+                                    <th>Gru. de Pago</th>
+                                    <th>Proyecto</th>
+                                    <th>Fase</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Los datos se cargarán dinámicamente -->
+                            </tbody>
+                        </table>
                     </div>
-                    <p class="card-text text-muted flex-grow-1 text-center">
-                        Gestione notas y observaciones relacionadas con los empleados
-                    </p>
-                    <button type="button" class="btn btn-outline-primary w-100 mt-auto"
-                            onclick="showModal('EmployeeNotes', 'Observaciones')">
-                        <i class="fas fa-cog me-2"></i>Configurar
-                    </button>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 <script src="~/js/employees.js" asp-append-version="true"></script>
+<!-- Script para inicializar DataTables -->
+<script>
+    $(document).ready(function() {
+        // Inicializar DataTables
+        var table = $('#empleadosTable').DataTable({
+            language: {
+                url: '//cdn.datatables.net/plug-ins/1.13.6/i18n/es-ES.json'
+            },
+            responsive: true,
+            autoWidth: false,
+            dom: '<"row"<"col-sm-12 col-md-6"l><"col-sm-12 col-md-6"f>>t<"row"<"col-sm-12 col-md-6"i><"col-sm-12 col-md-6"p>>',
+            // Datos de ejemplo - reemplazar con datos reales
+            data: [
+                {
+                    select: '',
+                    codigo: 'E001',
+                    nombre: 'García Pérez, Ana',
+                    cedula: '1234567890',
+                    departamento: 'Contabilidad',
+                    centroCosto: 'Administración',
+                    grupoPago: 'Mensual',
+                    proyecto: 'Principal',
+                    fase: 'Operación'
+                },
+                {
+                    select: '',
+                    codigo: 'E002',
+                    nombre: 'Rodríguez, Juan',
+                    cedula: '0987654321',
+                    departamento: 'Desarrollo',
+                    centroCosto: 'IT',
+                    grupoPago: 'Quincenal',
+                    proyecto: 'Secundario',
+                    fase: 'Implementación'
+                }
+                // Añadir más datos de ejemplo aquí
+            ],
+            columns: [
+                {
+                    data: 'select',
+                    orderable: false,
+                    render: function() {
+                        return '<div class="form-check"><input class="form-check-input" type="checkbox"></div>';
+                    }
+                },
+                { data: 'codigo' },
+                { data: 'nombre' },
+                { data: 'cedula' },
+                { data: 'departamento' },
+                { data: 'centroCosto' },
+                { data: 'grupoPago' },
+                { data: 'proyecto' },
+                { data: 'fase' },
+                {
+                    data: null,
+                    orderable: false,
+                    render: function() {
+                        return '<div class="btn-group btn-group-sm">' +
+                               '<button type="button" class="btn btn-outline-primary edit-btn" title="Editar"><i class="fas fa-edit"></i></button>' +
+                               '<button type="button" class="btn btn-outline-info view-btn" title="Ver detalles"><i class="fas fa-eye"></i></button>' +
+                               '<button type="button" class="btn btn-outline-danger delete-btn" title="Eliminar"><i class="fas fa-trash-alt"></i></button>' +
+                               '</div>';
+                    }
+                }
+            ]
+        });
+
+        // Cambiar orden por defecto cuando cambia el selector
+        $('#ordenDefault').on('change', function() {
+            const orderColumn = $(this).val();
+
+            switch(orderColumn) {
+                case 'nombre':
+                    table.order([2, 'asc']).draw();
+                    break;
+                case 'codigo':
+                    table.order([1, 'asc']).draw();
+                    break;
+                case 'cedula':
+                    table.order([3, 'asc']).draw();
+                    break;
+                case 'departamento':
+                    table.order([4, 'asc']).draw();
+                    break;
+            }
+        });
+
+        // Seleccionar/deseleccionar todos
+        $('#selectAll').on('change', function() {
+            const isChecked = $(this).prop('checked');
+            $('.form-check-input').prop('checked', isChecked);
+        });
+
+        // Botones de acción
+        $('#empleadosTable').on('click', '.edit-btn', function() {
+            const data = table.row($(this).closest('tr')).data();
+            alert('Editar empleado: ' + data.nombre);
+            // Aquí iría la lógica para editar
+        });
+
+        $('#empleadosTable').on('click', '.view-btn', function() {
+            const data = table.row($(this).closest('tr')).data();
+            alert('Ver detalles de: ' + data.nombre);
+            // Aquí iría la lógica para ver detalles
+        });
+
+        $('#empleadosTable').on('click', '.delete-btn', function() {
+            const data = table.row($(this).closest('tr')).data();
+            if (confirm('¿Está seguro que desea eliminar a ' + data.nombre + '?')) {
+                // Aquí iría la lógica para eliminar
+                alert('Empleado eliminado: ' + data.nombre);
+            }
+        });
+
+        // Nuevo empleado
+        $('#btnNuevoEmpleado').on('click', function() {
+            alert('Crear nuevo empleado');
+            // Aquí iría la lógica para crear un nuevo empleado
+        });
+    });
+</script>

@@ -220,26 +220,19 @@ function showModal(formName, title) {
     // Configurar anchos personalizados según el formulario
     if (formName === 'CostCenters') {
         modalDialog.style.width = '65em'; // ~1040px
-        console.log('Aplicando ancho personalizado para CostCenters: 65em');
     } else if (formName === 'Schedules') {
         modalDialog.style.width = '82em'; // ~1200px
-        console.log('Aplicando ancho personalizado para Schedules: 75em');
     } else if (['EmployeeData', 'EmployeeNotes', 'PaymentMethods'].includes(formName)) {
         modalDialog.style.width = '60em'; // ~960px
-        console.log(`Aplicando ancho personalizado para ${formName}: 60em`);
     } else if (['GeneralEmployeeData', 'IncomeConfig', 'DefaultIncome'].includes(formName)) {
         modalDialog.style.width = '70em'; // ~1120px
-        console.log(`Aplicando ancho personalizado para ${formName}: 70em`);
     } else if (['Branches', 'Departments', 'Positions'].includes(formName)) {
-        modalDialog.style.width = '50em'; // ~800px
-        console.log(`Aplicando ancho personalizado para ${formName}: 50em`);
+        modalDialog.style.width = '95em';
     } else if (['Projects', 'Phases', 'Division'].includes(formName)) {
         modalDialog.style.width = '55em'; // ~880px
-        console.log(`Aplicando ancho personalizado para ${formName}: 55em`);
     } else {
         // Formularios más pequeños con ancho predeterminado
         modalDialog.style.width = '40em'; // ~640px
-        console.log(`Aplicando ancho predeterminado para ${formName}: 40em`);
     }
 
     // Asegurarse que max-width sea reemplazado definitivamente por nuestro ancho personalizado

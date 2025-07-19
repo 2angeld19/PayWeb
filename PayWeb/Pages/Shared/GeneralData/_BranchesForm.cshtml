@@ -1,16 +1,169 @@
 ﻿@model PayWeb.Controllers.GeneralDataController.BranchViewModel
+@using PayWeb.Models
+@using System.Collections.Generic
 
-<form id="branchesForm" method="post">
-    <div class="mb-3">
-        <label for="code" class="form-label">Código</label>
-        <input type="text" class="form-control" id="code" name="code" required>
+<div class="row">
+    <!-- Columna izquierda: Tabla de datos -->
+    <div class="col-md-6">
+        @{
+            var tableModel = new DataTableViewModel
+            {
+                TableId = "branchesTable",
+                EntityName = "Sucursales",
+                FormId = "branchesForm",
+                Columns = new List<DataTableColumn>
+        {
+        new DataTableColumn { Field = "id", Title = "ID", Width = "50px" },
+        new DataTableColumn { Field = "code", Title = "Código", Width = "100px" },
+        new DataTableColumn { Field = "name", Title = "Descripción de la Sucursal" }
+        },
+                Data = Model?.Branches?.Select(b => new
+                {
+                    id = b.Id,
+                    code = b.BranchAddress,  // Adaptación - no hay campo Code en Branch
+                    name = b.BranchName
+                }).ToList<object>() ?? new List<object>()
+            };
+        }
+
+        @await Html.PartialAsync("_DataTable", tableModel)
     </div>
-    <div class="mb-3">
-        <label for="branchName" class="form-label">Nombre de la Sucursal</label>
-        <input type="text" class="form-control" id="branchName" name="BranchName" required>
+
+    <!-- Columna derecha: Formulario de detalles -->
+    <div class="col-md-6">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <form id="branchesForm" method="post" class="needs-validation" novalidate>
+                    <input type="hidden" id="branchId" name="Id" value="@(Model?.CurrentBranch?.Id ?? 0)" />
+                    <input type="hidden" id="companyId" name="CompanyId" value="@Model?.CompanyId" />
+
+                    <div class="mb-3">
+                        <label for="code" class="form-label">Código:</label>
+                        <input type="text" class="form-control" id="code" name="BranchAddress" required
+                               value="@(Model?.CurrentBranch?.BranchAddress ?? "")" maxlength="10">
+                        <div class="invalid-feedback">Por favor ingrese un código.</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="branchName" class="form-label">Nombre:</label>
+                        <input type="text" class="form-control" id="branchName" name="BranchName" required
+                               value="@(Model?.CurrentBranch?.BranchName ?? "")" maxlength="100">
+                        <div class="invalid-feedback">Por favor ingrese un nombre para la sucursal.</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="branchPhone" class="form-label">Teléfono:</label>
+                        <input type="text" class="form-control" id="branchPhone" name="BranchPhone"
+                               value="@(Model?.CurrentBranch?.BranchPhone ?? "")" maxlength="20">
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-    <div class="mb-3">
-        <label for="codinterfase" class="form-label">Cod. Interfase</label>
-        <input type="text" class="form-control" id="codinterfase" name="codinterfase" required>
-    </div>
-</form>
+</div>
+
+<script>
+    // Funciones de manejo para la tabla
+    window.onRowSelected_branchesTable = function(data) {
+        // Cargar los datos de la fila seleccionada en el formulario
+        $('#branchId').val(data.id);
+        $('#code').val(data.code);
+        $('#branchName').val(data.name);
+
+        // Solicitar los detalles completos de esta sucursal
+        fetch(`/Api/Branches/GetDetails?id=${data.id}`)
+            .then(response => response.json())
+            .then(details => {
+                // Completar el resto de campos del formulario
+                $('#branchPhone').val(details.branchPhone);
+            })
+            .catch(error => {
+                console.error('Error al obtener detalles:', error);
+                showToast('Error', 'No se pudieron cargar los detalles de la sucursal', 'error');
+            });
+    };
+
+    window.onNewItem_branchesTable = function() {
+        // Limpiar el formulario para un nuevo registro
+        $('#branchesForm')[0].reset();
+        $('#branchId').val(0);
+        // Mantener el ID de la compañía
+        const companyId = $('#companyId').val();
+        $('#companyId').val(companyId);
+        $('#code').focus();
+    };
+
+    window.onSaveItem_branchesTable = function() {
+        // Validar el formulario antes de enviar
+        const form = $('#branchesForm')[0];
+        if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+            form.classList.add('was-validated');
+            return;
+        }
+
+        // Recopilar datos del formulario
+        const formData = new FormData(form);
+
+        // Enviar datos al servidor
+        fetch('/Api/Branches/Save', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(result => {
+            if (result.success) {
+                // Recargar la tabla
+                var table = window.dataTable_branchesTable;
+                if (table) {
+                    table.ajax.reload();
+                } else {
+                    // Si la tabla no tiene ajax configurado, recargar la página
+                    location.reload();
+                }
+
+                // Mostrar mensaje de éxito
+                showToast('Éxito', 'Sucursal guardada correctamente', 'success');
+
+                // Limpiar formulario
+                window.onNewItem_branchesTable();
+            } else {
+                showToast('Error', result.message || 'Error al guardar los datos', 'error');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            showToast('Error', 'Ocurrió un error al procesar la solicitud', 'error');
+        });
+    };
+
+    window.onCancelEdit_branchesTable = function() {
+        // Restablecer el formulario sin validaciones
+        $('#branchesForm')[0].reset();
+        $('#branchesForm').removeClass('was-validated');
+    };
+
+    // Función para mostrar toasts/notificaciones
+    function showToast(title, message, type) {
+        // Verificar si existe Toastify o un sistema similar
+        if (typeof Toastify === 'function') {
+            Toastify({
+                text: message,
+                duration: 3000,
+                gravity: "top",
+                position: "right",
+                backgroundColor: type === 'success' ? "#28a745" : "#dc3545"
+            }).showToast();
+        } else {
+            // Fallback a alert básico
+            alert(`${title}: ${message}`);
+        }
+    }
+
+    // Inicializar al cargar la página
+    $(document).ready(function() {
+        // Por defecto, activar el modo "nuevo"
+        window.onNewItem_branchesTable();
+    });
+</script>

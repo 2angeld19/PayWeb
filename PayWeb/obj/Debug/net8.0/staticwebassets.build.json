@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Psoow5GgB91khwPAWITLqyyAUneAKrlN8+vP2dtpJCc=",
+  "Hash": "L/Vzp+Nl4UMe8s8f+QRDWBrN6pEdF7Axm2NgxUbGahU=",
   "Source": "PayWeb",
   "BasePath": "_content/PayWeb",
   "Mode": "Default",
@@ -220,8 +220,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "wglsfsbtbx",
-      "Integrity": "UFXv7cW+/PmNONOSZuBhbWw/T8BMaQvU4f8ML1hj8VY=",
+      "Fingerprint": "j1l22vmfxq",
+      "Integrity": "+eq27/s+4J2Ra5mTOCZzOcaOF9T1xLc6dpAA8SxSOZk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\employees.js"
@@ -241,8 +241,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "ou9h9n0deb",
-      "Integrity": "4A4Fzgl2WEzXR/ybqFoATmtxbqGiUkhhdk6dd/KQ0T0=",
+      "Fingerprint": "sevt0vf4c2",
+      "Integrity": "vO9xcRA81c+HJB6vlpxUhgbej49gRv5+rt6L5RH/z6s=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\modalHelper.js"
@@ -2105,6 +2105,51 @@
       ]
     },
     {
+      "Route": "js/employees.j1l22vmfxq.js",
+      "AssetFile": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\js\\employees.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5597"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+eq27/s+4J2Ra5mTOCZzOcaOF9T1xLc6dpAA8SxSOZk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 10 May 2025 15:53:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "j1l22vmfxq"
+        },
+        {
+          "Name": "label",
+          "Value": "js/employees.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+eq27/s+4J2Ra5mTOCZzOcaOF9T1xLc6dpAA8SxSOZk="
+        }
+      ]
+    },
+    {
       "Route": "js/employees.js",
       "AssetFile": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\js\\employees.js",
       "Selectors": [],
@@ -2115,7 +2160,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "12648"
+          "Value": "5597"
         },
         {
           "Name": "Content-Type",
@@ -2123,11 +2168,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"UFXv7cW+/PmNONOSZuBhbWw/T8BMaQvU4f8ML1hj8VY=\""
+          "Value": "\"+eq27/s+4J2Ra5mTOCZzOcaOF9T1xLc6dpAA8SxSOZk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 13:40:34 GMT"
+          "Value": "Sat, 10 May 2025 15:53:35 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2137,52 +2182,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-UFXv7cW+/PmNONOSZuBhbWw/T8BMaQvU4f8ML1hj8VY="
-        }
-      ]
-    },
-    {
-      "Route": "js/employees.wglsfsbtbx.js",
-      "AssetFile": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\js\\employees.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "12648"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"UFXv7cW+/PmNONOSZuBhbWw/T8BMaQvU4f8ML1hj8VY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 13:40:34 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "wglsfsbtbx"
-        },
-        {
-          "Name": "label",
-          "Value": "js/employees.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-UFXv7cW+/PmNONOSZuBhbWw/T8BMaQvU4f8ML1hj8VY="
+          "Value": "sha256-+eq27/s+4J2Ra5mTOCZzOcaOF9T1xLc6dpAA8SxSOZk="
         }
       ]
     },
@@ -2197,7 +2197,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "13704"
+          "Value": "13243"
         },
         {
           "Name": "Content-Type",
@@ -2205,11 +2205,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"4A4Fzgl2WEzXR/ybqFoATmtxbqGiUkhhdk6dd/KQ0T0=\""
+          "Value": "\"vO9xcRA81c+HJB6vlpxUhgbej49gRv5+rt6L5RH/z6s=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 14:35:26 GMT"
+          "Value": "Sat, 10 May 2025 16:47:39 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2219,12 +2219,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-4A4Fzgl2WEzXR/ybqFoATmtxbqGiUkhhdk6dd/KQ0T0="
+          "Value": "sha256-vO9xcRA81c+HJB6vlpxUhgbej49gRv5+rt6L5RH/z6s="
         }
       ]
     },
     {
-      "Route": "js/modalHelper.ou9h9n0deb.js",
+      "Route": "js/modalHelper.sevt0vf4c2.js",
       "AssetFile": "C:\\Users\\angel\\source\\repos\\PayWeb\\PayWeb\\wwwroot\\js\\modalHelper.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2234,7 +2234,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "13704"
+          "Value": "13243"
         },
         {
           "Name": "Content-Type",
@@ -2242,11 +2242,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"4A4Fzgl2WEzXR/ybqFoATmtxbqGiUkhhdk6dd/KQ0T0=\""
+          "Value": "\"vO9xcRA81c+HJB6vlpxUhgbej49gRv5+rt6L5RH/z6s=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 10 May 2025 14:35:26 GMT"
+          "Value": "Sat, 10 May 2025 16:47:39 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2256,7 +2256,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "ou9h9n0deb"
+          "Value": "sevt0vf4c2"
         },
         {
           "Name": "label",
@@ -2264,7 +2264,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-4A4Fzgl2WEzXR/ybqFoATmtxbqGiUkhhdk6dd/KQ0T0="
+          "Value": "sha256-vO9xcRA81c+HJB6vlpxUhgbej49gRv5+rt6L5RH/z6s="
         }
       ]
     },
